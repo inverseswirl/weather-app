@@ -1,0 +1,327 @@
+@import './variables';
+
+///font mixins......
+@mixin block-font(){
+    font-family: 'Monoton', cursive;
+}
+
+
+@mixin   serif-font(){
+    font-family: 'EB Garamond', serif;
+}
+@mixin   sansserif-font(){
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
+}
+@mixin   cursive(){
+ font-family: 'Zen Dots', cursive;
+   
+}
+
+
+@mixin font($font-weight,$font-size){
+    font-weight: $font-weight;
+    font-size: $font-size;
+} 
+  
+  //miscellaneous mixins
+  
+@mixin flex($direction){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@mixin center(){
+    text-align: center;
+}
+  
+  
+  
+  
+html,body{
+scroll-behavior: smooth;
+overflow-y:scroll;
+overflow-x: hidden;
+
+}
+   
+.App{
+    height: 100vh;
+    width: 100vw;
+}
+   
+  
+   
+///NEUTRAL SECTION............
+.neutral{
+
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../img/sanddune.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+
+  &-headline{
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(45deg,$color ,salmon,$color ,salmon, $color);
+    background-size: 60% 100%;
+    background-position: 100% 10px;
+    margin:0;
+    @include block-font();
+    @include font(500, 80px);
+    @include center();
+    font-size:calc(80px + 1vw) !important;
+    text-transform:capitalize;
+    transform: translate(0px,50px);
+    animation: tornado 1.7s linear 1;
+  
+ 
+
+   
+    @keyframes tornado {
+        0%{
+            position: absolute;
+            top: 100px;
+             background:url('../img/wind.svg');
+             background-repeat: no-repeat;
+             background-position: 0% 30%;
+             background-size: 420px 120px;
+           
+        }
+             
+
+        25%{
+        
+            background:url('../img/wind.svg');
+            background-repeat: no-repeat;
+            background-position: 40% 20%;
+            background-size: 420px 120px;
+            transform: skew(20deg,-10deg);
+            position: absolute;
+            top: 100px;
+        }
+        50%{
+            background:url('../img/wind.svg');
+            background-repeat: no-repeat;
+            background-position: 70% 20%;
+            background-size: 420px 120px;
+            transform: skewY(-10deg,0deg);
+            position: absolute;
+            top: 90px;
+        
+        }
+        75%{
+            background:url('../img/wind.svg');
+            background-repeat: no-repeat;
+            background-position: 90% 20%;
+            background-size: 420px 120px;
+            transform: skewY(0deg,0deg);
+            opacity:0;
+            position: absolute;
+            top: 80px;
+           
+
+          
+
+        }
+       
+        100%{
+            opacity:0;
+
+        }
+    }
+   }
+
+ 
+}
+
+
+
+
+///SUMMER SECTION............
+
+
+
+.landscape{
+    background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    height: 100vh;
+    max-width: 100vw;
+    position: relative;
+    z-index: -1;
+
+    &-sun{
+        border-radius: 50%;
+        width:100px;
+        height:100px;
+        background-color: yellow;
+        position: absolute;
+        border: 1px solid #ffa60042;
+        top: 30px;
+        left: 75px;
+        animation: appear 1.5s linear 1;
+        
+        &::after{
+            content:'';
+            position: absolute;
+            background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 40%, rgba(255, 166, 0, 0.8) 76%);
+            background-size: 100% 100%;
+            border-radius: 50%;
+            top: -10px;
+            left: -10px;
+            width:120px;
+            height:120px;
+            animation: shine 2s ease-in-out 1;
+        }
+    }
+    
+
+}
+  
+   
+
+
+
+
+
+
+
+
+
+
+@keyframes appear{
+    0%{
+        transform: translate(-200px,180px);
+  
+    }
+    100%{
+        transform: translate(0px,0px);
+        
+    }
+}
+
+
+
+@keyframes shine {
+    0%{
+        opacity: 0;
+    }
+    15%{
+        opacity:0.1;
+    }
+    25%{
+        opacity: 0.2;
+    }
+    50%{
+        opacity: 0.3;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes  movieInside{
+    0%{
+       transform: translate(0px,50px);
+       opacity:0;
+    }
+
+    50%{
+        opacity: 0;
+        transform: translate(0px,50px);
+    }
+    50%{
+        opacity: 0.2;
+        transform: translate(0px,50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0px,0px);
+    }
+}
+
+///search input.....................
+.search{
+ position: absolute;
+ top:calc(340px - 4vh);
+ left:calc(240px + 4vw);
+ border:4px solid $color;
+ border-radius: 100px;
+ padding: 10px;
+ width: 60%;
+
+ 
+     &-headline{
+          color: salmon;
+          padding:0 0 9px 4px;
+          @include center();
+          margin: 0;
+     }
+
+      & > span{
+        padding: 0 5px 0 10px;
+        color: white;
+      }
+       &-query{
+            outline:none;
+            border:none; 
+            background: transparent;
+            @include font(700, 2rem);
+            color: rgba(18,18,18,0.8);
+            @include cursive();
+            @include center();
+            width:60%;
+         
+            padding: 0 0 5px 5%;
+
+            &::-webkit-search-cancel-button{
+                appearance: none;
+                background-color: rgba(18,18,18,0.8);
+                height: 20px;
+                width: 20px;
+
+            }
+           
+               
+
+        }
+
+        &-btn{
+            outline:none;
+            border:none;  
+            background: transparent;
+            cursor: pointer;
+            border:2px solid black;
+            border-radius: 50%;
+            padding: 4px;
+            &:active, &:focus{
+                outline:none;
+                border:none; 
+                background: transparent;
+
+            }
+
+        }
+}
+
+.temperature{
+    position: absolute;
+    top: 250px;
+    z-index: 4;
+    font-size: 1rem;
+
+}
