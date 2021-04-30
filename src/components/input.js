@@ -1,6 +1,5 @@
 import React from 'react';
 import {BsSearch} from 'react-icons/bs';
-import {api} from '../components/result';
 import Result from '../components/result';
 
 
@@ -10,10 +9,8 @@ class Input extends React.Component{
   constructor(props){
     super(props)
 
-    this.state={ data: null,input: "",button: false}
+    this.state={ data: '',input: "",button: false}
     this.handleInput=this.handleInput.bind(this);
-    // this.handleClick=this.handleClick.bind(this);
-    // this.handleApi=this.handleApi.bind(this);
     this.api=this.api.bind(this);
 
 }
@@ -27,28 +24,31 @@ api(searchQuery){
 
   fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
   .then((res)=>res.json())
-  .then((res)=>this.setState({data: res})
+  .then((res)=>
+
+this.setState({data: res})
+
   
 )
 
 }
 
 
-
-
-handleClick(){
-
-}
-
 render(){
 const{input,data,button}=this.state;
+const{location,current}=data
+
+// const{temperature}=current
+
 
 
 
     return(
-
+      <div>
+      <h1 className="search-headline">Enter the place name here!</h1>
     <div className="search">
-       <h1 className="search-headline">Enter the place name here!</h1>
+      
+    
        <input className="search-query" 
               type="search"
               value={input}
@@ -56,20 +56,18 @@ const{input,data,button}=this.state;
             />
 
        <button 
-      
-           onClick={()=>this.api(input)}
+      onClick={()=>this.api(input)}
       className="search-btn">
-    <span><BsSearch size={32}/></span></button>
+       <span><BsSearch size={32}/></span></button>
        
-       {/* <Result data={data}
-       btn={button}
-       /> */}
+       </div>
 
- <div className="temperature"> 
-  <h1> Hello,How are you</h1>
-  <pre>{JSON.stringify(data,null,2)}</pre>
- </div>
-     
+        <div className="temperature"> 
+         <pre>{JSON.stringify(current,null,2)}</pre>
+         <pre>{JSON.stringify(location,null,2)}</pre>
+      
+        </div>
+            
   
 
     
@@ -77,6 +75,7 @@ const{input,data,button}=this.state;
     
     
     
+   
     </div>
     )
 

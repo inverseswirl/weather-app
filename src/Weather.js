@@ -4,6 +4,7 @@ import  Neutral  from './style/neutral';
 
 import Input from '../src/components/input';
 import Result from './components/result';
+import Thermometer from './style/thermometer';
 
 const Weather=()=>{
 
@@ -14,6 +15,7 @@ const Weather=()=>{
           <Input />
          </Neutral>
          <Result/>
+         {/* <Thermometer/> */}
         </div>
     )
 }
