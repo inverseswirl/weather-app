@@ -55,15 +55,16 @@ overflow-x: scroll;
    
   
    
-///NEUTRAL SECTION............
+///NEUTRAL main SECTION............
 .neutral{
 
   height: 100vh;
   width: 100vw;
-  background-image:url('../img/question-mark.svg');
-  background-repeat:  repeat;
-  background-size: 20% 60%;
-  background-position: 100% 100%;
+  background-image:url('../img/planet.svg');
+  background-repeat: no-repeat;
+  background-size: 20% 40%;
+  background-position: 10% 80%;
+
 
 
   &-headline{
@@ -73,14 +74,13 @@ overflow-x: scroll;
     background-image: linear-gradient(45deg,$color ,salmon,$color ,salmon, $color);
     background-size: 60% 100%;
     background-position: 100% 10px;
-    margin:0;
     @include block-font();
     @include font(500, 80px);
     @include center();
     font-size:calc(80px + 1vw) !important;
     text-transform:capitalize;
-    transform: translate(0px,50px);
-    // animation: tornado 1.7s linear 1;
+    animation: moveUp 2.6s linear;
+    
   
     }
  
@@ -140,18 +140,15 @@ overflow-x: scroll;
 
 ///search input.....................
 .search{
- position: absolute;
- top:calc(340px - 4vh);
- left:calc(240px + 4vw);
- border:4px solid $color;
- border-radius: 100px;
- padding: 10px;
- width: 60%;
+
+ border-bottom:4px solid $color;
+ border-radius:90px;
+ padding: 5px;
+
 
  
      &-headline{
           color: salmon;
-          padding:0 0 9px 4px;
           @include center();
           margin: 0;
      }
@@ -268,8 +265,27 @@ overflow-x: scroll;
 }
 
 
+////weather-report...............................................
+
+.weather-report{
+    border: 1px solid black;
+}
+
+.temperature{
+ @include flex(row);
+
+    &-img{
+      width: 20%;
+      height: 20%;
+    }
 
 
+
+
+
+
+
+}
 
 /////////KEYFRAMES..........................
 
@@ -337,19 +353,19 @@ overflow-x: scroll;
 
 
 
-@keyframes  movieInside{
+@keyframes  moveUp{
     0%{
-        transform: translate(0px,50px);
-        opacity:0;
+        transform: translate(0px,100vh);
+        
     }
 
     50%{
-        opacity: 0;
-        transform: translate(0px,50px);
+        
+        transform: translate(0px,100vh) scaleX(1,1);
+        
     }
     50%{
-        opacity: 0.2;
-        transform: translate(0px,50px);
+          transform: translate(0px,100vh)  scaleX(-1,-1);
     }
 
     100%{

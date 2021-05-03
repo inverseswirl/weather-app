@@ -1,4 +1,5 @@
 import React from 'react';
+import cloudy from '../img/cloudy.svg'
 
 
 
@@ -26,10 +27,17 @@ constructor(props){
   return(
               
             
-      <div>
+      <div className="weather-report">
+          <div className="temperature">
+            <img className="temperature-img" alt="weather" src={cloudy}/>
+           <p className="temperature-actual">{this.props.temperature}</p>
+          </div>
 
-   {this.props.btn ? <div> { this.props.data && <pre>{JSON.stringify(this.props.data,2)}</pre>}</div>: null}
+          
+         <div className="location">
 
+         </div>
+      
       </div> 
               
     )

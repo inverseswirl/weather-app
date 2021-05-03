@@ -13,9 +13,10 @@ const Weather=()=>{
          <Neutral>
             
           <Input />
+          {/* <Result/> */}
          </Neutral>
-         <Result/>
-         {/* <Thermometer/> */}
+     
+
         </div>
     )
 }

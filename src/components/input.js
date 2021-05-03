@@ -9,7 +9,7 @@ class Input extends React.Component{
   constructor(props){
     super(props)
 
-    this.state={ data: '',input: "",button: false}
+    this.state={ current: "",location:"", input: ""}
     this.handleInput=this.handleInput.bind(this);
     this.api=this.api.bind(this);
 
@@ -24,9 +24,11 @@ api(searchQuery){
 
   fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
   .then((res)=>res.json())
-  .then((res)=>
-
-this.setState({data: res})
+  .then((res)=> 
+  this.setState({
+    current: res.current,
+    location:res.location
+  })
 
   
 )
@@ -35,8 +37,9 @@ this.setState({data: res})
 
 
 render(){
-const{input,data,button}=this.state;
-const{location,current}=data
+const{input,current,location}=this.state;
+ const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
+ const{name, country,localtime ,timezone_id}=location;
 
 // const{temperature}=current
 
@@ -44,47 +47,51 @@ const{location,current}=data
 
 
     return(
-      <div>
-      <h1 className="search-headline">Enter the place name here!</h1>
-    <div className="search">
+  <div>
+   
+     <div className="search">
+     <h1 className="search-headline">Enter the place name here!</h1>
+          <input className="search-query" 
+                  type="search"
+                  value={input}
+                  onChange={this.handleInput}
+                />
+
+          <button  className="search-btn"
+                   onClick={()=>this.api(input)}
+            >
+          <span><BsSearch size={32}/></span></button>
+      </div>
+          
       
     
-       <input className="search-query" 
-              type="search"
-              value={input}
-              onChange={this.handleInput}
-            />
+  
 
-       <button 
-      onClick={()=>this.api(input)}
-      className="search-btn">
-       <span><BsSearch size={32}/></span></button>
-       
-       </div>
-
-        <div className="temperature"> 
-         <pre>{JSON.stringify(current,null,2)}</pre>
-         <pre>{JSON.stringify(location,null,2)}</pre>
+   
+        <Result 
+        current={current}
+        temperature={temperature}
+        />
       
-        </div>
+     
+      
             
   
 
+   
+  </div>
+    )
+
+    
+}
+}
+
+
+
+
+
+export default Input;
     
       
     
     
-    
-   
-    </div>
-    )
-
-
-
-
-
-
-
-}
-}
-export default Input;
