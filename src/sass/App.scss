@@ -60,7 +60,7 @@ overflow-x: scroll;
 
   height: 100vh;
   width: 100vw;
-  background-image:linear-gradient(120deg,purple,transparent),url('../img/planet.svg');
+  background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   overflow-y:hidden;
@@ -70,17 +70,15 @@ overflow-x: scroll;
 
   &-headline{
     color:transparent;
-    -webkit-background-clip: text;
     background-clip: text;
-    background-image: linear-gradient(45deg,$color ,salmon,$color ,salmon, $color);
-    background-size: 60% 100%;
-    background-position: 100% 10px;
+    background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
+    background-position: 100% 100%;
     @include block-font();
-    @include font(500, 80px);
+    @include font(200, 80px);
     @include center();
     font-size:calc(80px + 1vw) !important;
     text-transform:capitalize;
-    animation: moveUp 1s linear;
+    animation: shine 1s linear;
     
   
     }
@@ -154,19 +152,18 @@ overflow-x: scroll;
        &-input{
             outline:none;
             border:none;
-            // border-bottom: 2px solid $color !important; 
             background-image: radial-gradient(circle,purple 120%,transparent);
-            // background: transparent;
-            border-radius: 23px;
+            border-radius: 100px;
             @include font(700, 2rem);
             color: rgba(18,18,18,0.8);
             @include sansserif-font();
             @include center();
             width: 420px;
             color: $color;
-            padding: 4px 4px 5px 10px;
+            padding: 4px 4px 9px 20px;
             margin-left:10px;
             animation:  wide 0.5s ease-out;
+
             &::-webkit-search-cancel-button{
                 appearance: none;
                 background-image: linear-gradient(45deg, transparent 50%,$color 50% 55.5%,transparent 55.5%),linear-gradient(135deg,transparent 50%,$color 50% 55.5%,transparent 55.5%);
@@ -343,16 +340,16 @@ overflow-x: scroll;
         opacity: 0;
     }
     15%{
-        opacity:0.1;
+        opacity:0.2;
     }
     25%{
-        opacity: 0.2;
+        opacity: 0.4;
     }
     50%{
-        opacity: 0.3;
+        opacity: 0.6;
     }
     75%{
-        opacity: 0.5;
+        opacity: 0.8;
     }
     100%{
         opacity: 1;
@@ -364,17 +361,17 @@ overflow-x: scroll;
 
 @keyframes  moveUp{
     0%{
-        transform: translate(0px,100vh);
+        transform: translate(100vw,0px);
         
     }
 
     50%{
         
-        transform: translate(0px,100vh) scaleX(1,1);
+        transform: translate(100vw,0px) ;
         
     }
     50%{
-          transform: translate(0px,100vh)  scaleX(-1,-1);
+          transform: translate(100vw,0px) ;
     }
 
     100%{
