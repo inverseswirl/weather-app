@@ -9,7 +9,7 @@ import Thermometer from './style/thermometer';
 const Weather=()=>{
 
     return(
-    <div>
+    <>
          <Neutral>
             
           <Input />
@@ -17,7 +17,7 @@ const Weather=()=>{
          </Neutral>
      
 
-        </div>
+       </>
     )
 }
 export default Weather;

@@ -50,17 +50,17 @@ const{input,current,location}=this.state;
   <div>
    
      <div className="search">
-     <h1 className="search-headline">Enter the place name here!</h1>
-          <input className="search-query" 
+          <input className="search-input" 
                   type="search"
                   value={input}
                   onChange={this.handleInput}
+                  placeholder="Enter place name here!"
                 />
-
           <button  className="search-btn"
                    onClick={()=>this.api(input)}
-            >
-          <span><BsSearch size={32}/></span></button>
+            ><span><BsSearch size={34}/></span></button>
+     
+
       </div>
           
       

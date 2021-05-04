@@ -29,7 +29,7 @@ constructor(props){
             
       <div className="weather-report">
           <div className="temperature">
-            <img className="temperature-img" alt="weather" src={cloudy}/>
+            {/* <img className="temperature-img" alt="weather" /> */}
            <p className="temperature-actual">{this.props.temperature}</p>
           </div>
 
