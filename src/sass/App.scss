@@ -41,34 +41,22 @@
   
   
   
-html,body{
-scroll-behavior: smooth;
-overflow-y:scroll;
-overflow-x: scroll;
+// html,body{
+// // scroll-behavior: smooth;
+// // overflow:hidden;
 
-}
+// }
    
 .App{
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
    
   
-   
-///NEUTRAL main SECTION............
-.neutral{
+///title................
 
-  height: 100vh;
-  width: 100vw;
-  background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
-  background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  overflow-y:hidden;
-
-
-
-
-  &-headline{
+.title{
     color:transparent;
     background-clip: text;
     background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
@@ -79,11 +67,26 @@ overflow-x: scroll;
     font-size:calc(80px + 1vw) !important;
     text-transform:capitalize;
     animation: shine 1s linear;
-    
-  
-    }
- 
+
 }
+///NEUTRAL main SECTION............
+.neutral{
+
+  height: 100vh;
+  width: 100vw;
+  background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  z-index:-1;
+ 
+
+}
+
+
+
 
 
  
@@ -101,9 +104,11 @@ overflow-x: scroll;
     background-size: 100% 100%;
     background-position: 50% 50%;
     height: 100vh;
-    max-width: 100vw;
-    position: relative;
+    width: 100vw;
+    position: absolute;
+    top:0;
     z-index: -1;
+    animation: shine 0.2s linear 1;
 
     &-sun{
         border-radius: 50%;
@@ -113,9 +118,10 @@ overflow-x: scroll;
         position: absolute;
         border: 1px solid #ffa60042;
         top: 30px;
-        left: 75px;
-        animation: appear 1.5s linear 1;
+        left: 40px;
+        animation: appear 1.2s linear 1;
         
+    
         &::after{
             content:'';
             position: absolute;
@@ -142,8 +148,6 @@ overflow-x: scroll;
 
 
 .search{
- border-radius:90px;
- padding: 5px;
  margin: 0;
 
  
@@ -185,33 +189,32 @@ overflow-x: scroll;
         }
 
         &-btn{
-            display:inline;
+            color: $color;
+            display:inline-block;
             outline:none;
-            border:none;  
+            border:none; 
             background: transparent;
             cursor: pointer;
-            margin: 3px 0 0 2px;
+             height: 60px;
+             width:60px;
+            background-image: url('../img/loupe.svg');
+            background-size: 70px 38px;
+            background-position: 80% 110%;
+            background-repeat: no-repeat;
+           
             &:active, &:focus{
                 outline:none;
                 border:none; 
-                background: transparent;
+
 
             }
-
-            & > span{
-                padding: 2px;
-                color: $color;
-              }
+            
         }
-}
-
-.temperature{
-    position: absolute;
-    top: 250px;
-    z-index: 4;
-    font-size: 1rem;
+           
 
 }
+
+
 
 
 
@@ -273,25 +276,37 @@ overflow-x: scroll;
 
 ////weather-report...............................................
 
-// .weather-report{
-//     // border: 1px solid black;
-// }
+.weather-report{
+
+    // border: 1px solid $color;
+    margin-top: 20px;
+    position: static;
+
+}
 
 .temperature{
  @include flex(row);
+ justify-content: space-around;
 
     &-img{
-      width: 20%;
-      height: 20%;
+      width: 50px;
+      height: 50px;
     }
 
-
+  &-actual{
+      @include font(500, 1.8rem);
+      @include sansserif-font();
+      color:$color;
+  }
+  
 
 
 
 
 
 }
+
+
 
 /////////KEYFRAMES..........................
 

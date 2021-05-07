@@ -1,10 +1,11 @@
 import '../src/sass/App.scss';
-import Weather from './Weather';
+import Input from './components/input';
+// import Weather from './Weather';
 
 function App() {
   return (
     <div className="App">
-     <Weather/>
+   <Input/>
     </div>
      
 

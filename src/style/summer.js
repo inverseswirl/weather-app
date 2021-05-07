@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Summer=()=>{
+const Summer=()=>{
     return(
         <div className="landscape"> 
            <div className="landscape-sun"></div>
@@ -8,3 +8,5 @@ export const Summer=()=>{
 
     )
 }
+
+export default Summer;

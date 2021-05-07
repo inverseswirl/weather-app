@@ -11,13 +11,9 @@ import cloudy from '../img/cloudy.svg'
 
 
 
-export default class Result extends React.Component{
-constructor(props){
-  super(props)
+const Result =(props)=>{
 
 
-}
- render(){
 
 
 
@@ -27,16 +23,17 @@ constructor(props){
   return(
               
             
-      <div className="weather-report">
+      <div className="">
+
           <div className="temperature">
-            {/* <img className="temperature-img" alt="weather" /> */}
-           <p className="temperature-actual">{this.props.temperature}</p>
+           <p className="temperature-actual">The current temperature is {props.temp}<sup>o</sup>C</p>
+           <img className="temperature-img" alt="weather"  src={cloudy} />
+           {/* <h2>The name is {props.name} & country is {props.country}</h2> */}
+           
           </div>
 
           
-         <div className="location">
-
-         </div>
+            <div className="location"></div>
       
       </div> 
               
@@ -44,15 +41,15 @@ constructor(props){
 
  }
   
+
+
+
+export default Result;
   
 
 
 
 
 
-
-
-
-}
 
 

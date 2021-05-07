@@ -1,6 +1,9 @@
 import React from 'react';
-import {BsSearch} from 'react-icons/bs';
+import {FaSearch} from 'react-icons/fa';
 import Result from '../components/result';
+import Title from './title';
+import Summer from '../style/summer';
+import Neutral from '../style/neutral';
 
 
 
@@ -9,8 +12,9 @@ class Input extends React.Component{
   constructor(props){
     super(props)
 
-    this.state={ current: "",location:"", input: ""}
+    this.state={ res: null,current:"",location:"", input: "",button:false}
     this.handleInput=this.handleInput.bind(this);
+    this.handleButton=this.handleButton.bind(this);
     this.api=this.api.bind(this);
 
 }
@@ -20,36 +24,49 @@ handleInput(e){
 
 }
 
+
+
+
+
 api(searchQuery){
 
-  fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
-  .then((res)=>res.json())
-  .then((res)=> 
-  this.setState({
-    current: res.current,
-    location:res.location
-  })
 
+    fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
+    .then((res)=>res.json())
+    .then((res)=> 
+    this.setState({
+      res:res,
+      current: res.current,
+      location:res.location,
+      
   
-)
+    }))
+}
 
+handleButton(){
+  const {input}=this.state
+this.setState({button: true});
+this.api(input);
 }
 
 
-render(){
-const{input,current,location}=this.state;
- const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
- const{name, country,localtime ,timezone_id}=location;
 
-// const{temperature}=current
+render(){
+const{res,current, location,input,button}=this.state;
+const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
+const{name, country,localtime ,timezone_id}=location;
+
 
 
 
 
     return(
-  <div>
+  <>
+    {temperature >24? <Summer/>: <Neutral/>}
    
-     <div className="search">
+     
+     <Title/>
+     <div className="search">                {/* search-input*/}  
           <input className="search-input" 
                   type="search"
                   value={input}
@@ -57,21 +74,37 @@ const{input,current,location}=this.state;
                   placeholder="Enter place name here!"
                 />
           <button  className="search-btn"
-                   onClick={()=>this.api(input)}
-            ><span><BsSearch size={34}/></span></button>
+                   onClick={this.handleButton}></button>
+     </div>
      
 
-      </div>
-          
+
+    {!res && button===true ? <h1>Loading</h1>: null}
+
+   <div className="weather-report">
+      {res && button?   <Result 
+        temp={temperature}
+        name={name}
+        country={country}
+      
+        />   : null}
+         <Result 
+        temp={temperature}
+        name={name}
+        country={country}
+      
+        /> 
+  
+  </div>
+       
+        
+   
+    
+
       
     
-  
-
    
-        <Result 
-        current={current}
-        temperature={temperature}
-        />
+       
       
      
       
@@ -79,7 +112,8 @@ const{input,current,location}=this.state;
   
 
    
-  </div>
+
+  </>
     )
 
     
