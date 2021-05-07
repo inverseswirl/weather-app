@@ -15,7 +15,7 @@ class Input extends React.Component{
     this.state={ res: null,current:"",location:"", input: "",button:false}
     this.handleInput=this.handleInput.bind(this);
     this.handleButton=this.handleButton.bind(this);
-    this.api=this.api.bind(this);
+    this.apiFetchWeather=this.apiFetchWeather.bind(this);
 
 }
 
@@ -28,7 +28,7 @@ handleInput(e){
 
 
 
-api(searchQuery){
+apiFetchWeather(searchQuery){
 
 
     fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
@@ -46,7 +46,7 @@ api(searchQuery){
 handleButton(){
   const {input}=this.state
 this.setState({button: true});
-this.api(input);
+this.apiFetchWeather(input);
 }
 
 
