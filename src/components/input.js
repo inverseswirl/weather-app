@@ -53,8 +53,9 @@ this.apiFetchWeather(input);
 
 render(){
 const{res,current, location,input,button}=this.state;
+
 const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
-const{name, country,localtime ,timezone_id}=location;
+// const{name, country,localtime ,timezone_id}=location;
 
 
 
@@ -79,23 +80,16 @@ const{name, country,localtime ,timezone_id}=location;
      
 
 
-    {!res && button===true ? <h1>Loading</h1>: null}
+    {!res && button===true ? <h1 className="loading">Loading</h1>: null}
 
-   <div className="weather-report">
       {res && button?   <Result 
-        temp={temperature}
-        name={name}
-        country={country}
-      
-        />   : null}
-         <Result 
-        temp={temperature}
-        name={name}
-        country={country}
-      
-        /> 
+                current={current}
+                location={location}
+                      />   : null}
+            
+   
   
-  </div>
+
        
         
    

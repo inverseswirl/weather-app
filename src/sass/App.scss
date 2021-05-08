@@ -45,12 +45,15 @@
 // // scroll-behavior: smooth;
 // // overflow:hidden;
 
+
 // }
    
 .App{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+   
+  
 }
    
   
@@ -141,7 +144,12 @@
   
    
 
-
+//////loading.............
+.loading{
+    color: $color;
+    @include font(500, 2rem);
+    @include sansserif-font();
+}
 
 ///search input.....................
 
@@ -191,15 +199,16 @@
         &-btn{
             color: $color;
             display:inline-block;
+        
             outline:none;
             border:none; 
             background: transparent;
             cursor: pointer;
-             height: 60px;
-             width:60px;
+            height: 52px;
+            width:70px;
             background-image: url('../img/loupe.svg');
-            background-size: 70px 38px;
-            background-position: 80% 110%;
+            background-size: 65px 43px;
+            background-position: 0% 160%;
             background-repeat: no-repeat;
            
             &:active, &:focus{
@@ -278,33 +287,41 @@
 
 .weather-report{
 
-    // border: 1px solid $color;
-    margin-top: 20px;
-    position: static;
-
+    // box-shadow: 0px 0.7px 6px 0.2px purple;
+    margin: 40px 5vw 0 5vw;
+   @include flex(column);
+    flex-wrap: wrap;
 }
+    
 
-.temperature{
+////result data set................................. 
+
+
+.data{
  @include flex(row);
- justify-content: space-around;
+ animation: emerge 1s linear 1;
+ perspective: 5cm;
+ 
 
     &-img{
       width: 50px;
       height: 50px;
+      
     }
 
   &-actual{
-      @include font(500, 1.8rem);
-      @include sansserif-font();
+      @include font(500, 2rem);
+      @include serif-font();
       color:$color;
+      margin-right: 30px;
   }
-  
-
-
 
 
 
 }
+
+
+
 
 
 
@@ -352,7 +369,7 @@
 
 @keyframes shine {
     0%{
-        opacity: 0;
+        opacity: 0.1;
     }
     15%{
         opacity:0.2;
@@ -374,24 +391,29 @@
 
 
 
-@keyframes  moveUp{
+@keyframes  emerge{
     0%{
-        transform: translate(100vw,0px);
+        transform: rotate3d(-15, 0, 0, -90deg);
+        opacity: 0.4;
         
     }
 
     50%{
         
-        transform: translate(100vw,0px) ;
+        transform: rotate3d(-15, 0, 0, -90deg);
+        opacity:0.7;
         
     }
     50%{
-          transform: translate(100vw,0px) ;
+       
+        transform: rotate3d(-15, 0, 0, -90deg);
+        opacity: 0.9;
     }
 
     100%{
-        opacity: 1;
-        transform: translate(0px,0px);
+
+        transform: rotate3d(0,0,0,deg);
+        opacity:1;
     }
 }
 
@@ -472,4 +494,3 @@
     }
 }  
 
-   
