@@ -1,9 +1,9 @@
 import React from 'react';
-import {FaSearch} from 'react-icons/fa';
-import Result from '../components/result';
+import Result from './result';
 import Title from './title';
 import Summer from '../style/summer';
 import Neutral from '../style/neutral';
+import Winter from '../style/winter';
 
 
 
@@ -63,7 +63,7 @@ const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
 
     return(
   <>
-    {temperature >24? <Summer/>: <Neutral/>}
+    {temperature >24? <Summer/>: <Winter/>}
    
      
      <Title/>
@@ -80,7 +80,7 @@ const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
      
 
 
-    {!res && button===true ? <h1 className="loading">Loading</h1>: null}
+    {/* {!res && button===true ? <h1 className="loading">Loading...</h1>: null} */}
 
       {res && button?   <Result 
                 current={current}

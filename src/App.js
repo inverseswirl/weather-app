@@ -1,5 +1,5 @@
 import '../src/sass/App.scss';
-import Input from './components/input';
+import Input from './components/input.js';
 // import Weather from './Weather';
 
 function App() {
