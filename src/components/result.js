@@ -12,7 +12,7 @@ import Data from '../mini-components/data';
 
 
 
-const Result =({current,location})=>{
+const Result =({current,location,weather})=>{
 
 
 
@@ -28,6 +28,7 @@ const Result =({current,location})=>{
         <Data 
         current={current}
         location={location}
+        weather={weather}
         />
         
       

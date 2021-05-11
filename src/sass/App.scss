@@ -15,6 +15,7 @@
 
 .title{
     color:transparent;
+    padding: 30px 0 0 0;
     background-clip: text;
     background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
     background-position: 100% 100%;
@@ -184,32 +185,30 @@
 
 
 .search{
- margin: 0;
-
+  padding: 40px 0 0 0;
+  @include flex(row);
  
     
-      
-       &-input{
+      &-input{
             outline:none;
-            border:none;
-            background-image: radial-gradient(circle,purple 120%,transparent);
+            background-image: radial-gradient(circle,rgb(167, 71, 167) 130%,transparent);
+            border: 2px solid $color;
             border-radius: 100px;
             @include font(700, 2rem);
             color: rgba(18,18,18,0.8);
             @include sansserif-font();
             @include center();
-            width: 420px;
+            width: 40%;     //420px
             color: $color;
-            padding: 4px 4px 9px 20px;
-            margin-left:10px;
-            animation:  wide 0.5s ease-out;
+            padding: 2px 0 5px 10px;
+            animation:  wide 0.4s linear 1;
 
             &::-webkit-search-cancel-button{
                 appearance: none;
-                background-image: linear-gradient(45deg, transparent 50%,$color 50% 55.5%,transparent 55.5%),linear-gradient(135deg,transparent 50%,$color 50% 55.5%,transparent 55.5%);
+                background-image: linear-gradient(45deg, transparent 50%,$color 50% 53.5%,transparent 53.5%),linear-gradient(135deg,transparent 50%,$color 50% 53.5%,transparent 53.5%);
                 height: 14px;
                 width: 14px;
-                padding-right:10px;
+                padding-right:30px;
               
 
             }
@@ -217,8 +216,6 @@
                color: #b68c21;
                @include font(200, 1.2rem);
                @include cursive();
-               text-align: left;
-               padding: 0 0 0 4px ;
            }
                
 
@@ -226,19 +223,18 @@
 
         &-btn{
             color: $color;
-            display:inline-block;
-        
             outline:none;
             border:none; 
             background: transparent;
             cursor: pointer;
             height: 52px;
             width:70px;
-            background-image: url('../img/loupe.svg');
-            background-size: 65px 43px;
-            background-position: 0% 160%;
+            background-image: url('../img/magnifying-glass.svg');
+            background-size: 70px 42px;
+            background-position: 0% 58%;
             background-repeat: no-repeat;
            
+        
             &:active, &:focus{
                 outline:none;
                 border:none; 
@@ -328,62 +324,76 @@
 
 .data{
 $font: 'Nunito', sans-serif;
+$animation: emerge 0.7s linear 1;
 
  @include flex(column);
  align-items: flex-start;
  justify-content: flex-start;
  background: linear-gradient( 270deg,$color ,rgb(167, 71, 167));
- width: 590px;
+ width: 650px;
+ 
  margin: 40px auto;
  border-radius: 12px;
  animation: shine 0.5s linear 1;
  position: relative;
- padding-left: 10px;
-
+ padding: 2%;
+ 
 
 
 &-temperature{
     @include font(700, 1.3rem);
     font-family: $font;
     color:$color;
-    animation: emerge 0.7s linear 1;
+    animation: $animation;
     perspective: 1rem;
+    padding-right: 20px;
+}
 
    
     
-}
 &-flex{
     @include flex(row);
    
     &-feelslike{
-        @include font(700, 1.3rem);
+        @include font(700, 1.1rem);
         font-family: $font;
         color:$color;
-        animation: emerge 0.7s linear 1;
+        animation: $animation;
         perspective: 1rem;
         padding: 0 0 10px 10px;
-    
+       
        
     }
-
+   
+    &-img{
+        padding:10px 0 0 90px;
+    }
+        
+     
+       
+        
+        
     &-name{
         padding-left:5rem;
         position:absolute;
-        right:4%;
-        bottom:22%;
-
+        right:3%;
+        top:14%;
+        @include flex(column);
+        align-items: flex-start;
+        justify-content: center;
+        width: 240px;
 
         h1{
             display:inline-block;
             margin:0;
             font-family: 'Dela Gothic One', cursive;
-            @include font(900,3.2rem);
+            @include font(500,2rem);
             background-clip: text;
             color: transparent;
             background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
             background-position: 100% 50%;
             background-size: contain;
-            animation: emerge 0.7s linear 1;
+            animation:$animation;
             perspective: 1rem;
 
 
@@ -396,13 +406,31 @@ $font: 'Nunito', sans-serif;
             color: transparent;
             background-image: url('https://cdn.pixabay.com/photo/2016/04/26/22/57/texture-1355534_1280.jpg');
             background-position: center;
-            background-size: cover;
-            @include font(500,2rem);
+            background-size: cover;  
+            animation: $animation;
+            @include font(500,1.2rem);
+            font-family: $font;
         }
     }
 }
 
 
+&-other{
+    @include font(700, 0.9rem);
+    font-family: $font;
+    color:purple;
+    animation:$animation;
+    padding:2px 0 0 12px;
+}
+
+&-time{
+    @include font(500, 12px);
+    font-family: $font;
+    color:purple;
+    // animation:$animation;
+    padding:0px 0 0px 270px;
+    margin-bottom: -27px;
+}
 }
 
 
@@ -418,23 +446,22 @@ $font: 'Nunito', sans-serif;
 
 @keyframes rise {
     0%{
-        height: 90px;
+      transform: translate(0,10px);
+      opacity:0;
+      
     }
     25%{
-        height: 120px;
+        transform: translate(0,8px);
+        opacity:0;
     }
-    55%{
-        height:  130px;
+    50%{
+        transform: translate(0,6px);
     }
     75%{
-        height:  170px;
+        transform: translate(0,4px);
     }
-    90%{
-        height:  190px;
-    }
-    
     100%{
-        height: 220px;
+        transform: translate(0,0px);
     }
 }
 
@@ -582,25 +609,19 @@ $font: 'Nunito', sans-serif;
 
 @keyframes wide{
     0%{
-        width: 50px
-    }
-    15%{
-        width: 100px;
+        width: 8%;
     }
     25%{
-        width: 190px;
+        width: 16%;
     }
     50%{
-        width: 240px;
-    }
-    65%{
-        width: 290px;
+        width: 24%;
     }
     75%{
-        width: 370px;
+        width: 36%;
     }
     100%{
-        width: 420px;
+        width: 40%;
     }
 }  
 

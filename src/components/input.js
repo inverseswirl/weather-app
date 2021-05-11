@@ -12,7 +12,7 @@ class Input extends React.Component{
   constructor(props){
     super(props)
 
-    this.state={ res: null,current:"",location:"", input: "",button:false}
+    this.state={ res: null,current:"",location:"", input: "", weather:"", button:false}
     this.handleInput=this.handleInput.bind(this);
     this.handleButton=this.handleButton.bind(this);
     this.apiFetchWeather=this.apiFetchWeather.bind(this);
@@ -38,7 +38,7 @@ apiFetchWeather(searchQuery){
       res:res,
       current: res.current,
       location:res.location,
-      
+      weather: res.current.weather_descriptions[0]
   
     }))
 }
@@ -52,10 +52,9 @@ this.apiFetchWeather(input);
 
 
 render(){
-const{res,current, location,input,button}=this.state;
+const{res,current, location, weather,input,button}=this.state;
 
-const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
-// const{name, country,localtime ,timezone_id}=location;
+const{temperature}=current;
 
 
 
@@ -63,8 +62,9 @@ const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
 
     return(
   <>
-    {temperature >24? <Summer/>: <Neutral/>}
-    {temperature <18? <Winter/>: <Neutral/>}
+    {temperature >=24 ? <Summer/>: <Neutral/>}
+    {temperature <=23 && temperature >0? <Neutral/>:null}
+    {temperature<=0? <Winter/>: null}
    
      
      <Title/>
@@ -82,17 +82,19 @@ const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
 
 
     {!res && button===true ? <h1 className="loading">Loading...</h1>: null}
-{/* 
+
       {res && button?   <Result 
                 current={current}
                 location={location}
-                      />   : null} */}
+                weather={weather}
+                      />   : null}
             
-   
+{/*    
             <Result 
                 current={current}
                 location={location}
-                />
+                weather={weather}
+                /> */}
 
        
         
