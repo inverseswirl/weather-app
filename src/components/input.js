@@ -63,7 +63,8 @@ const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
 
     return(
   <>
-    {temperature >24? <Summer/>: <Winter/>}
+    {temperature >24? <Summer/>: <Neutral/>}
+    {temperature <18? <Winter/>: <Neutral/>}
    
      
      <Title/>
@@ -80,15 +81,18 @@ const{temperature,feelsike,precip,weather_descriptions,uv_index }=current;
      
 
 
-    {/* {!res && button===true ? <h1 className="loading">Loading...</h1>: null} */}
-
+    {!res && button===true ? <h1 className="loading">Loading...</h1>: null}
+{/* 
       {res && button?   <Result 
                 current={current}
                 location={location}
-                      />   : null}
+                      />   : null} */}
             
    
-  
+            <Result 
+                current={current}
+                location={location}
+                />
 
        
         

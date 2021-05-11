@@ -1,60 +1,14 @@
 @import './variables';
 
-///font mixins......
-@mixin block-font(){
-    font-family: 'Monoton', cursive;
-}
 
-
-@mixin   serif-font(){
-    font-family: 'EB Garamond', serif;
-}
-@mixin   sansserif-font(){
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-   
-}
-@mixin   cursive(){
- font-family: 'Zen Dots', cursive;
-   
-}
-
-
-@mixin font($font-weight,$font-size){
-    font-weight: $font-weight;
-    font-size: $font-size;
-} 
   
-  //miscellaneous mixins
-  
-@mixin flex($direction){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: center;
-    align-items: center;
-}
-
-
-@mixin center(){
-    text-align: center;
-}
-  
-  
-  
-  
-// html,body{
-// // scroll-behavior: smooth;
-// // overflow:hidden;
-
-
-// }
-   
 .App{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+}
    
   
-}
    
   
 ///title................
@@ -67,9 +21,18 @@
     @include block-font();
     @include font(200, 80px);
     @include center();
-    font-size:calc(80px + 1vw) !important;
+    font-size:calc(80px + 1vw);
     text-transform:capitalize;
     animation: shine 1s linear;
+    
+    @include laptopLarge{
+        font-size:calc(3rem + 2vw);
+    }
+    @include laptop{
+        font-size:calc(2.3rem + 2vw);
+    }
+    
+
 
 }
 ///NEUTRAL main SECTION............
@@ -95,7 +58,7 @@
  ///WINTER section.......
 
 .winter{
-    background-image:url('https://images.pexels.com/photos/3462588/pexels-photo-3462588.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500');
+    background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100vh;
@@ -104,15 +67,56 @@
     top:0;
     z-index: -1;
 
-    &-snowflake{
+    &-snowflake1{
         background-image: url('../img/snowflake.svg');
         background-size: 100% 100%;
-        height: 100px;
-        width:100px;
+        height: 40px;
+        width:60px;
         position: absolute;
-        animation: appear 1s linear 1;
-
+        left: 10%;
+        animation: fall 6.5s linear infinite;
     }
+    &-snowflake2{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height: 40px;
+        width:60px;
+        position: absolute;
+        top: 12%;
+        left: 16%;
+        animation: fall 7s linear infinite;
+    }
+    &-snowflake3{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height: 40px;
+        width:60px;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        animation: fall 4.9s linear infinite;
+    }
+    &-snowflake4{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height:40px;
+        width:60px;
+        position: absolute;
+        top: 14%;
+        left: 63%;
+        animation: fall 4s linear infinite;
+    }
+    &-snowflake5{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height: 40px;
+        width:60px;
+        position: absolute;
+        top: 0%;
+        left: 82%;
+        animation: fall 5.5s linear infinite;
+    }
+
 
 }
 
@@ -309,43 +313,103 @@
 
 ////weather-report...............................................
 
-.weather-report{
+// .weather-report{
 
-    // box-shadow: 0px 0.7px 6px 0.2px purple;
-    margin: 40px 5vw 0 5vw;
-   @include flex(column);
-    flex-wrap: wrap;
-}
+//     // box-shadow: 0px 0.7px 6px 0.2px purple;
+//     // margin: 40px 5vw 0 5vw;
+
+   
+// }
+
     
 
 ////result data set................................. 
 
 
 .data{
- @include flex(row);
- animation: emerge 1s linear 1;
- perspective: 5cm;
- 
+$font: 'Nunito', sans-serif;
 
-    &-img{
-      width: 50px;
-      height: 50px;
-      
+ @include flex(column);
+ align-items: flex-start;
+ justify-content: flex-start;
+ background: linear-gradient( 270deg,$color ,rgb(167, 71, 167));
+ width: 590px;
+ margin: 40px auto;
+ border-radius: 12px;
+ animation: shine 0.5s linear 1;
+ position: relative;
+ padding-left: 10px;
+
+
+
+&-temperature{
+    @include font(700, 1.3rem);
+    font-family: $font;
+    color:$color;
+    animation: emerge 0.7s linear 1;
+    perspective: 1rem;
+
+   
+    
+}
+&-flex{
+    @include flex(row);
+   
+    &-feelslike{
+        @include font(700, 1.3rem);
+        font-family: $font;
+        color:$color;
+        animation: emerge 0.7s linear 1;
+        perspective: 1rem;
+        padding: 0 0 10px 10px;
+    
+       
     }
 
-  &-actual{
-      @include font(500, 2rem);
-      @include serif-font();
-      color:$color;
-      margin-right: 30px;
-  }
+    &-name{
+        padding-left:5rem;
+        position:absolute;
+        right:4%;
+        bottom:22%;
 
+
+        h1{
+            display:inline-block;
+            margin:0;
+            font-family: 'Dela Gothic One', cursive;
+            @include font(900,3.2rem);
+            background-clip: text;
+            color: transparent;
+            background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
+            background-position: 100% 50%;
+            background-size: contain;
+            animation: emerge 0.7s linear 1;
+            perspective: 1rem;
+
+
+            }
+       h2{
+            color: purple;
+            margin:0;
+            @include cursive();
+            background-clip: text;
+            color: transparent;
+            background-image: url('https://cdn.pixabay.com/photo/2016/04/26/22/57/texture-1355534_1280.jpg');
+            background-position: center;
+            background-size: cover;
+            @include font(500,2rem);
+        }
+    }
+}
 
 
 }
 
 
 
+
+
+    
 
 
 
@@ -386,19 +450,36 @@
 
 @keyframes fall{
     0%{
-        transform: translate(-200px,180px);
-        transform: rotate();
+        transform: translate(0,10vh) rotate(2deg);
+     
+  
+    }
+    25%{
+        transform: translate(0,22vh) rotate(90deg);
+     
+  
+    }
+    50%{
+        transform: translate(0,32vh) rotate(180deg);
+    
+  
+    }
+    75%{
+        transform: translate(0,45vh) rotate(270deg);
+
   
     }
     100%{
-        transform: translate(0px,0px);
+        transform: translate(0px,56vh) rotate(360deg);
+        opacity:0;
+     
     }
 }
         
 
 @keyframes shine {
     0%{
-        opacity: 0.1;
+        opacity: 0;
     }
     15%{
         opacity:0.2;

@@ -20,18 +20,21 @@ const Result =({current,location})=>{
 
 
 
-
   return(
               
    
     <div className="weather-report">
         
-        <Data current={current}  location={location}/>
-        {/* <Data />
-        <Data /> */}
+        <Data 
+        current={current}
+        location={location}
+        />
+        
+      
+        
+      </div> 
       
 
-      </div> 
 
           
       
