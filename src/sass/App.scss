@@ -140,7 +140,6 @@
     position: absolute;
     top:0;
     z-index: -1;
-    animation: shine 0.2s linear 1;
 
     &-sun{
         border-radius: 50%;
@@ -187,7 +186,7 @@
 .search{
   padding: 40px 0 0 0;
   @include flex(row);
- 
+  position:relative;
     
       &-input{
             outline:none;
@@ -202,6 +201,7 @@
             color: $color;
             padding: 2px 0 5px 10px;
             animation:  wide 0.4s linear 1;
+          
 
             &::-webkit-search-cancel-button{
                 appearance: none;
@@ -217,9 +217,11 @@
                @include font(200, 1.2rem);
                @include cursive();
            }
-               
+        
+          
 
         }
+       
 
         &-btn{
             color: $color;
@@ -251,61 +253,6 @@
 
 
 
-////therma.....
-
-.thermometer{
-    height:50vh;
-    width: 25vw;
-    position:relative;
-    top: 100px;
-    left: 40px;
-    border: 1px solid black;
-
-&-base{
-    height: 60px;
-    width:60px;
-    background-color: salmon;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0%;
-    left:38%;
-    border: 12px solid #bbdeec;
-    z-index:1;
-
-
-   
-}
-
-&-base::after{     //makes border
-    content:'';
-    border: 12px solid #bbdeec;
-    border-top-left-radius: 23px;
-    border-top-right-radius: 23px;
-    position:absolute;
-    height: 250px;
-    width:25px;
-    bottom: 98%;
-    left:12%;
-}
-&-base::before{   //makes inner tube 
-    content:'';
-     background-image: linear-gradient(90deg,#bbdeec 10%,salmon 10% 90%,#bbdeec 90% );
-     border-radius: 23px;
-     height: 270px;
-     width:28px;
-     position: absolute;
-     bottom: 98%;
-     left:30%;
-     z-index:-1;
-
-     
-    
-}
-
-
-
-}
-
 
 ////weather-report...............................................
 
@@ -323,7 +270,7 @@
 
 
 .data{
-    
+
 $font: 'Nunito', sans-serif;
 $animation: emerge 0.7s linear 1;
 
@@ -333,7 +280,7 @@ $animation: emerge 0.7s linear 1;
  background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
  background-size:  100% 100%,172% 169%,cover;
  background-repeat: no-repeat;
- width: 640px;
+ width: 590px;
  margin: 40px auto;
  border-radius: 12px;
  animation: shine 0.5s linear 1;
@@ -343,7 +290,7 @@ $animation: emerge 0.7s linear 1;
 
 
 &-temperature{
-    @include font(700, 1.3rem);
+    @include font(700, 1.2rem);
     font-family: $font;
     color:$color;
     animation: $animation;
@@ -366,14 +313,6 @@ $animation: emerge 0.7s linear 1;
        
     }
    
-        
-    .data-other{
-        @include font(700, 1.1rem);
-        font-family: $font;
-        color:purple;
-        animation:$animation;
-        // padding:0px 0 0 30px;
-    }
        
         
         
@@ -424,11 +363,10 @@ $animation: emerge 0.7s linear 1;
    
 
     &-other{
-        @include font(700, 1rem);
+        @include font(700, 1.2rem);
         font-family: $font;
         color:$color;
         animation:$animation;
-        // padding:0px 0 0 20px;
     }
 
 
@@ -483,7 +421,19 @@ $animation: emerge 0.7s linear 1;
 
 
 
-
+@keyframes appear {
+    0%{
+       transform: translate(-80px,100px); 
+       opacity:0.5;
+    }
+    50%{
+        transform: translate(-50px,50px); 
+    }
+   100%{
+    transform: translate(0px,0px); 
+    }
+    
+}
 
 
 
@@ -521,7 +471,7 @@ $animation: emerge 0.7s linear 1;
 
 @keyframes shine {
     0%{
-        opacity: 0;
+        opacity: 0.1;
     }
     15%{
         opacity:0.2;

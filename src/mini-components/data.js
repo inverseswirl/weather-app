@@ -12,7 +12,7 @@ import {FaRegSmileBeam} from 'react-icons/fa';
 const Data=({current,location,weather})=>{
    
     const{temperature,feelslike,weather_descriptions,precip}=current;
-    const{name,country,localtime}=location;
+    const{name,country}=location;
     
    
    return(
@@ -56,8 +56,8 @@ const Data=({current,location,weather})=>{
             {weather==="Haze" ?    <RiHazeLine color="rgb(100, 93, 93)" size={36}  style={{paddingLeft:'10px',marginBottom:'-4px'}}/>: null}
             {weather==="Light Rain" ?    <GiRaining color="rgb(105, 93, 93)" size={38}  style={{paddingLeft:'10px',marginBottom:'-5px'}}/>  : null}
             {weather==="Clear" ?   <FaRegSmileBeam color="lightyellow" size={36} style={{paddingLeft:'10px',marginBottom:'-5px'}} />  : null} 
-            {weather==="Smoke" ?   <WiDust color="lightyellow" size={36} style={{paddingLeft:'10px',marginBottom:'-5px'}} />  : null} 
-            { temperature<=0 ?  <GiSnowing color="#DADADA" size={40}/> : null}
+            {weather==="Smoke" ?   <WiDust color="lightyellow" size={45} style={{paddingLeft:'5px',marginBottom:'-13px'}} />  : null} 
+            { temperature<=0 ?  <GiSnowing color="#DADADA" style={{paddingLeft:'5px',marginBottom:'-10px'}} size={40}/> : null}
          
             </p>  
            
