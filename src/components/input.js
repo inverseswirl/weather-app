@@ -12,7 +12,14 @@ class Input extends React.Component{
   constructor(props){
     super(props)
 
-    this.state={ res: null,current:"",location:"", input: "", weather:"", button:false}
+    this.state={ 
+      res: null,
+      current:"",
+      location:"", 
+      input: "", 
+      weather:"", 
+      button:false
+    }
     this.handleInput=this.handleInput.bind(this);
     this.handleButton=this.handleButton.bind(this);
     this.apiFetchWeather=this.apiFetchWeather.bind(this);
@@ -45,8 +52,8 @@ apiFetchWeather(searchQuery){
 
 handleButton(){
   const {input}=this.state
-this.setState({button: true});
-this.apiFetchWeather(input);
+  this.setState({button: true});
+  this.apiFetchWeather(input);
 }
 
 
@@ -89,12 +96,12 @@ const{temperature}=current;
                 weather={weather}
                       />   : null}
             
-{/*    
-            <Result 
+   
+           {/* <Result 
                 current={current}
                 location={location}
                 weather={weather}
-                /> */}
+                />  */}
 
        
         

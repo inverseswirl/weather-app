@@ -323,20 +323,22 @@
 
 
 .data{
+    
 $font: 'Nunito', sans-serif;
 $animation: emerge 0.7s linear 1;
 
- @include flex(column);
+@include flex(column);
  align-items: flex-start;
  justify-content: flex-start;
- background: linear-gradient( 270deg,$color ,rgb(167, 71, 167));
- width: 650px;
- 
+ background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
+ background-size:  100% 100%,172% 169%,cover;
+ background-repeat: no-repeat;
+ width: 640px;
  margin: 40px auto;
  border-radius: 12px;
  animation: shine 0.5s linear 1;
  position: relative;
- padding: 2%;
+ padding: 3% 2% 2% 2%;
  
 
 
@@ -346,7 +348,6 @@ $animation: emerge 0.7s linear 1;
     color:$color;
     animation: $animation;
     perspective: 1rem;
-    padding-right: 20px;
 }
 
    
@@ -355,46 +356,50 @@ $animation: emerge 0.7s linear 1;
     @include flex(row);
    
     &-feelslike{
-        @include font(700, 1.1rem);
+        @include font(700, 1.2rem);
         font-family: $font;
         color:$color;
         animation: $animation;
         perspective: 1rem;
-        padding: 0 0 10px 10px;
+        padding: 0 0 6px 0;
        
        
     }
    
-    &-img{
-        padding:10px 0 0 90px;
-    }
         
-     
+    .data-other{
+        @include font(700, 1.1rem);
+        font-family: $font;
+        color:purple;
+        animation:$animation;
+        // padding:0px 0 0 30px;
+    }
        
         
         
-    &-name{
+    &-location{
         padding-left:5rem;
         position:absolute;
-        right:3%;
-        top:14%;
+        right:4%;
+        top:22%;
         @include flex(column);
         align-items: flex-start;
-        justify-content: center;
-        width: 240px;
+        width: 260px;
+        animation:$animation;
+        perspective: 1rem;
 
         h1{
             display:inline-block;
             margin:0;
             font-family: 'Dela Gothic One', cursive;
-            @include font(500,2rem);
+            @include font(500,1.9rem);
             background-clip: text;
             color: transparent;
             background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
             background-position: 100% 50%;
             background-size: contain;
-            animation:$animation;
-            perspective: 1rem;
+           
+         
 
 
             }
@@ -407,7 +412,6 @@ $animation: emerge 0.7s linear 1;
             background-image: url('https://cdn.pixabay.com/photo/2016/04/26/22/57/texture-1355534_1280.jpg');
             background-position: center;
             background-size: cover;  
-            animation: $animation;
             @include font(500,1.2rem);
             font-family: $font;
         }
@@ -415,22 +419,33 @@ $animation: emerge 0.7s linear 1;
 }
 
 
-&-other{
-    @include font(700, 0.9rem);
-    font-family: $font;
-    color:purple;
-    animation:$animation;
-    padding:2px 0 0 12px;
+
+
+   
+
+    &-other{
+        @include font(700, 1rem);
+        font-family: $font;
+        color:$color;
+        animation:$animation;
+        // padding:0px 0 0 20px;
+    }
+
+
+&-weathertype{
+ 
+    &-weather{
+        padding-top:55px;
+        color: purple !important;
+        @include font(500, 1.3rem);
+        font-family: $font;
+        animation:$animation;
+        
+    }
 }
 
-&-time{
-    @include font(500, 12px);
-    font-family: $font;
-    color:purple;
-    // animation:$animation;
-    padding:0px 0 0px 270px;
-    margin-bottom: -27px;
-}
+
+
 }
 
 
