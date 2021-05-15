@@ -140,6 +140,7 @@
     position: absolute;
     top:0;
     z-index: -1;
+    animation: shine 0.1s linear 1;
 
     &-sun{
         border-radius: 50%;
@@ -184,7 +185,7 @@
 
 
 .search{
-  padding: 40px 0 0 0;
+  padding: 80px 0 0 0;
   @include flex(row);
   position:relative;
     
@@ -280,7 +281,7 @@ $animation: emerge 0.7s linear 1;
  background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
  background-size:  100% 100%,172% 169%,cover;
  background-repeat: no-repeat;
- width: 590px;
+ width: 620px;
  margin: 40px auto;
  border-radius: 12px;
  animation: shine 0.5s linear 1;
@@ -317,31 +318,50 @@ $animation: emerge 0.7s linear 1;
         
         
     &-location{
-        padding-left:5rem;
         position:absolute;
         right:4%;
-        top:22%;
+        top:10%;
         @include flex(column);
-        align-items: flex-start;
-        width: 260px;
+        align-items: center;
+        width: 45%;
         animation:$animation;
         perspective: 1rem;
+      
+       
+        // box-shadow: 1px 1px 5px 1px  rgb(255, 198, 53);
+        border-radius: 12px;
+        text-align: center;
+        padding:1px;
 
         h1{
             display:inline-block;
             margin:0;
             font-family: 'Dela Gothic One', cursive;
-            @include font(500,1.9rem);
+            @include font(500,1.8rem);
             background-clip: text;
             color: transparent;
             background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
             background-position: 100% 50%;
             background-size: contain;
+            // padding-left:2px;
            
-         
-
+           
+        
 
             }
+
+        .pin-shadow{
+            background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
+            position: absolute;
+            background-size: 134% 20%;
+            background-position: 3px 94%;
+            background-repeat: no-repeat;
+            top:0;
+            left:15%;
+        }
+            
+            
+   
        h2{
             color: purple;
             margin:0;
@@ -353,6 +373,7 @@ $animation: emerge 0.7s linear 1;
             background-size: cover;  
             @include font(500,1.2rem);
             font-family: $font;
+            
         }
     }
 }
@@ -372,6 +393,7 @@ $animation: emerge 0.7s linear 1;
 
 &-weathertype{
  
+
     &-weather{
         padding-top:55px;
         color: purple !important;
@@ -590,3 +612,28 @@ $animation: emerge 0.7s linear 1;
     }
 }  
 
+@keyframes pin{
+    0%{
+        transform: translate(0,-6px);
+        
+    }
+    25%{
+        transform: translate(0,-12px);
+        
+    }
+  
+    50%{
+        transform: translate(0,0px);
+
+    }
+    75%{
+        transform: translate(0,-7px);
+    }
+    85%{
+        transform: translate(0,-3.5px);
+
+    }
+    100%{
+        transform: rotate3d(0,0px); 
+    }
+}

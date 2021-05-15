@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Data from '../mini-components/data';
+import Data from './data';
 
 
 
@@ -12,7 +12,7 @@ import Data from '../mini-components/data';
 
 
 
-const Result =({current,location,weather})=>{
+const Result =({current,location})=>{
 
 
 
@@ -28,7 +28,7 @@ const Result =({current,location,weather})=>{
         <Data 
         current={current}
         location={location}
-        weather={weather}
+
         />
         
       

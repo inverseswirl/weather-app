@@ -7,18 +7,19 @@ import Winter from '../style/winter';
 
 
 
+
 class Input extends React.Component{
 
   constructor(props){
     super(props)
 
     this.state={ 
-      res: null,
+      res: "",
       current:"",
       location:"", 
       input: "", 
-      weather:"",
-      button:false
+      button:false,
+      errorMsg:""
     }
     this.handleInput=this.handleInput.bind(this);
     this.handleButton=this.handleButton.bind(this);
@@ -32,24 +33,6 @@ handleInput(e){
 }
 
 
-
-
-
-fetchCurrentWeather(searchQuery){
-
-
-    fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
-    .then((res)=>res.json())
-    .then((res)=> 
-    this.setState({
-      res:res,
-      current: res.current,
-      location:res.location,
-      weather: res.current.weather_descriptions[0]
-  
-    }))
-}
-
 handleButton(){
   const {input}=this.state
   this.setState({button: true});
@@ -57,21 +40,38 @@ handleButton(){
 }
 
 
+fetchCurrentWeather(searchQuery){
+
+
+   fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
+    .then((res)=>res.json())
+    .then((res)=> 
+    this.setState({
+      res:res,
+      current: res.current,
+      location:res.location
+   
+  
+    }))
+    .catch((error)=>{
+      this.setState({ errorMsg: error})
+    })
+
+
+}
+
+
+
+
 
 render(){
-const{res,current, location, weather,input,button}=this.state;
-console.log(current);
-const{temperature}=current;
-
-
-
-
+const{res,current, location, temperature,input,button,errorMsg}=this.state;
 
     return(
   <>
-    {temperature >=24 ? <Summer/>: <Neutral/>}
-    {temperature <=23 && temperature >0? <Neutral/>:null}
-    {temperature<=0? <Winter/>: null}
+    {res && res.current.temperature>=24 ? <Summer/>: <Neutral/>}
+    {res && res.current.temperature <=23 && res.current.temperature >0? <Neutral/>:null}
+    {res && res.current.temperature <=0? <Winter/>: null} 
    
      
      <Title/>
@@ -84,28 +84,28 @@ const{temperature}=current;
                 />
           <button  className="search-btn"
                    onClick={this.handleButton}></button>
+                   {errorMsg}
      </div>
      
 
 
     {!res && button===true ? <h1 className="loading">Loading...</h1>: null}
 
-      {res && button?   <Result 
+      {/* {res && button?   <Result 
                 current={current}
                 location={location}
-                weather={weather}
-                      />   : null}
+          
+                      />   : null} */}
             
    
            {/* <Result 
                 current={current}
                 location={location}
-                weather={weather}
-                />  */}
+                
+                />   */}
 
 
 
-      {/* {res && button ? <pre>{JSON.stringify(forecast,2)}</pre>: null} */}
         
    
     
