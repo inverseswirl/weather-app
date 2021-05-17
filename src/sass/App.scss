@@ -326,9 +326,6 @@ $animation: emerge 0.7s linear 1;
         width: 45%;
         animation:$animation;
         perspective: 1rem;
-      
-       
-        // box-shadow: 1px 1px 5px 1px  rgb(255, 198, 53);
         border-radius: 12px;
         text-align: center;
         padding:1px;
@@ -336,14 +333,13 @@ $animation: emerge 0.7s linear 1;
         h1{
             display:inline-block;
             margin:0;
-            font-family: 'Dela Gothic One', cursive;
-            @include font(500,1.8rem);
+            font-family: $font;
+            @include font(500,1.4rem);
             background-clip: text;
             color: transparent;
             background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
             background-position: 100% 50%;
             background-size: contain;
-            // padding-left:2px;
            
            
         
@@ -357,7 +353,7 @@ $animation: emerge 0.7s linear 1;
             background-position: 3px 94%;
             background-repeat: no-repeat;
             top:0;
-            left:15%;
+            left:2%;
         }
             
             
@@ -371,7 +367,7 @@ $animation: emerge 0.7s linear 1;
             background-image: url('https://cdn.pixabay.com/photo/2016/04/26/22/57/texture-1355534_1280.jpg');
             background-position: center;
             background-size: cover;  
-            @include font(500,1.2rem);
+            @include font(500,1.3rem);
             font-family: $font;
             
         }
@@ -408,6 +404,36 @@ $animation: emerge 0.7s linear 1;
 
 }
 
+
+//error..............
+
+.error{
+    @include font(200,10px);
+    @include sansserif-font();
+    color:$color;
+    text-align: center;
+    padding:7px 0 6px 0;
+    background-color: rgb(214, 104, 104);
+    width:29%;
+    margin: 0 auto;
+    margin-top: 8px;
+    margin-left: 33%;
+    border-radius: 12px;
+    animation: emerge 0.5s linear 1;
+    letter-spacing: 0.4px;
+    position: relative;
+
+
+    &::after{
+        background-image: linear-gradient(135deg,transparent 50%,rgb(214, 104, 104) 50.14%);
+        content: '';
+        position: absolute;
+        left:4%;
+        top:-14px;
+        height: 17px;
+        width:16px;
+    }
+}
 
 
 

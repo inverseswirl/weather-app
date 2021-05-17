@@ -4,6 +4,7 @@ import Title from './title';
 import Summer from '../style/summer';
 import Neutral from '../style/neutral';
 import Winter from '../style/winter';
+import Error from './error';
 
 
 
@@ -49,26 +50,31 @@ fetchCurrentWeather(searchQuery){
     this.setState({
       res:res,
       current: res.current,
-      location:res.location
+      location:res.location,
+      errorMsg: res.error
    
   
     }))
-    .catch((error)=>{
-      this.setState({ errorMsg: error})
-    })
+   
 
 
 }
 
 
 
-
-
 render(){
-const{res,current, location, temperature,input,button,errorMsg}=this.state;
 
-    return(
+const{res,current, location,input,errorMsg,button}=this.state;
+console.log(errorMsg);
+
+if(errorMsg){
+  return <Error />
+}
+
+
+  return(
   <>
+
     {res && res.current.temperature>=24 ? <Summer/>: <Neutral/>}
     {res && res.current.temperature <=23 && res.current.temperature >0? <Neutral/>:null}
     {res && res.current.temperature <=0? <Winter/>: null} 
@@ -84,19 +90,21 @@ const{res,current, location, temperature,input,button,errorMsg}=this.state;
                 />
           <button  className="search-btn"
                    onClick={this.handleButton}></button>
-                   {errorMsg}
      </div>
+                  
      
 
 
     {!res && button===true ? <h1 className="loading">Loading...</h1>: null}
 
-      {/* {res && button?   <Result 
+  
+
+      {res && button?   <Result 
                 current={current}
                 location={location}
           
-                      />   : null} */}
-            
+                      />   : null}
+                    
    
            {/* <Result 
                 current={current}
