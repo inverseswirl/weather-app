@@ -327,17 +327,17 @@ $animation: emerge 0.7s linear 1;
         animation:$animation;
         perspective: 1rem;
         border-radius: 12px;
-        text-align: center;
+        text-align: right;
         padding:1px;
 
         h1{
             display:inline-block;
             margin:0;
-            font-family: $font;
-            @include font(500,1.4rem);
+            font-family: 'Dela Gothic One', cursive;
+            @include font(500,1.5rem);
             background-clip: text;
             color: transparent;
-            background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
+            background-image: url('../img/milky-way.jpeg');
             background-position: 100% 50%;
             background-size: contain;
            
@@ -353,7 +353,7 @@ $animation: emerge 0.7s linear 1;
             background-position: 3px 94%;
             background-repeat: no-repeat;
             top:0;
-            left:2%;
+            left:8%;
         }
             
             
@@ -367,7 +367,7 @@ $animation: emerge 0.7s linear 1;
             background-image: url('https://cdn.pixabay.com/photo/2016/04/26/22/57/texture-1355534_1280.jpg');
             background-position: center;
             background-size: cover;  
-            @include font(500,1.3rem);
+            @include font(500,1.25rem);
             font-family: $font;
             
         }
