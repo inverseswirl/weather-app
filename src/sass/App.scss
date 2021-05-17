@@ -287,7 +287,7 @@ $animation: emerge 0.7s linear 1;
  animation: shine 0.5s linear 1;
  position: relative;
  padding: 3% 2% 2% 2%;
- 
+
 
 
 &-temperature{
@@ -295,7 +295,7 @@ $animation: emerge 0.7s linear 1;
     font-family: $font;
     color:$color;
     animation: $animation;
-    perspective: 1rem;
+   
 }
 
    
@@ -308,7 +308,6 @@ $animation: emerge 0.7s linear 1;
         font-family: $font;
         color:$color;
         animation: $animation;
-        perspective: 1rem;
         padding: 0 0 6px 0;
        
        
@@ -325,7 +324,6 @@ $animation: emerge 0.7s linear 1;
         align-items: center;
         width: 45%;
         animation:$animation;
-        perspective: 1rem;
         border-radius: 12px;
         text-align: right;
         padding:1px;
@@ -344,7 +342,7 @@ $animation: emerge 0.7s linear 1;
            
         
 
-            }
+        }
 
         .pin-shadow{
             background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
@@ -353,7 +351,10 @@ $animation: emerge 0.7s linear 1;
             background-position: 3px 94%;
             background-repeat: no-repeat;
             top:0;
-            left:8%;
+            left:7%;
+            perspective: 40rem;
+          
+
         }
             
             
@@ -543,26 +544,26 @@ $animation: emerge 0.7s linear 1;
 
 @keyframes  emerge{
     0%{
-        transform: rotate3d(-15, 0, 0, -90deg);
-        opacity: 0.4;
+        transform: rotateX(-120deg);
+        opacity: 0.2;
         
     }
 
     50%{
         
-        transform: rotate3d(-15, 0, 0, -90deg);
-        opacity:0.7;
+        transform: rotateX(-80deg);
+        opacity:0.6;
         
     }
     50%{
        
-        transform: rotate3d(-15, 0, 0, -90deg);
-        opacity: 0.9;
+        transform: rotateX(-40deg);
+        opacity: 0.8;
     }
 
     100%{
 
-        transform: rotate3d(0,0,0,deg);
+        transform: rotateX(0deg);
         opacity:1;
     }
 }
@@ -640,26 +641,26 @@ $animation: emerge 0.7s linear 1;
 
 @keyframes pin{
     0%{
-        transform: translate(0,-6px);
+        transform: translate(0,-6px)  rotateY(250deg);
         
     }
     25%{
-        transform: translate(0,-12px);
+        transform: translate(0,-12px)  rotateY(190deg);
         
     }
   
     50%{
-        transform: translate(0,0px);
+        transform: translate(0,0px) rotateY(120deg);
 
     }
     75%{
-        transform: translate(0,-7px);
+        transform: translate(0,-7px) rotateY(85deg);
     }
-    85%{
-        transform: translate(0,-3.5px);
+    90%{
+        transform: translate(0,-3.5px) rotateY(25deg);
 
     }
     100%{
-        transform: rotate3d(0,0px); 
+        transform: rotate3d(0,0px) rotateY(0);
     }
 }

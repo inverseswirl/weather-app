@@ -11,7 +11,7 @@ const Error =()=>{
      <div>
        <Neutral/>
        <Title/>
-        <div className="search">             
+        <div className="search" style={{animation:'none'}}>             
           <input className="search-input" 
                   type="search"
                   placeholder="Enter place name here!"

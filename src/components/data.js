@@ -24,7 +24,7 @@ const Data=({current,location})=>{
        <p className="data-flex-feelslike">It feels like {feelslike}<sup>o</sup>C</p>
        <div className="data-flex-location">
       
-          <h1><span className="pin-shadow">< FiMapPin  style={{ animation: 'pin 2.5s linear 1'}}color="#FFB362" size={30}/></span> {name}</h1>
+          <h1><span className="pin-shadow">< FiMapPin  style={{ animation: 'pin 2s linear 1'}} color="#FFB362" size={30}/></span> {name}</h1>
           <h2>{country}</h2>
        </div>
     </div>

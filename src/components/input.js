@@ -65,7 +65,6 @@ fetchCurrentWeather(searchQuery){
 render(){
 
 const{res,current, location,input,errorMsg,button}=this.state;
-console.log(errorMsg);
 
 if(errorMsg){
   return <Error />
@@ -105,12 +104,12 @@ if(errorMsg){
           
                       />   : null}
                     
-   
-           {/* <Result 
+  
+           <Result 
                 current={current}
                 location={location}
                 
-                />   */}
+                />   
 
 
 
