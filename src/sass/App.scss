@@ -175,10 +175,20 @@
 
 //////loading.............
 .loading{
-    color: $color;
-    @include font(500, 2rem);
-    @include sansserif-font();
+   
+    @include flex(row);
+    &-img{
+        height:100px;
+        width:100px;
+    }
+
+
+   
 }
+
+
+
+
 
 ///search input.....................
 
@@ -549,7 +559,7 @@ $animation: emerge 0.7s linear 1;
         
     }
 
-    50%{
+    25%{
         
         transform: rotateX(-80deg);
         opacity:0.6;
@@ -662,5 +672,24 @@ $animation: emerge 0.7s linear 1;
     }
     100%{
         transform: rotate3d(0,0px) rotateY(0);
+    }
+}
+
+
+@keyframes color {
+    0%{
+      color:$color;
+        
+    }
+   
+  
+    50%{
+        color:darkgoldenrod;
+
+    }
+   
+   
+    100%{
+        color:$color;
     }
 }

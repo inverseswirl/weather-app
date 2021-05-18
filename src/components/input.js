@@ -5,6 +5,7 @@ import Summer from '../style/summer';
 import Neutral from '../style/neutral';
 import Winter from '../style/winter';
 import Error from './error';
+import Loading from './loading';
 
 
 
@@ -94,9 +95,9 @@ if(errorMsg){
      
 
 
-    {!res && button===true ? <h1 className="loading">Loading...</h1>: null}
+    {!res && button ? <Loading/>: null}
 
-  
+     
 
       {res && button?   <Result 
                 current={current}
@@ -105,11 +106,12 @@ if(errorMsg){
                       />   : null}
                     
   
-           <Result 
+           {/* <Result 
                 current={current}
                 location={location}
                 
-                />   
+                />    */}
+                <Loading/>
 
 
 

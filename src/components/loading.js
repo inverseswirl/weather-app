@@ -1,12 +1,16 @@
 import React from 'react';
-import {BiLoaderCircle} from 'react-icons/bi';
+import cloud from '../img/cloud.svg';
+
+
 const Loading=()=>{
     return(
-        <div>
-        <span></span>
-         <h1 className="loading">Loading...</h1>
+        <div className="loading">
+        <img  alt="loading"className="loading-img" src={cloud}/>
         </div>
-    )
-}
-
-export default Loading;
+     
+     )
+ }
+ 
+ export default Loading;
+      
+    
