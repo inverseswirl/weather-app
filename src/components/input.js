@@ -4,8 +4,10 @@ import Title from './title';
 import Summer from '../style/summer';
 import Neutral from '../style/neutral';
 import Winter from '../style/winter';
+import Cloudy from '../style/cloudy';
 import Error from './error';
 import Loading from './loading';
+
 
 
 
@@ -30,7 +32,7 @@ class Input extends React.Component{
 }
 
 handleInput(e){
-  this.setState({input:  e.target.value})
+  this.setState({input: e.target.value})
 
 }
 
@@ -75,9 +77,10 @@ if(errorMsg){
   return(
   <>
 
-    {res && res.current.temperature>=24 ? <Summer/>: <Neutral/>}
+    <Cloudy search={input}/>
+    {/* {res && res.current.temperature>=24 ? <Summer/>: <Neutral/>}
     {res && res.current.temperature <=23 && res.current.temperature >0? <Neutral/>:null}
-    {res && res.current.temperature <=0? <Winter/>: null} 
+    {res && res.current.temperature <=0? <Winter/>: null}  */}
    
      
      <Title/>
@@ -99,19 +102,18 @@ if(errorMsg){
 
      
 
-      {res && button?   <Result 
+      {/* {res && button?   <Result 
                 current={current}
                 location={location}
           
-                      />   : null}
+                      />   : null} */}
                     
   
-           {/* <Result 
+    <Result 
                 current={current}
                 location={location}
                 
-                />    */}
-                <Loading/>
+                />    
 
 
 

@@ -131,7 +131,7 @@
 
 
 .landscape{
-    background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-position: 50% 50%;
@@ -172,6 +172,45 @@
 }
   
    
+////// cloudy..................
+
+.cloudy{
+    background-image:linear-gradient(180deg, rgba(128, 128, 128, 0.561) 1% ,transparent),url('https://images.unsplash.com/photo-1503441669932-76d3a4625eb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1594&q=80');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top:0;
+    z-index: -1;
+    overflow: hidden;
+  
+ 
+    
+    &-birds{
+        background:url('../img/gull-bird-flying-shape.svg');
+        background-repeat: no-repeat;
+        background-size: 50% 100%;
+        animation: bird 5s linear 1;
+        perspective: 20rem;
+        position: absolute;
+        top: 10%;
+        left:20%;
+        height:100px;
+        width:100px;
+        opacity:0; 
+    
+    }
+   
+    
+
+}
+
+
+
+
+
+
 
 //////loading.............
 .loading{
@@ -361,7 +400,7 @@ $animation: emerge 0.7s linear 1;
             background-position: 3px 94%;
             background-repeat: no-repeat;
             top:0;
-            left:7%;
+            left:11%;
             perspective: 40rem;
           
 
@@ -582,53 +621,48 @@ $animation: emerge 0.7s linear 1;
 
 
    
-@keyframes tornado {
+@keyframes bird {
     0%{
-        position: absolute;
-        top: 100px;
-         background:url('../img/wind.svg');
-         background-repeat: no-repeat;
-         background-position: 0% 30%;
-         background-size: 420px 120px;
-       
+        top: 5%;
+        left:5%;
+        transform: rotateX(100deg) ;
+        opacity:0.5;
     }
-         
-
+      
     25%{
     
-        background:url('../img/wind.svg');
-        background-repeat: no-repeat;
-        background-position: 40% 20%;
-        background-size: 420px 120px;
-        transform: skew(20deg,-10deg);
-        position: absolute;
-        top: 100px;
+        top: 15%;
+        left:40%;
+        transform: rotateX(0deg);
+        opacity:0.5;
     }
+        
+       
     50%{
-        background:url('../img/wind.svg');
-        background-repeat: no-repeat;
-        background-position: 70% 20%;
-        background-size: 420px 120px;
-        transform: skewY(-10deg,0deg);
-        position: absolute;
-        top: 90px;
+        top: 20%;
+        left:60%;
+        transform:rotateX(-80deg);
+        opacity:0.5;
     
     }
     75%{
-        background:url('../img/wind.svg');
-        background-repeat: no-repeat;
-        background-position: 90% 20%;
-        background-size: 420px 120px;
-        transform: skewY(0deg,0deg);
-        opacity:0;
-        position: absolute;
-        top: 80px;
+        top: 25%;
+        left: 80%;
+        transform: rotateX(0deg);
+        opacity:0.5;
     }
     
     100%{
         opacity:0;
+        left:100%;
+        top:20%;
+        transform: rotateX(80deg);
     }
 }
+       
+       
+         
+
 
 
 @keyframes wide{
