@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cloudy=({input})=>{
+const Cloudy=()=>{
     return(
         <div className="cloudy">
           <span className="cloudy-birds"></span>

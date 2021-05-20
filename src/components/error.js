@@ -10,16 +10,17 @@ const Error =()=>{
  return(
      <div>
        <Neutral/>
-       <Title/>
-        <div className="search" style={{animation:'none'}}>             
+       <Title />
+        <div className="search">             
           <input className="search-input" 
                   type="search"
                   placeholder="Enter place name here!"
+                  style={{animation:'none'}}
                 />
           <button  className="search-btn"></button>
         </div>
         <div className="error">
-            <h1><BiErrorCircle size={20}/> Please try again with the right name! </h1>
+            <h1><BiErrorCircle size={19}/> Please try again. </h1>
         </div>
      </div>
  

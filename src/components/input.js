@@ -77,10 +77,12 @@ if(errorMsg){
   return(
   <>
 
-    <Cloudy search={input}/>
-    {/* {res && res.current.temperature>=24 ? <Summer/>: <Neutral/>}
-    {res && res.current.temperature <=23 && res.current.temperature >0? <Neutral/>:null}
-    {res && res.current.temperature <=0? <Winter/>: null}  */}
+
+    {res && res.current.temperature>=24 ? <Summer/>: <Neutral/>}
+    {current && current.weather_descriptions[0]==="Cloudy"? <Cloudy/>: null}
+    {current && current.weather_descriptions[0]==="Partly cloudy"? <Cloudy/>: null}
+    {current && current.weather_descriptions[0]==="Overcast"? <Cloudy/>: null}
+    {res && res.current.temperature <=0? <Winter/>: null} 
    
      
      <Title/>
@@ -102,19 +104,14 @@ if(errorMsg){
 
      
 
-      {/* {res && button?   <Result 
+      {res && button?   <Result 
                 current={current}
                 location={location}
           
-                      />   : null} */}
+                      />   : null}
                     
   
-    <Result 
-                current={current}
-                location={location}
-                
-                />    
-
+   
 
 
         
