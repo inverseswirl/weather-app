@@ -110,8 +110,12 @@ if(errorMsg){
           
                       />   : null}
                     
-  
-   
+
+                    {/* <Result 
+                current={current}
+                location={location}
+          
+                      />  */}
 
 
         

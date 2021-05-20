@@ -41,7 +41,7 @@ $color: rgb(224, 205, 170);
 ///media qery mixin........
 
 
-$laptopLarge-screen:1159px;
+$laptopLarge-screen:1170px;
 $laptop-screen:900px;
 $tablet-screen:745px;
 $mobileLarge-screen:600px;
@@ -61,6 +61,7 @@ $mobileSmall-screen: 475px;
      @content;
    }
 }
+
 @mixin mobileLarge{
  @media (max-width:$mobileLarge-screen){
      @content;

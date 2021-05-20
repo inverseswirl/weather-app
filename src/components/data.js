@@ -23,10 +23,10 @@ const Data=({current,location})=>{
     <div className="data-flex">
        <p className="data-flex-feelslike">It feels like {feelslike}<sup>o</sup>C</p>
        <div className="data-flex-location">
-      
           <h1><span className="pin-shadow">< FiMapPin  style={{ animation: 'pin 2s linear 1'}} color="#FFB362" size={30}/></span> {name}</h1>
           <h2>{country}</h2>
        </div>
+      
     </div>
      
 
@@ -60,11 +60,9 @@ const Data=({current,location})=>{
             {current && current.weather_descriptions[0]==="Clear" ?   <FaRegSmileBeam color="lightyellow" size={36} style={{paddingLeft:'10px',marginBottom:'-5px'}} />  : null} 
             {current && current.weather_descriptions[0]==="Smoke" ?   <WiDust color="lightyellow" size={45} style={{paddingLeft:'5px',marginBottom:'-13px'}} />  : null} 
             {current && current.temperature <0  ?  <GiSnowing color="#DADADA" style={{paddingLeft:'5px',marginBottom:'-11px'}} size={32}/> : null}
-
-         
-            </p>  
+    </p>  
            
-        </div>
+     </div>
      
 
 
