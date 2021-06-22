@@ -50,11 +50,13 @@ fetchCurrentWeather(searchQuery){
    fetch(`http://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
     .then((res)=>res.json())
     .then((res)=> 
+    
     this.setState({
       res:res,
       current: res.current,
       location:res.location,
       errorMsg: res.error
+ 
    
   
     }))

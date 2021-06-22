@@ -78,6 +78,11 @@ $mobileSmall-screen: 475px;
       @content;
     }
 }
+@mixin media2($size){
+    @media (min-width: $size){
+      @content;
+    }
+}
 
 
 
