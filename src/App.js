@@ -4,10 +4,10 @@ import Input from './components/input.js';
 const App = ()=> {
   return (
    
-    <div className="App">
+   
       <Input/>
    
-     </div>
+
 
   );
 }
