@@ -274,104 +274,104 @@ html, body{
 
 
 
-// .search{
-//   padding: 80px 0 0 0;
-//   @include flex(row);
-//   position:relative;
+.search{
+  padding: 80px 0 0 0;
+  @include flex(row);
+  position:relative;
     
-//       &-input{
-//             outline:none;
-//             background-image: radial-gradient(circle,rgb(167, 71, 167) 130%,transparent);
-//             border: 2px solid $color;
-//             border-radius: 100px;
-//             @include font(700, 2rem);
-//             color: rgba(18,18,18,0.8);
-//             @include sansserif-font();
-//             @include center();
-//             width: 40%;     //420px
-//             color: $color;
-//             padding: 2px 0 5px 10px;
-//             animation:  wide 0.4s linear 1;
+      &-input{
+            outline:none;
+            background-image: radial-gradient(circle,rgb(167, 71, 167) 130%,transparent);
+            border: 2px solid $color;
+            border-radius: 100px;
+            @include font(700, 2rem);
+            color: rgba(18,18,18,0.8);
+            @include sansserif-font();
+            @include center();
+            width: 40%;     //420px
+            color: $color;
+            padding: 2px 0 5px 10px;
+            animation:  wide 0.4s linear 1;
             
-//             @include laptop{
-//                width:50%;
-//                padding: 1px 0 4px 18px;
-//             }
-//             @include tablet{
-//                width:53%;
-//                padding: 1px 0 4px 18px;
-//                @include font(700, 1.7rem);
-//             }
-//             @include mobileLarge{
-//                width:55%;
-//                padding: 0px 0 4px 12px;
-//                @include font(700, 1.6rem);
-//             }
-//             @include mobileSmall{
-//                width:50%;
-//                padding: 0px 0 4px 12px;
-//                @include font(700, 1.6rem);
-//             }
+            @include laptop{
+               width:50%;
+               padding: 1px 0 4px 18px;
+            }
+            @include tablet{
+               width:53%;
+               padding: 1px 0 4px 18px;
+               @include font(700, 1.7rem);
+            }
+            @include mobileLarge{
+               width:55%;
+               padding: 0px 0 4px 12px;
+               @include font(700, 1.6rem);
+            }
+            @include mobileSmall{
+               width:50%;
+               padding: 0px 0 4px 12px;
+               @include font(700, 1.6rem);
+            }
 
 
 
-//             &::-webkit-search-cancel-button{
-//                 appearance: none;
-//                 background-image: linear-gradient(45deg, transparent 50%,$color 50% 53.5%,transparent 53.5%),linear-gradient(135deg,transparent 50%,$color 50% 53.5%,transparent 53.5%);
-//                 height: 14px;
-//                 width: 14px;
-//                 padding-right:30px;
+            &::-webkit-search-cancel-button{
+                appearance: none;
+                background-image: linear-gradient(45deg, transparent 50%,$color 50% 53.5%,transparent 53.5%),linear-gradient(135deg,transparent 50%,$color 50% 53.5%,transparent 53.5%);
+                height: 14px;
+                width: 14px;
+                padding-right:30px;
               
 
-//             }
-//            &::placeholder{
-//                color: #b68c21;
-//                @include font(200, 1.2rem);
-//                @include cursive();
-//                @include tablet{
-//                 @include font(200, 1.1rem);  
-//                }
-//                @include mobileLarge{
-//                 @include font(200, 0.9rem);
-//             }
-//                @include mobileSmall{
-//                 @include font(200, 0.7rem);
+            }
+           &::placeholder{
+               color: #b68c21;
+               @include font(200, 1.2rem);
+               @include cursive();
+               @include tablet{
+                @include font(200, 1.1rem);  
+               }
+               @include mobileLarge{
+                @include font(200, 0.9rem);
+              }
+               @include mobileSmall{
+                @include font(200, 0.7rem);
            
-//             }
-//            }
+            }
+           }
         
           
 
-//         }
+        }
        
 
-//         &-btn{
-//             color: $color;
-//             outline:none;
-//             border:none; 
-//             background: transparent;
-//             cursor: pointer;
-//             height: 52px;
-//             width:70px;
-//             background-image: url('../img/magnifying-glass.svg');
-//             background-size: 70px 40px;
-//             background-position: 0% 58%;
-//             background-repeat: no-repeat;
+        &-btn{
+            color: $color;
+            outline:none;
+            border:none; 
+            background: transparent;
+            cursor: pointer;
+            height: 52px;
+            width:70px;
+            background-image: url('../img/magnifying-glass.svg');
+            background-size: 70px 40px;
+            background-position: 0% 58%;
+            background-repeat: no-repeat;
            
-//         @include mobileLarge{
-//             background-size: 56px 30px;
-//         }
-//             &:active, &:focus{
-//                 outline:none;
-//                 border:none; 
+            @include mobileLarge{
+                background-size: 56px 30px;
+            }
+            &:active, &:focus{
+                outline:none;
+                border:none; 
 
 
-//             }
+            }
             
-//         }
+        }
            
 
-// }
+}
 
 
 
