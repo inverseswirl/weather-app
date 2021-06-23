@@ -1,4 +1,4 @@
-import './sass/App.scss';
+import './sass/App.css';
 import Input from './components/input.js';
 
 function App() {
