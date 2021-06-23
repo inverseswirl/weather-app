@@ -78,7 +78,7 @@ if(errorMsg){
 
   return(
   
-<div className="App">
+<div className="Apps">
     {res && res.current.temperature>=24 ? <Summer/>: <Neutral/>}
     {current && current.weather_descriptions[0]==="Cloudy"? <Cloudy/>: null}
     {current && current.weather_descriptions[0]==="Partly cloudy"? <Cloudy/>: null}
