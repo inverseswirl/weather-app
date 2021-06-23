@@ -563,6 +563,63 @@ html, body {
   }
 }
 
+.data-weathertype {
+  padding-top: 55px;
+  color: purple !important;
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-family: "Nunito", sans-serif;
+  -webkit-animation: emerge 0.7s linear 1;
+          animation: emerge 0.7s linear 1;
+}
+
+@media (max-width: 475px) {
+  .data-weathertype {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+.data-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.data-group .data-group-feelslike {
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  color: #e0cdaa;
+  -webkit-animation: emerge 0.7s linear 1;
+          animation: emerge 0.7s linear 1;
+  padding: 0 0 6px 0;
+}
+
+@media (max-width: 600px) {
+  .data-group .data-group-feelslike {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .data-group .data-group-feelslike {
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+}
+
 .error {
   font-weight: 200;
   font-size: 10px;

@@ -454,25 +454,45 @@ html, body{
     }
 
 
+
+    &-weathertype{
+
+        padding-top:55px;
+        color: purple !important;
+        @include font(500, 1.3rem);
+        font-family: $font;
+        animation:$animation;
+
+        @include mobileSmall{
+            @include font(500, 1rem);
+        
+        }
+        
+    }
+    
+
+       
+
+
    
     
-//   &-flex{
-//      @include flex(row);
+  &-group{
+     @include flex(row);
    
-//      #{&}-feelslike{
-//         @include font(700, 1.2rem);
-//         font-family: $font;
-//         color:$color;
-//         animation: $animation;
-//         padding: 0 0 6px 0;
-//         @include mobileLarge{
-//             @include font(700, 0.9rem);   
-//         }
+     #{&}-feelslike{
+        @include font(700, 1.2rem);
+        font-family: $font;
+        color:$color;
+        animation: $animation;
+        padding: 0 0 6px 0;
+        @include mobileLarge{
+            @include font(700, 0.9rem);   
+        }
        
-//         @include mobileSmall{
-//             @include font(700, 0.85rem);   
-//         }
-//     }
+        @include mobileSmall{
+            @include font(700, 0.85rem);   
+        }
+    }
 
 //     #{&}-location{
 //         position:absolute;
@@ -577,34 +597,13 @@ html, body{
 //     }
        
 
-//   }
+  }
         
        
 
 
 
 
-
-
-
-
-//     &-weathertype{
-
-
-//         #{&}-weather{
-//             padding-top:55px;
-//             color: purple !important;
-//             @include font(500, 1.3rem);
-//             font-family: $font;
-//             animation:$animation;
-
-//             @include mobileSmall{
-//                 @include font(500, 1rem);
-            
-//             }
-            
-//         }
-//     }
 
 
        
