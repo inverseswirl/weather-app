@@ -87,8 +87,9 @@ if(errorMsg){
     {res && res.current.temperature <=0? <Winter/>: null} 
    
      
-     <Title/>
-     <div className="search">                {/* search-input*/}  
+         <Title/>
+
+     <div className="search">             
           <input className="search-input" 
                   type="search"
                   value={input}
@@ -100,24 +101,33 @@ if(errorMsg){
      </div>
                   
      
-
-
     {!res && button ? <Loading/>: null}
 
-     
+
 
       {res && button?   <Result 
-                current={current}
-                location={location}
-          
-                      />   : null}
+                  current={current}
+                  location={location}
+
+                        />   : null}
+     
+
                     
 
-                    {/* <Result 
-                current={current}
-                location={location}
-          
-                      />  */}
+  </>
+    )
+
+    
+}
+}
+
+
+
+
+
+export default Input;
+
+                 
 
 
         
@@ -135,19 +145,6 @@ if(errorMsg){
   
 
    
-
-  </>
-    )
-
-    
-}
-}
-
-
-
-
-
-export default Input;
     
       
     

@@ -14,12 +14,6 @@ import Data from './data';
 
 const Result =({current,location})=>{
 
-
-
-
-
-
-
   return(
               
    
@@ -44,12 +38,18 @@ const Result =({current,location})=>{
     )
 
  }
+
+
+
+ export default Result;
+   
+
+
+
   
 
 
 
-export default Result;
-  
 
 
 
