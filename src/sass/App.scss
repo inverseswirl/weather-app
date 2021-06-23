@@ -436,10 +436,10 @@ html, body{
 
    
     
- &-flex{
-    @include flex(row);
+  &-flex{
+     @include flex(row);
    
-    #{&}-feelslike{
+     #{&}-feelslike{
         @include font(700, 1.2rem);
         font-family: $font;
         color:$color;
@@ -554,39 +554,37 @@ html, body{
             
         }
 
-       
-
     }
+       
+
+  }
         
        
-   
-       
-}
-        
-      
+
+
+
+     
+    &-other{
+        @include font(700, 1.2rem);
+        font-family: $font;
+        color:$color;
+        animation:$animation;
+
+        @include mobileLarge{
+            @include font(700, 0.9rem);   
+        }
+        @include mobileSmall{
+            @include font(700, 0.85rem);   
+        }
     
+    }
 
 
 
-   
-
-     &-other{
-            @include font(700, 1.2rem);
-            font-family: $font;
-            color:$color;
-            animation:$animation;
-
-            @include mobileLarge{
-                @include font(700, 0.9rem);   
-            }
-            @include mobileSmall{
-                @include font(700, 0.85rem);   
-            }
-       }
 
 
     &-weathertype{
- 
+
 
         #{&}-weather{
             padding-top:55px;
@@ -604,6 +602,10 @@ html, body{
     }
 
 
+       
+        
+      
+    
 
 }
 
