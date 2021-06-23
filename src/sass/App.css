@@ -454,6 +454,115 @@ html, body {
   border: none;
 }
 
+.data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-image: linear-gradient(0deg, #dd9d25, transparent), url("../img/customwave.svg"), linear-gradient(110deg, #a747a7, #ffc635);
+  background-size: 100% 100%,172% 169%,cover;
+  background-repeat: no-repeat;
+  width: 620px;
+  margin: 40px auto;
+  border-radius: 12px;
+  -webkit-animation: shine 0.5s linear 1;
+          animation: shine 0.5s linear 1;
+  position: relative;
+  padding: 3% 2% 2% 2%;
+}
+
+@media (max-width: 900px) {
+  .data {
+    width: 540px;
+  }
+}
+
+@media (max-width: 745px) {
+  .data {
+    width: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .data {
+    width: 420px;
+  }
+}
+
+@media (max-width: 475px) {
+  .data {
+    width: 280px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .data {
+    width: 700px;
+    margin: 20px auto;
+  }
+}
+
+.data-temperature {
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  color: #e0cdaa;
+  -webkit-animation: emerge 0.7s linear 1;
+          animation: emerge 0.7s linear 1;
+}
+
+@media (max-width: 600px) {
+  .data-temperature {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .data-temperature {
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+}
+
+.data-other {
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  color: #e0cdaa;
+  -webkit-animation: emerge 0.7s linear 1;
+          animation: emerge 0.7s linear 1;
+}
+
+@media (max-width: 600px) {
+  .data-other {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .data-other {
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+}
+
 .error {
   font-weight: 200;
   font-size: 10px;
