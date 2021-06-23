@@ -18,40 +18,41 @@ html, body{
   
 ///title................
 
-// .title{
-//     color:transparent;
-//     padding: 30px 0 0 0;
-//     background-clip: text;
-//     background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
-//     background-position: 100% 100%;
-//     @include block-font();
-//     @include font(200, 80px);
-//     @include center();
-//     font-size:calc(70px + 1vw);
-//     text-transform:capitalize;
+.title{
+    color:transparent;
+    padding: 30px 0 0 0;
+    background-clip: text;
+    background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
+    background-position: 100% 100%;
+    @include block-font();
+    @include font(200, 80px);
+    @include center();
+    font-size:calc(70px + 1vw);
+    text-transform:capitalize;
     
-//     @include laptopLarge{
-//         font-size:calc(3.5rem + 1vw);
-//     }
-//     @include laptop{
-//         font-size:calc(2.7rem + 1vw);
-//     }
-//     @include tablet{
-//         font-size:calc(2.2rem + 1vw);
-//     }
+    @include laptopLarge{
+        font-size:calc(3.5rem + 1vw);
+    }
+    @include laptop{
+        font-size:calc(2.7rem + 1vw);
+    }
+    @include tablet{
+        font-size:calc(2.2rem + 1vw);
+    }
   
-//     @include mobileLarge{
-//         font-size:calc(1.85rem + 1vw);
-//     }
+    @include mobileLarge{
+        font-size:calc(1.85rem + 1vw);
+    }
   
-//     @include mobileSmall{
-//         font-size:calc(1.6rem + 1vw);
-//     }
+    @include mobileSmall{
+        font-size:calc(1.6rem + 1vw);
+    }
   
     
 
 
-// }
+}
+
 // ///NEUTRAL main SECTION............
 // .neutral{
 

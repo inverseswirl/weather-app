@@ -15,4 +15,48 @@ html, body {
   width: 100vw;
   overflow: hidden;
 }
+
+.title {
+  color: transparent;
+  padding: 30px 0 0 0;
+  background-clip: text;
+  background-image: radial-gradient(circle at 20%, #e0cdaa 50%, purple 51.5%);
+  background-position: 100% 100%;
+  font-family: 'Monoton', cursive;
+  font-weight: 200;
+  font-size: 80px;
+  text-align: center;
+  font-size: calc(70px + 1vw);
+  text-transform: capitalize;
+}
+
+@media (max-width: 1170px) {
+  .title {
+    font-size: calc(3.5rem + 1vw);
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: calc(2.7rem + 1vw);
+  }
+}
+
+@media (max-width: 745px) {
+  .title {
+    font-size: calc(2.2rem + 1vw);
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: calc(1.85rem + 1vw);
+  }
+}
+
+@media (max-width: 475px) {
+  .title {
+    font-size: calc(1.6rem + 1vw);
+  }
+}
 /*# sourceMappingURL=App.css.map */
