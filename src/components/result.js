@@ -17,7 +17,7 @@ const Result =({current,location})=>{
   return(
               
    
-    <div className="weather-report">
+
         
         <Data 
         current={current}
@@ -27,7 +27,7 @@ const Result =({current,location})=>{
         
       
         
-      </div> 
+
       
 
 
