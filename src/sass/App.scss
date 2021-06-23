@@ -54,20 +54,20 @@ html, body{
 }
 
 // ///NEUTRAL main SECTION............
-// .neutral{
+.neutral{
 
-//   height: 100vh;
-//   width: 100vw;
-//   background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
-//   background-repeat: no-repeat;
-//   background-size: 100% 100%;
-//   overflow: hidden;
-//   position: absolute;
-//   top:0;
-//   z-index:-1;
+  height: 100vh;
+  width: 100vw;
+  background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+  position: absolute;
+  top:0;
+  z-index:-1;
  
 
-// }
+}
 
 
 
@@ -75,69 +75,69 @@ html, body{
 
 //  ///WINTER section.......
 
-// .winter{
-//     background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
-//     background-repeat: no-repeat;
-//     background-size: 100% 100%;
-//     height: 100vh;
-//     width: 100vw;
-//     position: absolute;
-//     top:0;
-//     z-index: -1;
+.winter{
+    background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top:0;
+    z-index: -1;
 
-//     &-snowflake1{
-//         background-image: url('../img/snowflake.svg');
-//         background-size: 100% 100%;
-//         height: 40px;
-//         width:60px;
-//         position: absolute;
-//         left: 10%;
-//         animation: fall 6.5s linear infinite;
-//     }
+    &-snowflake1{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height: 40px;
+        width:60px;
+        position: absolute;
+        left: 10%;
+        animation: fall 6.5s linear infinite;
+    }
 
-//     &-snowflake2{
-//         background-image: url('../img/snowflake.svg');
-//         background-size: 100% 100%;
-//         height: 40px;
-//         width:60px;
-//         position: absolute;
-//         top: 12%;
-//         left: 16%;
-//         animation: fall 7s linear infinite;
-//     }
-//     &-snowflake3{
-//         background-image: url('../img/snowflake.svg');
-//         background-size: 100% 100%;
-//         height: 40px;
-//         width:60px;
-//         position: absolute;
-//         top: 10%;
-//         left: 40%;
-//         animation: fall 4.9s linear infinite;
-//     }
-//     &-snowflake4{
-//         background-image: url('../img/snowflake.svg');
-//         background-size: 100% 100%;
-//         height:40px;
-//         width:60px;
-//         position: absolute;
-//         top: 14%;
-//         left: 63%;
-//         animation: fall 4s linear infinite;
-//     }
-//     &-snowflake5{
-//         background-image: url('../img/snowflake.svg');
-//         background-size: 100% 100%;
-//         height: 40px;
-//         width:60px;
-//         position: absolute;
-//         top: 0%;
-//         left: 82%;
-//         animation: fall 5.5s linear infinite;
-//     }
+    &-snowflake2{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height: 40px;
+        width:60px;
+        position: absolute;
+        top: 12%;
+        left: 16%;
+        animation: fall 7s linear infinite;
+    }
+    &-snowflake3{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height: 40px;
+        width:60px;
+        position: absolute;
+        top: 10%;
+        left: 40%;
+        animation: fall 4.9s linear infinite;
+    }
+    &-snowflake4{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height:40px;
+        width:60px;
+        position: absolute;
+        top: 14%;
+        left: 63%;
+        animation: fall 4s linear infinite;
+    }
+    &-snowflake5{
+        background-image: url('../img/snowflake.svg');
+        background-size: 100% 100%;
+        height: 40px;
+        width:60px;
+        position: absolute;
+        top: 0%;
+        left: 82%;
+        animation: fall 5.5s linear infinite;
+    }
 
 
-// }
+}
 
 
 
