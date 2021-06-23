@@ -540,6 +540,30 @@ html, body {
   }
 }
 
+.data-feelslike {
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Nunito", sans-serif;
+  color: #e0cdaa;
+  -webkit-animation: emerge 0.7s linear 1;
+          animation: emerge 0.7s linear 1;
+  padding: 0 0 6px 0;
+}
+
+@media (max-width: 600px) {
+  .data-feelslike {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .data-feelslike {
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+}
+
 .data-other {
   font-weight: 700;
   font-size: 1.2rem;
@@ -580,43 +604,117 @@ html, body {
   }
 }
 
-.data-group {
+.data-group-location {
+  position: absolute;
+  right: 4%;
+  top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.data-group .data-group-feelslike {
-  font-weight: 700;
-  font-size: 1.2rem;
-  font-family: "Nunito", sans-serif;
-  color: #e0cdaa;
+  align-items: center;
+  width: 45%;
   -webkit-animation: emerge 0.7s linear 1;
           animation: emerge 0.7s linear 1;
-  padding: 0 0 6px 0;
+  border-radius: 12px;
+  text-align: right;
+  padding: 1px;
+}
+
+@media (max-width: 900px) {
+  .data-group-location {
+    width: 52%;
+  }
 }
 
 @media (max-width: 600px) {
-  .data-group .data-group-feelslike {
+  .data-group-location {
+    width: 53%;
+    right: 1%;
+  }
+}
+
+@media (max-width: 475px) {
+  .data-group-location {
+    width: 42%;
+    right: 3%;
+    top: 22%;
+    right: 10%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media (min-width: 1400px) {
+  .data-group-location {
+    width: 52%;
+    padding-top: 20px;
+  }
+}
+
+.data-group-location h1 {
+  display: inline-block;
+  margin: 0;
+  font-family: 'Dela Gothic One', cursive;
+  font-weight: 500;
+  font-size: 1.5rem;
+  background-clip: text;
+  color: transparent;
+  background-image: url("../img/milky-way.jpeg");
+  background-position: 100% 50%;
+  background-size: contain;
+}
+
+@media (max-width: 600px) {
+  .data-group-location h1 {
     font-weight: 700;
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 475px) {
-  .data-group .data-group-feelslike {
+  .data-group-location h1 {
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    margin-left: 15px;
+  }
+}
+
+.data-group-location h2 {
+  color: purple;
+  margin: 0;
+  font-family: 'Zen Dots', cursive;
+  background-clip: text;
+  color: transparent;
+  background-image: url("../img/texture.jpeg");
+  background-position: center;
+  background-size: cover;
+  font-weight: 500;
+  font-size: 1.25rem;
+  font-family: "Nunito", sans-serif;
+}
+
+@media (max-width: 600px) {
+  .data-group-location h2 {
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 475px) {
+  .data-group-location h2 {
+    font-weight: 700;
+    font-size: 0.7rem;
   }
 }
 

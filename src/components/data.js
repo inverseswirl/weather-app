@@ -20,14 +20,17 @@ const Data=({current,location})=>{
 <div className="data">
        
     <p className="data-temperature">Current temperature is {temperature}<sup>o</sup>C </p>
+    <p className="data-feelslike">It feels like {feelslike}<sup>o</sup>C</p>
     
-    <div className="data-group">
-       <p className="data-group-feelslike">It feels like {feelslike}<sup>o</sup>C</p>
+    
+ 
+      
        <div className="data-group-location">
-          <h1><span className="pin-shadow">< FiMapPin  style={{ animation: 'pin 2s linear 1'}} color="#FFB362" size={30}/></span> {name}</h1>
+          <h1> {name}</h1>
           <h2>{country}</h2>
        </div>
-    </div>
+
+    <span className="pin-shadow">< FiMapPin  style={{ animation: 'pin 2s linear 1'}} color="#FFB362" size={30}/></span>
       
      
 
@@ -55,6 +58,7 @@ const Data=({current,location})=>{
                 {current && current.weather_descriptions[0]==="Thunderstorm" ?   <RiThunderstormsLine color="grey" size={45}  style={{paddingLeft:'10px',marginBottom:'-8px'}}/> : null}
                 {current && current.weather_descriptions[0]==="Haze" ?    <RiHazeLine color="rgb(100, 93, 93)" size={36}  style={{paddingLeft:'10px',marginBottom:'-4px'}}/>: null}
                 {current && current.weather_descriptions[0]==="Light Rain" ?    <GiRaining color="rgb(105, 93, 93)" size={38}  style={{paddingLeft:'10px',marginBottom:'-5px'}}/>  : null}
+                {current && current.weather_descriptions[0]==="Torrential Rain Shower" ?    <GiRaining color="rgb(105, 93, 93)" size={38}  style={{paddingLeft:'10px',marginBottom:'-5px'}}/>  : null}
                 {current && current.weather_descriptions[0]==="Clear" ?   <FaRegSmileBeam color="lightyellow" size={36} style={{paddingLeft:'10px',marginBottom:'-5px'}} />  : null} 
                 {current && current.weather_descriptions[0]==="Smoke" ?   <WiDust color="lightyellow" size={45} style={{paddingLeft:'5px',marginBottom:'-13px'}} />  : null} 
                 {current && current.temperature <0  ?  <GiSnowing color="#DADADA" style={{paddingLeft:'5px',marginBottom:'-11px'}} size={32}/> : null}
