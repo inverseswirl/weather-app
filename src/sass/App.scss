@@ -18,220 +18,220 @@ html, body{
   
 ///title................
 
-.title{
-    color:transparent;
-    padding: 30px 0 0 0;
-    background-clip: text;
-    background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
-    background-position: 100% 100%;
-    @include block-font();
-    @include font(200, 80px);
-    @include center();
-    font-size:calc(70px + 1vw);
-    text-transform:capitalize;
+// .title{
+//     color:transparent;
+//     padding: 30px 0 0 0;
+//     background-clip: text;
+//     background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
+//     background-position: 100% 100%;
+//     @include block-font();
+//     @include font(200, 80px);
+//     @include center();
+//     font-size:calc(70px + 1vw);
+//     text-transform:capitalize;
     
-    @include laptopLarge{
-        font-size:calc(3.5rem + 1vw);
-    }
-    @include laptop{
-        font-size:calc(2.7rem + 1vw);
-    }
-    @include tablet{
-        font-size:calc(2.2rem + 1vw);
-    }
+//     @include laptopLarge{
+//         font-size:calc(3.5rem + 1vw);
+//     }
+//     @include laptop{
+//         font-size:calc(2.7rem + 1vw);
+//     }
+//     @include tablet{
+//         font-size:calc(2.2rem + 1vw);
+//     }
   
-    @include mobileLarge{
-        font-size:calc(1.85rem + 1vw);
-    }
+//     @include mobileLarge{
+//         font-size:calc(1.85rem + 1vw);
+//     }
   
-    @include mobileSmall{
-        font-size:calc(1.6rem + 1vw);
-    }
+//     @include mobileSmall{
+//         font-size:calc(1.6rem + 1vw);
+//     }
   
     
 
 
-}
-///NEUTRAL main SECTION............
-.neutral{
+// }
+// ///NEUTRAL main SECTION............
+// .neutral{
 
-  height: 100vh;
-  width: 100vw;
-  background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  overflow: hidden;
-  position: absolute;
-  top:0;
-  z-index:-1;
+//   height: 100vh;
+//   width: 100vw;
+//   background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
+//   background-repeat: no-repeat;
+//   background-size: 100% 100%;
+//   overflow: hidden;
+//   position: absolute;
+//   top:0;
+//   z-index:-1;
  
 
-}
+// }
 
 
 
 
 
- ///WINTER section.......
+//  ///WINTER section.......
 
-.winter{
-    background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top:0;
-    z-index: -1;
+// .winter{
+//     background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
+//     background-repeat: no-repeat;
+//     background-size: 100% 100%;
+//     height: 100vh;
+//     width: 100vw;
+//     position: absolute;
+//     top:0;
+//     z-index: -1;
 
-    &-snowflake1{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        left: 10%;
-        animation: fall 6.5s linear infinite;
-    }
+//     &-snowflake1{
+//         background-image: url('../img/snowflake.svg');
+//         background-size: 100% 100%;
+//         height: 40px;
+//         width:60px;
+//         position: absolute;
+//         left: 10%;
+//         animation: fall 6.5s linear infinite;
+//     }
 
-    &-snowflake2{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        top: 12%;
-        left: 16%;
-        animation: fall 7s linear infinite;
-    }
-    &-snowflake3{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        top: 10%;
-        left: 40%;
-        animation: fall 4.9s linear infinite;
-    }
-    &-snowflake4{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height:40px;
-        width:60px;
-        position: absolute;
-        top: 14%;
-        left: 63%;
-        animation: fall 4s linear infinite;
-    }
-    &-snowflake5{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        top: 0%;
-        left: 82%;
-        animation: fall 5.5s linear infinite;
-    }
-
-
-}
+//     &-snowflake2{
+//         background-image: url('../img/snowflake.svg');
+//         background-size: 100% 100%;
+//         height: 40px;
+//         width:60px;
+//         position: absolute;
+//         top: 12%;
+//         left: 16%;
+//         animation: fall 7s linear infinite;
+//     }
+//     &-snowflake3{
+//         background-image: url('../img/snowflake.svg');
+//         background-size: 100% 100%;
+//         height: 40px;
+//         width:60px;
+//         position: absolute;
+//         top: 10%;
+//         left: 40%;
+//         animation: fall 4.9s linear infinite;
+//     }
+//     &-snowflake4{
+//         background-image: url('../img/snowflake.svg');
+//         background-size: 100% 100%;
+//         height:40px;
+//         width:60px;
+//         position: absolute;
+//         top: 14%;
+//         left: 63%;
+//         animation: fall 4s linear infinite;
+//     }
+//     &-snowflake5{
+//         background-image: url('../img/snowflake.svg');
+//         background-size: 100% 100%;
+//         height: 40px;
+//         width:60px;
+//         position: absolute;
+//         top: 0%;
+//         left: 82%;
+//         animation: fall 5.5s linear infinite;
+//     }
 
 
+// }
 
 
 
 
-///SUMMER SECTION............
+
+
+// ///SUMMER SECTION............
 
 
 
-.landscape{
-    background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 50% 50%;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top:0;
-    z-index: -1;
-    animation: shine 0.1s linear 1;
+// .landscape{
+//     background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
+//     background-repeat: no-repeat;
+//     background-size: 100% 100%;
+//     background-position: 50% 50%;
+//     height: 100vh;
+//     width: 100vw;
+//     position: absolute;
+//     top:0;
+//     z-index: -1;
+//     animation: shine 0.1s linear 1;
 
-    &-sun{
-        border-radius: 50%;
-        width:100px;
-        height:100px;
-        background-color: yellow;
-        position: absolute;
-        border: 1px solid #ffa60042;
-        top: 30px;
-        left: 40px;
-        animation: appear 1.2s linear 1;
-        @include mobileSmall{
-            left: 14px; 
-            width:70px;
-            height:70px;
-        }
+//     &-sun{
+//         border-radius: 50%;
+//         width:100px;
+//         height:100px;
+//         background-color: yellow;
+//         position: absolute;
+//         border: 1px solid #ffa60042;
+//         top: 30px;
+//         left: 40px;
+//         animation: appear 1.2s linear 1;
+//         @include mobileSmall{
+//             left: 14px; 
+//             width:70px;
+//             height:70px;
+//         }
     
-        &::after{
-            content:'';
-            position: absolute;
-            background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 40%, rgba(255, 166, 0, 0.8) 76%);
-            background-size: 100% 100%;
-            border-radius: 50%;
-            top: -10px;
-            left: -10px;
-            width:120px;
-            height:120px;
-            animation: shine 2s ease-in-out 1;
-            @include mobileSmall{
-                top: -5px;
-                left: 0px;
-                width:82px;
-                height:82px;
-            }
-        }
-    }
+//         &::after{
+//             content:'';
+//             position: absolute;
+//             background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 40%, rgba(255, 166, 0, 0.8) 76%);
+//             background-size: 100% 100%;
+//             border-radius: 50%;
+//             top: -10px;
+//             left: -10px;
+//             width:120px;
+//             height:120px;
+//             animation: shine 2s ease-in-out 1;
+//             @include mobileSmall{
+//                 top: -5px;
+//                 left: 0px;
+//                 width:82px;
+//                 height:82px;
+//             }
+//         }
+//     }
     
 
-}
+// }
   
    
-////// cloudy..................
+// ////// cloudy..................
 
-.cloudy{
-    background-image:linear-gradient(180deg, rgba(128, 128, 128, 0.561) 1% ,transparent),url('../img/cloudypic.jpeg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top:0;
-    z-index: -1;
-    overflow: hidden;
+// .cloudy{
+//     background-image:linear-gradient(180deg, rgba(128, 128, 128, 0.561) 1% ,transparent),url('../img/cloudypic.jpeg');
+//     background-repeat: no-repeat;
+//     background-size: 100% 100%;
+//     height: 100vh;
+//     width: 100vw;
+//     position: absolute;
+//     top:0;
+//     z-index: -1;
+//     overflow: hidden;
   
  
     
-    &-birds{
-        background:url('../img/gull-bird-flying-shape.svg');
-        background-repeat: no-repeat;
-        background-size: 50% 100%;
-        animation: bird 6.2s linear infinite;
-        perspective: 20rem;
-        position: absolute;
-        top: 10%;
-        left:20%;
-        height:100px;
-        width:100px;
-        opacity:0; 
+//     &-birds{
+//         background:url('../img/gull-bird-flying-shape.svg');
+//         background-repeat: no-repeat;
+//         background-size: 50% 100%;
+//         animation: bird 6.2s linear infinite;
+//         perspective: 20rem;
+//         position: absolute;
+//         top: 10%;
+//         left:20%;
+//         height:100px;
+//         width:100px;
+//         opacity:0; 
     
-    }
+//     }
    
     
 
-}
+// }
 
 
 
@@ -239,137 +239,137 @@ html, body{
 
 
 
-//////loading.............
-.loading{
+// //////loading.............
+// .loading{
    
-    @include flex(row);
-    &-img{
-        height:100px;
-        width:100px;
+//     @include flex(row);
+//     &-img{
+//         height:100px;
+//         width:100px;
 
-        @include laptop{
-            height: 80px;
-            width:80px;
-            margin-right: 6%;
+//         @include laptop{
+//             height: 80px;
+//             width:80px;
+//             margin-right: 6%;
         
-        }
-        @include mobileSmall{
-            height: 70px;
-            width:70px;
-            margin-right: 10%;
-        }
-    }
+//         }
+//         @include mobileSmall{
+//             height: 70px;
+//             width:70px;
+//             margin-right: 10%;
+//         }
+//     }
 
 
    
-}
+// }
 
 
 
 
 
-///search input.....................
+// ///search input.....................
 
 
 
-.search{
-  padding: 80px 0 0 0;
-  @include flex(row);
-  position:relative;
+// .search{
+//   padding: 80px 0 0 0;
+//   @include flex(row);
+//   position:relative;
     
-      &-input{
-            outline:none;
-            background-image: radial-gradient(circle,rgb(167, 71, 167) 130%,transparent);
-            border: 2px solid $color;
-            border-radius: 100px;
-            @include font(700, 2rem);
-            color: rgba(18,18,18,0.8);
-            @include sansserif-font();
-            @include center();
-            width: 40%;     //420px
-            color: $color;
-            padding: 2px 0 5px 10px;
-            animation:  wide 0.4s linear 1;
+//       &-input{
+//             outline:none;
+//             background-image: radial-gradient(circle,rgb(167, 71, 167) 130%,transparent);
+//             border: 2px solid $color;
+//             border-radius: 100px;
+//             @include font(700, 2rem);
+//             color: rgba(18,18,18,0.8);
+//             @include sansserif-font();
+//             @include center();
+//             width: 40%;     //420px
+//             color: $color;
+//             padding: 2px 0 5px 10px;
+//             animation:  wide 0.4s linear 1;
             
-            @include laptop{
-               width:50%;
-               padding: 1px 0 4px 18px;
-            }
-            @include tablet{
-               width:53%;
-               padding: 1px 0 4px 18px;
-               @include font(700, 1.7rem);
-            }
-            @include mobileLarge{
-               width:55%;
-               padding: 0px 0 4px 12px;
-               @include font(700, 1.6rem);
-            }
-            @include mobileSmall{
-               width:50%;
-               padding: 0px 0 4px 12px;
-               @include font(700, 1.6rem);
-            }
+//             @include laptop{
+//                width:50%;
+//                padding: 1px 0 4px 18px;
+//             }
+//             @include tablet{
+//                width:53%;
+//                padding: 1px 0 4px 18px;
+//                @include font(700, 1.7rem);
+//             }
+//             @include mobileLarge{
+//                width:55%;
+//                padding: 0px 0 4px 12px;
+//                @include font(700, 1.6rem);
+//             }
+//             @include mobileSmall{
+//                width:50%;
+//                padding: 0px 0 4px 12px;
+//                @include font(700, 1.6rem);
+//             }
 
 
 
-            &::-webkit-search-cancel-button{
-                appearance: none;
-                background-image: linear-gradient(45deg, transparent 50%,$color 50% 53.5%,transparent 53.5%),linear-gradient(135deg,transparent 50%,$color 50% 53.5%,transparent 53.5%);
-                height: 14px;
-                width: 14px;
-                padding-right:30px;
+//             &::-webkit-search-cancel-button{
+//                 appearance: none;
+//                 background-image: linear-gradient(45deg, transparent 50%,$color 50% 53.5%,transparent 53.5%),linear-gradient(135deg,transparent 50%,$color 50% 53.5%,transparent 53.5%);
+//                 height: 14px;
+//                 width: 14px;
+//                 padding-right:30px;
               
 
-            }
-           &::placeholder{
-               color: #b68c21;
-               @include font(200, 1.2rem);
-               @include cursive();
-               @include tablet{
-                @include font(200, 1.1rem);  
-               }
-               @include mobileLarge{
-                @include font(200, 0.9rem);
-            }
-               @include mobileSmall{
-                @include font(200, 0.7rem);
+//             }
+//            &::placeholder{
+//                color: #b68c21;
+//                @include font(200, 1.2rem);
+//                @include cursive();
+//                @include tablet{
+//                 @include font(200, 1.1rem);  
+//                }
+//                @include mobileLarge{
+//                 @include font(200, 0.9rem);
+//             }
+//                @include mobileSmall{
+//                 @include font(200, 0.7rem);
            
-            }
-           }
+//             }
+//            }
         
           
 
-        }
+//         }
        
 
-        &-btn{
-            color: $color;
-            outline:none;
-            border:none; 
-            background: transparent;
-            cursor: pointer;
-            height: 52px;
-            width:70px;
-            background-image: url('../img/magnifying-glass.svg');
-            background-size: 70px 40px;
-            background-position: 0% 58%;
-            background-repeat: no-repeat;
+//         &-btn{
+//             color: $color;
+//             outline:none;
+//             border:none; 
+//             background: transparent;
+//             cursor: pointer;
+//             height: 52px;
+//             width:70px;
+//             background-image: url('../img/magnifying-glass.svg');
+//             background-size: 70px 40px;
+//             background-position: 0% 58%;
+//             background-repeat: no-repeat;
            
-        @include mobileLarge{
-            background-size: 56px 30px;
-        }
-            &:active, &:focus{
-                outline:none;
-                border:none; 
+//         @include mobileLarge{
+//             background-size: 56px 30px;
+//         }
+//             &:active, &:focus{
+//                 outline:none;
+//                 border:none; 
 
 
-            }
+//             }
             
-        }
+//         }
            
 
-}
+// }
 
 
 
@@ -379,227 +379,227 @@ html, body{
 
     
 
-////result data set................................. 
+// ////result data set................................. 
 
 
-.data{
+// .data{
 
- $font: 'Nunito', sans-serif;
- $animation: emerge 0.7s linear 1;
+//  $font: 'Nunito', sans-serif;
+//  $animation: emerge 0.7s linear 1;
 
- @include flex(column);
- align-items: flex-start;
- justify-content: flex-start;
- background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
- background-size:  100% 100%,172% 169%,cover;
- background-repeat: no-repeat;
- width: 620px;
- margin: 40px auto;
- border-radius: 12px;
- animation: shine 0.5s linear 1;
- position: relative;
- padding: 3% 2% 2% 2%;
+//  @include flex(column);
+//  align-items: flex-start;
+//  justify-content: flex-start;
+//  background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
+//  background-size:  100% 100%,172% 169%,cover;
+//  background-repeat: no-repeat;
+//  width: 620px;
+//  margin: 40px auto;
+//  border-radius: 12px;
+//  animation: shine 0.5s linear 1;
+//  position: relative;
+//  padding: 3% 2% 2% 2%;
 
- @include laptop{
-     width: 540px;
- }
- @include tablet{
-     width: 520px;
- }
- @include mobileLarge{
-     width: 420px;
- }
+//  @include laptop{
+//      width: 540px;
+//  }
+//  @include tablet{
+//      width: 520px;
+//  }
+//  @include mobileLarge{
+//      width: 420px;
+//  }
 
- @include mobileSmall{
-     width: 280px;
- }
- @include media2(1400px){
-     width: 700px;
-     margin: 20px auto;
+//  @include mobileSmall{
+//      width: 280px;
+//  }
+//  @include media2(1400px){
+//      width: 700px;
+//      margin: 20px auto;
     
- }
+//  }
 
 
- &-temperature{
-    @include font(700, 1.2rem);
-    font-family: $font;
-    color:$color;
-    animation: $animation;
-    @include mobileLarge{
-        @include font(700, 0.9rem);   
-    }
-    @include mobileSmall{
-        @include font(700, 0.85rem);   
-    }
+//  &-temperature{
+//     @include font(700, 1.2rem);
+//     font-family: $font;
+//     color:$color;
+//     animation: $animation;
+//     @include mobileLarge{
+//         @include font(700, 0.9rem);   
+//     }
+//     @include mobileSmall{
+//         @include font(700, 0.85rem);   
+//     }
    
- }
+//  }
 
    
     
-  &-flex{
-     @include flex(row);
+//   &-flex{
+//      @include flex(row);
    
-     #{&}-feelslike{
-        @include font(700, 1.2rem);
-        font-family: $font;
-        color:$color;
-        animation: $animation;
-        padding: 0 0 6px 0;
-        @include mobileLarge{
-            @include font(700, 0.9rem);   
-        }
+//      #{&}-feelslike{
+//         @include font(700, 1.2rem);
+//         font-family: $font;
+//         color:$color;
+//         animation: $animation;
+//         padding: 0 0 6px 0;
+//         @include mobileLarge{
+//             @include font(700, 0.9rem);   
+//         }
        
-        @include mobileSmall{
-            @include font(700, 0.85rem);   
-        }
-    }
+//         @include mobileSmall{
+//             @include font(700, 0.85rem);   
+//         }
+//     }
 
-    #{&}-location{
-        position:absolute;
-        right:4%;
-        top:10%;
-        @include flex(column);
-        align-items: center;
-        width: 45%;
-        animation:$animation;
-        border-radius: 12px;
-        text-align: right;
-        padding:1px;
+//     #{&}-location{
+//         position:absolute;
+//         right:4%;
+//         top:10%;
+//         @include flex(column);
+//         align-items: center;
+//         width: 45%;
+//         animation:$animation;
+//         border-radius: 12px;
+//         text-align: right;
+//         padding:1px;
     
-        @include laptop{
-            width: 52%; 
-        }
+//         @include laptop{
+//             width: 52%; 
+//         }
     
-        @include mobileLarge{
-            width: 53%; 
-            right:1%; 
+//         @include mobileLarge{
+//             width: 53%; 
+//             right:1%; 
     
-        }
-        @include mobileSmall{
-            width: 42%; 
-            right:3%; 
-            top:22%;
-            right:10%;
-            align-items: flex-end;
-        }
+//         }
+//         @include mobileSmall{
+//             width: 42%; 
+//             right:3%; 
+//             top:22%;
+//             right:10%;
+//             align-items: flex-end;
+//         }
     
-        @include media2(1400px){
-            width: 52%; 
-           padding-top: 20px;
+//         @include media2(1400px){
+//             width: 52%; 
+//            padding-top: 20px;
            
-        }
+//         }
 
 
 
 
 
 
-        h1{
-            display:inline-block;
-            margin:0;
-            font-family: 'Dela Gothic One', cursive;
-            @include font(500,1.5rem);
-            background-clip: text;
-            color: transparent;
-            background-image: url('../img/milky-way.jpeg');
-            background-position: 100% 50%;
-            background-size: contain;
-            @include mobileLarge{
-                @include font(700, 0.9rem);   
-            }
-            @include mobileSmall{
-                @include font(700, 0.7rem);  
-                margin-left: 15px; 
-            }
+//         h1{
+//             display:inline-block;
+//             margin:0;
+//             font-family: 'Dela Gothic One', cursive;
+//             @include font(500,1.5rem);
+//             background-clip: text;
+//             color: transparent;
+//             background-image: url('../img/milky-way.jpeg');
+//             background-position: 100% 50%;
+//             background-size: contain;
+//             @include mobileLarge{
+//                 @include font(700, 0.9rem);   
+//             }
+//             @include mobileSmall{
+//                 @include font(700, 0.7rem);  
+//                 margin-left: 15px; 
+//             }
         
         
 
-        }
+//         }
 
-        .pin-shadow{
-            background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
-            position: absolute;
-            background-size: 134% 20%;
-            background-position: 3px 94%;
-            background-repeat: no-repeat;
-            top:0;
-            left:11%;
-            perspective: 40rem;
+//         .pin-shadow{
+//             background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
+//             position: absolute;
+//             background-size: 134% 20%;
+//             background-position: 3px 94%;
+//             background-repeat: no-repeat;
+//             top:0;
+//             left:11%;
+//             perspective: 40rem;
 
         
         
 
-        }
+//         }
             
             
 
-      h2{
-            color: purple;
-            margin:0;
-            @include cursive();
-            background-clip: text;
-            color: transparent;
-            background-image: url('../img/texture.jpeg');
-            background-position: center;
-            background-size: cover;  
-            @include font(500,1.25rem);
-            font-family: $font;
-            @include mobileLarge{
-                @include font(700, 0.9rem);   
-            }
-            @include mobileSmall{
-                @include font(700, 0.7rem);   
-            }
+//       h2{
+//             color: purple;
+//             margin:0;
+//             @include cursive();
+//             background-clip: text;
+//             color: transparent;
+//             background-image: url('../img/texture.jpeg');
+//             background-position: center;
+//             background-size: cover;  
+//             @include font(500,1.25rem);
+//             font-family: $font;
+//             @include mobileLarge{
+//                 @include font(700, 0.9rem);   
+//             }
+//             @include mobileSmall{
+//                 @include font(700, 0.7rem);   
+//             }
         
             
-        }
+//         }
 
-    }
+//     }
        
 
-  }
+//   }
         
        
 
 
 
      
-    &-other{
-        @include font(700, 1.2rem);
-        font-family: $font;
-        color:$color;
-        animation:$animation;
+//     &-other{
+//         @include font(700, 1.2rem);
+//         font-family: $font;
+//         color:$color;
+//         animation:$animation;
 
-        @include mobileLarge{
-            @include font(700, 0.9rem);   
-        }
-        @include mobileSmall{
-            @include font(700, 0.85rem);   
-        }
+//         @include mobileLarge{
+//             @include font(700, 0.9rem);   
+//         }
+//         @include mobileSmall{
+//             @include font(700, 0.85rem);   
+//         }
     
-    }
+//     }
 
 
 
 
 
-    &-weathertype{
+//     &-weathertype{
 
 
-        #{&}-weather{
-            padding-top:55px;
-            color: purple !important;
-            @include font(500, 1.3rem);
-            font-family: $font;
-            animation:$animation;
+//         #{&}-weather{
+//             padding-top:55px;
+//             color: purple !important;
+//             @include font(500, 1.3rem);
+//             font-family: $font;
+//             animation:$animation;
 
-            @include mobileSmall{
-                @include font(500, 1rem);
+//             @include mobileSmall{
+//                 @include font(500, 1rem);
             
-            }
+//             }
             
-        }
-    }
+//         }
+//     }
 
 
        
@@ -607,39 +607,39 @@ html, body{
       
     
 
-}
+// }
 
 
-//error..............
+// //error..............
 
-.error{
-    @include font(200,10px);
-    @include sansserif-font();
-    color:$color;
-    text-align: center;
-    padding:6px 0 6px 0;
-    background-color: rgb(214, 104, 104);
-    width:17%;
-    margin: 0 auto;
-    margin-top: 8px;
-    margin-left: 38%;
-    border-radius: 12px;
-    animation: emerge 0.5s linear 1;
-    perspective: 15rem;
-    letter-spacing: 0.4px;
-    position: relative;
+// .error{
+//     @include font(200,10px);
+//     @include sansserif-font();
+//     color:$color;
+//     text-align: center;
+//     padding:6px 0 6px 0;
+//     background-color: rgb(214, 104, 104);
+//     width:17%;
+//     margin: 0 auto;
+//     margin-top: 8px;
+//     margin-left: 38%;
+//     border-radius: 12px;
+//     animation: emerge 0.5s linear 1;
+//     perspective: 15rem;
+//     letter-spacing: 0.4px;
+//     position: relative;
 
 
-    &::after{
-        background-image: linear-gradient(135deg,transparent 50%,rgb(214, 104, 104) 50.14%);
-        content: '';
-        position: absolute;
-        left:4%;
-        top:-14px;
-        height: 17px;
-        width:16px;
-    }
-}
+//     &::after{
+//         background-image: linear-gradient(135deg,transparent 50%,rgb(214, 104, 104) 50.14%);
+//         content: '';
+//         position: absolute;
+//         left:4%;
+//         top:-14px;
+//         height: 17px;
+//         width:16px;
+//     }
+// }
 
 
 
@@ -648,238 +648,238 @@ html, body{
 
 
 
-/////////KEYFRAMES..........................
+// /////////KEYFRAMES..........................
 
 
-@keyframes rise {
-    0%{
-      transform: translate(0,10px);
-      opacity:0;
+// @keyframes rise {
+//     0%{
+//       transform: translate(0,10px);
+//       opacity:0;
       
-    }
-    25%{
-        transform: translate(0,8px);
-        opacity:0;
-    }
-    50%{
-        transform: translate(0,6px);
-    }
-    75%{
-        transform: translate(0,4px);
-    }
-    100%{
-        transform: translate(0,0px);
-    }
-}
+//     }
+//     25%{
+//         transform: translate(0,8px);
+//         opacity:0;
+//     }
+//     50%{
+//         transform: translate(0,6px);
+//     }
+//     75%{
+//         transform: translate(0,4px);
+//     }
+//     100%{
+//         transform: translate(0,0px);
+//     }
+// }
 
 
 
 
-@keyframes appear {
-    0%{
-       transform: translate(-80px,100px); 
-       opacity:0.5;
-    }
-    50%{
-        transform: translate(-50px,50px); 
-    }
-   100%{
-    transform: translate(0px,0px); 
-    }
+// @keyframes appear {
+//     0%{
+//        transform: translate(-80px,100px); 
+//        opacity:0.5;
+//     }
+//     50%{
+//         transform: translate(-50px,50px); 
+//     }
+//    100%{
+//     transform: translate(0px,0px); 
+//     }
     
-}
+// }
 
 
 
 
 
 
-@keyframes fall{
-    0%{
-        transform: translate(0,10vh) rotate(2deg);
+// @keyframes fall{
+//     0%{
+//         transform: translate(0,10vh) rotate(2deg);
      
   
-    }
-    25%{
-        transform: translate(0,22vh) rotate(90deg);
+//     }
+//     25%{
+//         transform: translate(0,22vh) rotate(90deg);
      
   
-    }
-    50%{
-        transform: translate(0,32vh) rotate(180deg);
+//     }
+//     50%{
+//         transform: translate(0,32vh) rotate(180deg);
     
   
-    }
-    75%{
-        transform: translate(0,45vh) rotate(270deg);
+//     }
+//     75%{
+//         transform: translate(0,45vh) rotate(270deg);
 
   
-    }
-    100%{
-        transform: translate(0px,56vh) rotate(360deg);
-        opacity:0;
+//     }
+//     100%{
+//         transform: translate(0px,56vh) rotate(360deg);
+//         opacity:0;
      
-    }
-}
+//     }
+// }
         
 
-@keyframes shine {
-    0%{
-        opacity: 0.1;
-    }
-    15%{
-        opacity:0.2;
-    }
-    25%{
-        opacity: 0.4;
-    }
-    50%{
-        opacity: 0.6;
-    }
-    75%{
-        opacity: 0.8;
-    }
-    100%{
-        opacity: 1;
-    }
-}
+// @keyframes shine {
+//     0%{
+//         opacity: 0.1;
+//     }
+//     15%{
+//         opacity:0.2;
+//     }
+//     25%{
+//         opacity: 0.4;
+//     }
+//     50%{
+//         opacity: 0.6;
+//     }
+//     75%{
+//         opacity: 0.8;
+//     }
+//     100%{
+//         opacity: 1;
+//     }
+// }
 
 
 
 
-@keyframes  emerge{
-    0%{
-        transform: rotateX(-110deg);
-        opacity: 0.3;
+// @keyframes  emerge{
+//     0%{
+//         transform: rotateX(-110deg);
+//         opacity: 0.3;
         
-    }
+//     }
 
-    25%{
+//     25%{
         
-        transform: rotateX(-70deg);
-        opacity:0.6;
+//         transform: rotateX(-70deg);
+//         opacity:0.6;
         
-    }
-    50%{
+//     }
+//     50%{
        
-        transform: rotateX(-50deg);
-        opacity: 0.9;
-    }
+//         transform: rotateX(-50deg);
+//         opacity: 0.9;
+//     }
 
-    100%{
+//     100%{
 
-        transform: rotateX(0deg);
-        opacity:1;
-    }
-}
+//         transform: rotateX(0deg);
+//         opacity:1;
+//     }
+// }
 
 
 
 
    
-@keyframes bird {
-    0%{
-        top: 5%;
-        left:5%;
-        transform: rotateX(100deg) ;
-        opacity:0.5;
-    }
+// @keyframes bird {
+//     0%{
+//         top: 5%;
+//         left:5%;
+//         transform: rotateX(100deg) ;
+//         opacity:0.5;
+//     }
       
-    25%{
+//     25%{
     
-        top: 15%;
-        left:40%;
-        transform: rotateX(0deg);
-        opacity:0.5;
-    }
+//         top: 15%;
+//         left:40%;
+//         transform: rotateX(0deg);
+//         opacity:0.5;
+//     }
         
        
-    50%{
-        top: 20%;
-        left:60%;
-        transform:rotateX(-80deg);
-        opacity:0.5;
+//     50%{
+//         top: 20%;
+//         left:60%;
+//         transform:rotateX(-80deg);
+//         opacity:0.5;
     
-    }
-    75%{
-        top: 25%;
-        left: 80%;
-        transform: rotateX(0deg);
-        opacity:0.5;
-    }
+//     }
+//     75%{
+//         top: 25%;
+//         left: 80%;
+//         transform: rotateX(0deg);
+//         opacity:0.5;
+//     }
     
-    100%{
-        opacity:0;
-        left:100%;
-        top:20%;
-        transform: rotateX(80deg);
-    }
-}
+//     100%{
+//         opacity:0;
+//         left:100%;
+//         top:20%;
+//         transform: rotateX(80deg);
+//     }
+// }
        
        
          
 
 
 
-@keyframes wide{
-    0%{
-        width: 8%;
-    }
-    25%{
-        width: 16%;
-    }
-    50%{
-        width: 24%;
-    }
-    75%{
-        width: 36%;
-    }
-    100%{
-        width: 40%;
-    }
-}  
+// @keyframes wide{
+//     0%{
+//         width: 8%;
+//     }
+//     25%{
+//         width: 16%;
+//     }
+//     50%{
+//         width: 24%;
+//     }
+//     75%{
+//         width: 36%;
+//     }
+//     100%{
+//         width: 40%;
+//     }
+// }  
 
-@keyframes pin{
-    0%{
-        transform: translate(0,-6px)  rotateY(250deg);
+// @keyframes pin{
+//     0%{
+//         transform: translate(0,-6px)  rotateY(250deg);
         
-    }
-    25%{
-        transform: translate(0,-12px)  rotateY(190deg);
+//     }
+//     25%{
+//         transform: translate(0,-12px)  rotateY(190deg);
         
-    }
+//     }
   
-    50%{
-        transform: translate(0,0px) rotateY(120deg);
+//     50%{
+//         transform: translate(0,0px) rotateY(120deg);
 
-    }
-    75%{
-        transform: translate(0,-7px) rotateY(85deg);
-    }
-    90%{
-        transform: translate(0,-3.5px) rotateY(25deg);
+//     }
+//     75%{
+//         transform: translate(0,-7px) rotateY(85deg);
+//     }
+//     90%{
+//         transform: translate(0,-3.5px) rotateY(25deg);
 
-    }
-    100%{
-        transform: rotate3d(0,0px) rotateY(0);
-    }
-}
+//     }
+//     100%{
+//         transform: rotate3d(0,0px) rotateY(0);
+//     }
+// }
 
 
-@keyframes color {
-    0%{
-      color:$color;
+// @keyframes color {
+//     0%{
+//       color:$color;
         
-    }
+//     }
    
   
-    50%{
-        color:darkgoldenrod;
+//     50%{
+//         color:darkgoldenrod;
 
-    }
+//     }
    
    
-    100%{
-        color:$color;
-    }
-}
+//     100%{
+//         color:$color;
+//     }
+// }
