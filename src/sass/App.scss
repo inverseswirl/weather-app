@@ -148,56 +148,56 @@ html, body{
 
 
 
-// .landscape{
-//     background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
-//     background-repeat: no-repeat;
-//     background-size: 100% 100%;
-//     background-position: 50% 50%;
-//     height: 100vh;
-//     width: 100vw;
-//     position: absolute;
-//     top:0;
-//     z-index: -1;
-//     animation: shine 0.1s linear 1;
+.landscape{
+    background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top:0;
+    z-index: -1;
+    animation: shine 0.1s linear 1;
 
-//     &-sun{
-//         border-radius: 50%;
-//         width:100px;
-//         height:100px;
-//         background-color: yellow;
-//         position: absolute;
-//         border: 1px solid #ffa60042;
-//         top: 30px;
-//         left: 40px;
-//         animation: appear 1.2s linear 1;
-//         @include mobileSmall{
-//             left: 14px; 
-//             width:70px;
-//             height:70px;
-//         }
+    &-sun{
+        border-radius: 50%;
+        width:100px;
+        height:100px;
+        background-color: yellow;
+        position: absolute;
+        border: 1px solid #ffa60042;
+        top: 30px;
+        left: 40px;
+        animation: appear 1.2s linear 1;
+        @include mobileSmall{
+            left: 14px; 
+            width:70px;
+            height:70px;
+        }
     
-//         &::after{
-//             content:'';
-//             position: absolute;
-//             background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 40%, rgba(255, 166, 0, 0.8) 76%);
-//             background-size: 100% 100%;
-//             border-radius: 50%;
-//             top: -10px;
-//             left: -10px;
-//             width:120px;
-//             height:120px;
-//             animation: shine 2s ease-in-out 1;
-//             @include mobileSmall{
-//                 top: -5px;
-//                 left: 0px;
-//                 width:82px;
-//                 height:82px;
-//             }
-//         }
-//     }
+        &::after{
+            content:'';
+            position: absolute;
+            background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 40%, rgba(255, 166, 0, 0.8) 76%);
+            background-size: 100% 100%;
+            border-radius: 50%;
+            top: -10px;
+            left: -10px;
+            width:120px;
+            height:120px;
+            animation: shine 2s ease-in-out 1;
+            @include mobileSmall{
+                top: -5px;
+                left: 0px;
+                width:82px;
+                height:82px;
+            }
+        }
+    }
     
 
-// }
+}
   
    
 // ////// cloudy..................
