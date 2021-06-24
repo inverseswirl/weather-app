@@ -105,9 +105,3 @@ $mobileSmall-screen: 475px;
 
 
 
-@mixin keyframes($name) {
-   
-    @keyframes #{$name} {
-      @content;
-    } 
-  }
