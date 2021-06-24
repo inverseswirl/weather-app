@@ -70,6 +70,7 @@ fetchCurrentWeather(searchQuery){
 render(){
 
 const{res,current, location,input,errorMsg,button}=this.state;
+console.log(res)
 
 if(errorMsg){
   return <Error />
