@@ -472,7 +472,7 @@ html, body{
 
         padding-top:55px;
         color: purple !important;
-        @include font(500, 1.3rem);
+        @include font(600, 1.3rem);
         font-family: $font;
         animation:$animation;
 
@@ -488,18 +488,18 @@ html, body{
 
 
    
-    
-  &-group-location{
+      
+    &-location{
         position:absolute;
         right:4%;
-        top:10%;
+        top:8%;
         @include flex(column);
         align-items: center;
         width: 45%;
         animation:$animation;
         border-radius: 12px;
-        text-align: right;
-        padding:1px;
+        text-align: center;
+        
     
         @include laptop{
             width: 52%; 
@@ -511,11 +511,11 @@ html, body{
     
         }
         @include mobileSmall{
-            width: 42%; 
-            right:3%; 
-            top:22%;
-            right:10%;
-            align-items: flex-end;
+            width: 45%; 
+            right:5%; 
+            top:10%;
+         
+           
         }
     
         @include media2(1400px){
@@ -530,10 +530,10 @@ html, body{
 
 
         h1{
-            display:inline-block;
             margin:0;
             font-family: 'Dela Gothic One', cursive;
-            @include font(500,1.5rem);
+            @include font(500,1.4rem);
+            display:inline-flex;
             background-clip: text;
             color: transparent;
             background-image: url('../img/milky-way.jpeg');
@@ -547,28 +547,12 @@ html, body{
                 margin-left: 15px; 
             }
         
-        
-
         }
-
-//         .pin-shadow{
-//             background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
-//             position: absolute;
-//             background-size: 134% 20%;
-//             background-position: 3px 94%;
-//             background-repeat: no-repeat;
-//             top:0;
-//             left:11%;
-//             perspective: 40rem;
-
-        
         
 
-//         }
-            
-            
 
-      h2{
+
+        h2{
             color: purple;
             margin:0;
             @include cursive();
@@ -577,7 +561,7 @@ html, body{
             background-image: url('../img/texture.jpeg');
             background-position: center;
             background-size: cover;  
-            @include font(500,1.25rem);
+            @include font(600,1.3rem);
             font-family: $font;
             @include mobileLarge{
                 @include font(700, 0.9rem);   
@@ -589,24 +573,45 @@ html, body{
             
         }
 
+
+
+       &-pinshadow{
+        background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
+        // position: absolute;
+        background-size: 100% 20%;
+        background-position: 10px 94%;
+        background-repeat: no-repeat;
+        perspective: 40rem;
+        z-index: 0;
+     
+        // animation: pin 2s linear 3 ;
+
+
     
+    
+
+    }
+    
+
+    
+    }
+       
+  
+
+
        
 
-  }
-        
-       
-
 
 
 
 
 
        
+}
         
       
-    
 
-}
+    
 
 
 // //error..............

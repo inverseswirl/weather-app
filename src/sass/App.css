@@ -590,7 +590,7 @@ html, body {
 .data-weathertype {
   padding-top: 55px;
   color: purple !important;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.3rem;
   font-family: "Nunito", sans-serif;
   -webkit-animation: emerge 0.7s linear 1;
@@ -604,10 +604,10 @@ html, body {
   }
 }
 
-.data-group-location {
+.data-location {
   position: absolute;
   right: 4%;
-  top: 10%;
+  top: 8%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -626,48 +626,45 @@ html, body {
   -webkit-animation: emerge 0.7s linear 1;
           animation: emerge 0.7s linear 1;
   border-radius: 12px;
-  text-align: right;
-  padding: 1px;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
-  .data-group-location {
+  .data-location {
     width: 52%;
   }
 }
 
 @media (max-width: 600px) {
-  .data-group-location {
+  .data-location {
     width: 53%;
     right: 1%;
   }
 }
 
 @media (max-width: 475px) {
-  .data-group-location {
-    width: 42%;
-    right: 3%;
-    top: 22%;
-    right: 10%;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+  .data-location {
+    width: 45%;
+    right: 5%;
+    top: 10%;
   }
 }
 
 @media (min-width: 1400px) {
-  .data-group-location {
+  .data-location {
     width: 52%;
     padding-top: 20px;
   }
 }
 
-.data-group-location h1 {
-  display: inline-block;
+.data-location h1 {
   margin: 0;
   font-family: 'Dela Gothic One', cursive;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   background-clip: text;
   color: transparent;
   background-image: url("../img/milky-way.jpeg");
@@ -676,21 +673,21 @@ html, body {
 }
 
 @media (max-width: 600px) {
-  .data-group-location h1 {
+  .data-location h1 {
     font-weight: 700;
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 475px) {
-  .data-group-location h1 {
+  .data-location h1 {
     font-weight: 700;
     font-size: 0.7rem;
     margin-left: 15px;
   }
 }
 
-.data-group-location h2 {
+.data-location h2 {
   color: purple;
   margin: 0;
   font-family: 'Zen Dots', cursive;
@@ -699,23 +696,33 @@ html, body {
   background-image: url("../img/texture.jpeg");
   background-position: center;
   background-size: cover;
-  font-weight: 500;
-  font-size: 1.25rem;
+  font-weight: 600;
+  font-size: 1.3rem;
   font-family: "Nunito", sans-serif;
 }
 
 @media (max-width: 600px) {
-  .data-group-location h2 {
+  .data-location h2 {
     font-weight: 700;
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 475px) {
-  .data-group-location h2 {
+  .data-location h2 {
     font-weight: 700;
     font-size: 0.7rem;
   }
+}
+
+.data-location-pinshadow {
+  background-image: radial-gradient(ellipse at 30% 70%, #9c6602 4%, transparent 32%);
+  background-size: 100% 20%;
+  background-position: 10px 94%;
+  background-repeat: no-repeat;
+  -webkit-perspective: 40rem;
+          perspective: 40rem;
+  z-index: 0;
 }
 
 .error {

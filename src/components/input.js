@@ -109,7 +109,13 @@ if(errorMsg){
                   location={location}
 
                         />   : null}
-     
+
+           {/* <Result 
+                  current={current}
+                  location={location}
+
+                        />  
+     */}
 
      </div>           
 

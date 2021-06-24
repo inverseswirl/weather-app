@@ -25,14 +25,13 @@ const Data=({current,location})=>{
     
  
       
-       <div className="data-group-location">
+       <div className="data-location">
+       <span className="data-location-pinshadow">< FiMapPin  color="rgba(255, 179, 98,0.9)" size={30}/></span>
           <h1> {name}</h1>
           <h2>{country}</h2>
        </div>
 
-    <span className="pin-shadow">< FiMapPin  style={{ animation: 'pin 2s linear 1'}} color="#FFB362" size={30}/></span>
-      
-     
+  
 
     
       <p className="data-other"> UV index is <span>
