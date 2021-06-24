@@ -1,5 +1,5 @@
 import React from 'react';
-import './sass/App.css';
+import './sass/App.scss';
 import Input from './components/input.js';
 
 const App = ()=> {
