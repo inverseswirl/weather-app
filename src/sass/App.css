@@ -213,6 +213,13 @@ html, body {
   overflow: hidden;
 }
 
+@media (max-width: 475px) {
+  .cloudy {
+    background-size: cover;
+    background-position: 10% 0%;
+  }
+}
+
 .cloudy-birds {
   background: url("../img/gull-bird-flying-shape.svg");
   background-repeat: no-repeat;
@@ -328,10 +335,10 @@ html, body {
 
 @media (max-width: 475px) {
   .search-input {
-    width: 50%;
-    padding: 0px 0 4px 12px;
+    width: 55%;
+    padding: 4px 0 4px 10px;
     font-weight: 700;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -413,19 +420,19 @@ html, body {
 @media (max-width: 475px) {
   .search-input::-webkit-input-placeholder {
     font-weight: 200;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .search-input:-ms-input-placeholder {
     font-weight: 200;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .search-input::-ms-input-placeholder {
     font-weight: 200;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
   .search-input::placeholder {
     font-weight: 200;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -537,6 +544,7 @@ html, body {
   .data-temperature {
     font-weight: 700;
     font-size: 0.85rem;
+    padding-left: 3px;
   }
 }
 
@@ -561,6 +569,7 @@ html, body {
   .data-feelslike {
     font-weight: 700;
     font-size: 0.85rem;
+    padding-left: 3px;
   }
 }
 
@@ -584,6 +593,7 @@ html, body {
   .data-other {
     font-weight: 700;
     font-size: 0.85rem;
+    padding-left: 2px;
   }
 }
 
@@ -601,6 +611,7 @@ html, body {
   .data-weathertype {
     font-weight: 500;
     font-size: 1rem;
+    padding-left: 2px;
   }
 }
 
@@ -645,8 +656,8 @@ html, body {
 @media (max-width: 475px) {
   .data-location {
     width: 45%;
-    right: 5%;
-    top: 10%;
+    right: 1%;
+    top: 8%;
   }
 }
 
@@ -681,9 +692,8 @@ html, body {
 
 @media (max-width: 475px) {
   .data-location h1 {
-    font-weight: 700;
-    font-size: 0.7rem;
-    margin-left: 15px;
+    font-weight: 400;
+    font-size: 0.8rem;
   }
 }
 
@@ -711,18 +721,20 @@ html, body {
 @media (max-width: 475px) {
   .data-location h2 {
     font-weight: 700;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
 .data-location-pinshadow {
   background-image: radial-gradient(ellipse at 30% 70%, #9c6602 4%, transparent 32%);
   background-size: 100% 20%;
-  background-position: 10px 94%;
+  background-position: 6px 94%;
   background-repeat: no-repeat;
   -webkit-perspective: 40rem;
           perspective: 40rem;
   z-index: 0;
+  -webkit-animation: pin 2s linear 1;
+          animation: pin 2s linear 1;
 }
 
 @-webkit-keyframes emerge {
@@ -800,5 +812,59 @@ html, body {
   top: -14px;
   height: 17px;
   width: 16px;
+}
+
+@-webkit-keyframes pin {
+  0% {
+    -webkit-transform: translate(0, -6px) rotateY(250deg);
+            transform: translate(0, -6px) rotateY(250deg);
+  }
+  25% {
+    -webkit-transform: translate(0, -12px) rotateY(190deg);
+            transform: translate(0, -12px) rotateY(190deg);
+  }
+  50% {
+    -webkit-transform: translate(0, 0px) rotateY(120deg);
+            transform: translate(0, 0px) rotateY(120deg);
+  }
+  75% {
+    -webkit-transform: translate(0, -7px) rotateY(85deg);
+            transform: translate(0, -7px) rotateY(85deg);
+  }
+  90% {
+    -webkit-transform: translate(0, -3.5px) rotateY(25deg);
+            transform: translate(0, -3.5px) rotateY(25deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0px) rotateY(0);
+            transform: rotate3d(0, 0px) rotateY(0);
+  }
+}
+
+@keyframes pin {
+  0% {
+    -webkit-transform: translate(0, -6px) rotateY(250deg);
+            transform: translate(0, -6px) rotateY(250deg);
+  }
+  25% {
+    -webkit-transform: translate(0, -12px) rotateY(190deg);
+            transform: translate(0, -12px) rotateY(190deg);
+  }
+  50% {
+    -webkit-transform: translate(0, 0px) rotateY(120deg);
+            transform: translate(0, 0px) rotateY(120deg);
+  }
+  75% {
+    -webkit-transform: translate(0, -7px) rotateY(85deg);
+            transform: translate(0, -7px) rotateY(85deg);
+  }
+  90% {
+    -webkit-transform: translate(0, -3.5px) rotateY(25deg);
+            transform: translate(0, -3.5px) rotateY(25deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0px) rotateY(0);
+            transform: rotate3d(0, 0px) rotateY(0);
+  }
 }
 /*# sourceMappingURL=App.css.map */

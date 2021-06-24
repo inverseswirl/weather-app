@@ -11,6 +11,8 @@ html, body{
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+
+  
 }
    
   
@@ -212,6 +214,11 @@ html, body{
     top:0;
     z-index: -1;
     overflow: hidden;
+
+    @include mobileSmall{
+        background-size: cover;
+        background-position: 10% 0%;
+    }
   
  
     
@@ -308,9 +315,9 @@ html, body{
                @include font(700, 1.6rem);
             }
             @include mobileSmall{
-               width:50%;
-               padding: 0px 0 4px 12px;
-               @include font(700, 1.6rem);
+               width:55%;
+               padding: 4px 0 4px 10px;
+               @include font(700, 1.2rem);
             }
 
 
@@ -335,7 +342,7 @@ html, body{
                 @include font(200, 0.9rem);
               }
                @include mobileSmall{
-                @include font(200, 0.7rem);
+                @include font(200, 0.5rem);
            
             }
            }
@@ -431,7 +438,8 @@ html, body{
             @include font(700, 0.9rem);   
         }
         @include mobileSmall{
-            @include font(700, 0.85rem);   
+            @include font(700, 0.85rem); 
+            padding-left: 3px;  
         }
     
     }
@@ -447,7 +455,8 @@ html, body{
         }
        
         @include mobileSmall{
-            @include font(700, 0.85rem);   
+            @include font(700, 0.85rem); 
+            padding-left: 3px;    
         }
     }
             
@@ -461,7 +470,8 @@ html, body{
             @include font(700, 0.9rem);   
         }
         @include mobileSmall{
-            @include font(700, 0.85rem);   
+            @include font(700, 0.85rem);  
+            padding-left: 2px;   
         }
     
     }
@@ -478,6 +488,7 @@ html, body{
 
         @include mobileSmall{
             @include font(500, 1rem);
+            padding-left: 2px;  
         
         }
         
@@ -512,8 +523,8 @@ html, body{
         }
         @include mobileSmall{
             width: 45%; 
-            right:5%; 
-            top:10%;
+            right:1%; 
+            top:8%;
          
            
         }
@@ -543,8 +554,8 @@ html, body{
                 @include font(700, 0.9rem);   
             }
             @include mobileSmall{
-                @include font(700, 0.7rem);  
-                margin-left: 15px; 
+                @include font(400, 0.8rem);  
+                
             }
         
         }
@@ -567,7 +578,7 @@ html, body{
                 @include font(700, 0.9rem);   
             }
             @include mobileSmall{
-                @include font(700, 0.7rem);   
+                @include font(700, 0.8rem);   
             }
         
             
@@ -577,14 +588,13 @@ html, body{
 
        &-pinshadow{
         background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
-        // position: absolute;
         background-size: 100% 20%;
-        background-position: 10px 94%;
+        background-position: 6px 94%;
         background-repeat: no-repeat;
         perspective: 40rem;
         z-index: 0;
+        animation: pin 2s linear 1 ;
      
-        // animation: pin 2s linear 3 ;
 
 
     
@@ -837,31 +847,31 @@ html, body{
 //     }
 // }  
 
-// @keyframes pin{
-//     0%{
-//         transform: translate(0,-6px)  rotateY(250deg);
+@keyframes pin{
+    0%{
+        transform: translate(0,-6px)  rotateY(250deg);
         
-//     }
-//     25%{
-//         transform: translate(0,-12px)  rotateY(190deg);
+    }
+    25%{
+        transform: translate(0,-12px)  rotateY(190deg);
         
-//     }
+    }
   
-//     50%{
-//         transform: translate(0,0px) rotateY(120deg);
+    50%{
+        transform: translate(0,0px) rotateY(120deg);
 
-//     }
-//     75%{
-//         transform: translate(0,-7px) rotateY(85deg);
-//     }
-//     90%{
-//         transform: translate(0,-3.5px) rotateY(25deg);
+    }
+    75%{
+        transform: translate(0,-7px) rotateY(85deg);
+    }
+    90%{
+        transform: translate(0,-3.5px) rotateY(25deg);
 
-//     }
-//     100%{
-//         transform: rotate3d(0,0px) rotateY(0);
-//     }
-// }
+    }
+    100%{
+        transform: rotate3d(0,0px) rotateY(0);
+    }
+}
 
 
 // @keyframes color {
