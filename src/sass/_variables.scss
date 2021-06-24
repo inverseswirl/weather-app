@@ -102,3 +102,12 @@ $mobileSmall-screen: 475px;
 @mixin center(){
     text-align: center;
 }
+
+
+
+@mixin keyframes($name) {
+   
+    @keyframes #{$name} {
+      @content;
+    } 
+  }
