@@ -698,33 +698,33 @@ html, body{
 
 
 
-@keyframes fall{
-    0%{
-        transform: translate(0,10vh) rotate(2deg);
+// @keyframes fall{
+//     0%{
+//         transform: translate(0,10vh) rotate(2deg);
      
   
-    }
-    25%{
-        transform: translate(0,22vh) rotate(90deg);
+//     }
+//     25%{
+//         transform: translate(0,22vh) rotate(90deg);
      
   
-    }
-    50%{
-        transform: translate(0,32vh) rotate(180deg);
+//     }
+//     50%{
+//         transform: translate(0,32vh) rotate(180deg);
     
   
-    }
-    75%{
-        transform: translate(0,45vh) rotate(270deg);
+//     }
+//     75%{
+//         transform: translate(0,45vh) rotate(270deg);
 
   
-    }
-    100%{
-        transform: translate(0px,56vh) rotate(360deg);
-        opacity:0;
+//     }
+//     100%{
+//         transform: translate(0px,56vh) rotate(360deg);
+//         opacity:0;
      
-    }
-}
+//     }
+// }
         
 
 @keyframes shine {
@@ -751,31 +751,31 @@ html, body{
 
 
 
-@keyframes  emerge{
-    0%{
-        transform: rotateX(-110deg);
-        opacity: 0.3;
+// @keyframes  emerge{
+//     0%{
+//         transform: rotateX(-110deg);
+//         opacity: 0.3;
         
-    }
+//     }
 
-    25%{
+//     25%{
         
-        transform: rotateX(-70deg);
-        opacity:0.6;
+//         transform: rotateX(-70deg);
+//         opacity:0.6;
         
-    }
-    50%{
+//     }
+//     50%{
        
-        transform: rotateX(-50deg);
-        opacity: 0.9;
-    }
+//         transform: rotateX(-50deg);
+//         opacity: 0.9;
+//     }
 
-    100%{
+//     100%{
 
-        transform: rotateX(0deg);
-        opacity:1;
-    }
-}
+//         transform: rotateX(0deg);
+//         opacity:1;
+//     }
+// }
 
 
 
