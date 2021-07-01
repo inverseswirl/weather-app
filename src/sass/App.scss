@@ -170,27 +170,27 @@ html, body{
         position: absolute;
         top: 10%;
         left: 40%;
-        // @include keyframes(fall){
-        //     0%{
-        //         transform: translate(0,10vh) rotate(2deg);
-        //     }
-        //     25%{
-        //         transform: translate(0,22vh) rotate(90deg);
-        //     }
+        @include keyframes(fall){
+            0%{
+                transform: translate(0,10vh) rotate(2deg);
+            }
+            25%{
+                transform: translate(0,22vh) rotate(90deg);
+            }
              
-        //     50%{
-        //         transform: translate(0,32vh) rotate(180deg);
-        //     }
-        //     75%{
-        //         transform: translate(0,45vh) rotate(270deg);
-        //     }
-        //     100%{
-        //         transform: translate(0px,56vh) rotate(360deg);
-        //         opacity:0;
+            50%{
+                transform: translate(0,32vh) rotate(180deg);
+            }
+            75%{
+                transform: translate(0,45vh) rotate(270deg);
+            }
+            100%{
+                transform: translate(0px,56vh) rotate(360deg);
+                opacity:0;
              
-        //     }
-        // }
-        // @include animate(fall,4.9s ,linear,infinite);
+            }
+        }
+        @include animate(fall,4.9s ,linear,infinite);
     }
     &-snowflake4{
         background-image: url('../img/snowflake.svg');
@@ -200,27 +200,27 @@ html, body{
         position: absolute;
         top: 14%;
         left: 63%;
-        // @include keyframes(fall){
-        //     0%{
-        //         transform: translate(0,10vh) rotate(2deg);
-        //     }
-        //     25%{
-        //         transform: translate(0,22vh) rotate(90deg);
-        //     }
+        @include keyframes(fall){
+            0%{
+                transform: translate(0,10vh) rotate(2deg);
+            }
+            25%{
+                transform: translate(0,22vh) rotate(90deg);
+            }
              
-        //     50%{
-        //         transform: translate(0,32vh) rotate(180deg);
-        //     }
-        //     75%{
-        //         transform: translate(0,45vh) rotate(270deg);
-        //     }
-        //     100%{
-        //         transform: translate(0px,56vh) rotate(360deg);
-        //         opacity:0;
+            50%{
+                transform: translate(0,32vh) rotate(180deg);
+            }
+            75%{
+                transform: translate(0,45vh) rotate(270deg);
+            }
+            100%{
+                transform: translate(0px,56vh) rotate(360deg);
+                opacity:0;
              
-        //     }
-        // }
-        // @include animate(fall,4s,linear,infinite );
+            }
+        }
+        @include animate(fall,4s,linear,infinite );
        
     }
     
