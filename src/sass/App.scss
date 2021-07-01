@@ -660,55 +660,55 @@ html, body{
 
        
 
-// @keyframes emerge{
-//     0%{
-//         transform: rotateX(-110deg);
-//         opacity: 0.3;
-//     }
-//     25%{
-//         transform: rotateX(-70deg);
-//         opacity:0.6;
+@keyframes emerge{
+    0%{
+        transform: rotateX(-110deg);
+        opacity: 0.3;
+    }
+    25%{
+        transform: rotateX(-70deg);
+        opacity:0.6;
             
-//         }
-//         50%{
-//             transform: rotateX(-50deg);
-//             opacity: 0.9;
+        }
+        50%{
+            transform: rotateX(-50deg);
+            opacity: 0.9;
         
-//         }
-//         100%{
-//             transform: rotateX(0deg);
-//             opacity:1;
+        }
+        100%{
+            transform: rotateX(0deg);
+            opacity:1;
 
-//         }
-//     }
+        }
+    }
 
 
         
-//     @keyframes pin{
-//         0%{
-//             transform: translate(0,-6px)  rotateY(250deg);
+    @keyframes pin{
+        0%{
+            transform: translate(0,-6px)  rotateY(250deg);
             
-//         }
-//         25%{
-//             transform: translate(0,-12px)  rotateY(190deg);
+        }
+        25%{
+            transform: translate(0,-12px)  rotateY(190deg);
             
-//         }
+        }
     
-//         50%{
-//             transform: translate(0,0px) rotateY(120deg);
+        50%{
+            transform: translate(0,0px) rotateY(120deg);
     
-//         }
-//         75%{
-//             transform: translate(0,-7px) rotateY(85deg);
-//         }
-//         90%{
-//             transform: translate(0,-3.5px) rotateY(25deg);
+        }
+        75%{
+            transform: translate(0,-7px) rotateY(85deg);
+        }
+        90%{
+            transform: translate(0,-3.5px) rotateY(25deg);
     
-//         }
-//         100%{
-//             transform: rotate3d(0,0px) rotateY(0);
-//         }
-//     } 
+        }
+        100%{
+            transform: rotate3d(0,0px) rotateY(0);
+        }
+    } 
 
     
 
