@@ -263,19 +263,19 @@ html, body{
         position: absolute;
         top: 20px;
         left: 40px;
-        // @include keyframes(appear){
-        //     0%{
-        //         transform: translate(-80px,100px); 
-        //         opacity:0.5;
-        //      }
-        //      50%{
-        //          transform: translate(-50px,50px); 
-        //      }
-        //     100%{
-        //      transform: translate(0px,0px); 
-        //      }
-        // }
-        // @include animate( appear,1.2s, linear, 1);
+        @include keyframes(appear){
+            0%{
+                transform: translate(-80px,100px); 
+                opacity:0.5;
+             }
+             50%{
+                 transform: translate(-50px,50px); 
+             }
+            100%{
+             transform: translate(0px,0px); 
+             }
+        }
+        @include animate( appear,1.2s, linear, 1);
     
 
         @include mobileSmall{
@@ -334,40 +334,40 @@ html, body{
         background:url('../img/gull-bird-flying-shape.svg');
         background-repeat: no-repeat;
         background-size: 50% 100%;
-    //     @include keyframes(bird){
-    //         0%{
-    //             top: 5%;
-    //             left:5%;
-    //             transform: rotateX(100deg) ;
-    //             opacity:0.5;
-    //         }
-    //         25%{
+        @include keyframes(bird){
+            0%{
+                top: 5%;
+                left:5%;
+                transform: rotateX(100deg) ;
+                opacity:0.5;
+            }
+            25%{
             
-    //             top: 15%;
-    //             left:40%;
-    //             transform: rotateX(0deg);
-    //             opacity:0.5;
-    //         }
-    //          50%{
-    //             top: 20%;
-    //             left:60%;
-    //             transform:rotateX(-80deg);
-    //             opacity:0.5;
-    //         }
-    //         75%{
-    //             top: 25%;
-    //             left: 80%;
-    //             transform: rotateX(0deg);
-    //             opacity:0.5;
-    //         }
-    //         100%{
-    //             opacity:0;
-    //             left:100%;
-    //             top:20%;
-    //             transform: rotateX(80deg);
-    //         }
-    //     }
-    //    @include animate(bird ,6.2s ,linear, infinite);  
+                top: 15%;
+                left:40%;
+                transform: rotateX(0deg);
+                opacity:0.5;
+            }
+             50%{
+                top: 20%;
+                left:60%;
+                transform:rotateX(-80deg);
+                opacity:0.5;
+            }
+            75%{
+                top: 25%;
+                left: 80%;
+                transform: rotateX(0deg);
+                opacity:0.5;
+            }
+            100%{
+                opacity:0;
+                left:100%;
+                top:20%;
+                transform: rotateX(80deg);
+            }
+        }
+       @include animate(bird ,6.2s ,linear, infinite);  
         perspective: 20rem;
         position: absolute;
         top: 10%;
