@@ -86,9 +86,7 @@ html, body{
     position: absolute;
     top:0;
     z-index: -1;
-    @mixin anime($name, $duration){
-        animation: $name $duration linear infinite;
-    }
+  
 
     @include mobileSmall{
         background-size: cover;
@@ -121,7 +119,7 @@ html, body{
              
             }
         }
-        @include anime(fall,6.5s );
+        @include animate(fall,6.5s ,linear,infinite);
     }
           
             
@@ -156,7 +154,7 @@ html, body{
              
             }
         }
-        @include anime(fall,7s )
+        @include animate(fall,7s,linear,infinite );
        
     }
     &-snowflake3{
@@ -187,7 +185,7 @@ html, body{
              
             }
         }
-        @include anime(fall,4.9s );
+        @include animate(fall,4.9s ,linear,infinite);
     }
     &-snowflake4{
         background-image: url('../img/snowflake.svg');
@@ -217,7 +215,7 @@ html, body{
              
             }
         }
-        @include anime(fall,4s );
+        @include animate(fall,4s,linear,infinite );
        
     }
     &-snowflake5{
@@ -248,7 +246,7 @@ html, body{
              
             }
         }
-        @include anime(fall,5.5s );
+        @include anime(fall,5.5s,linear,infinite );
       
     }
 
@@ -307,7 +305,7 @@ html, body{
             left: -10px;
             width:120px;
             height:120px;
-            animation: shine 2s ease-in-out 1;
+            
             @include mobileSmall{
                 top: -5px;
                 left: -6px;
@@ -538,15 +536,7 @@ html, body{
 .data{
 
     $font: 'Nunito', sans-serif;
-    @mixin animate($name,$duration){
-        animation: $name $duration linear 1;
-    }
-
-    @mixin keyframes($name){
-        @keyframes #{$name}{
-            @content;
-        }
-    }
+   
 
 
 
@@ -579,7 +569,7 @@ html, body{
         }
     }
                 
-    @include animate(emerge, 1s);
+    @include animate(emerge,1s,linear,1);
     position: relative;
     padding: 3% 2% 2% 2%;
 
@@ -788,7 +778,7 @@ html, body{
                     transform: rotate3d(0,0px) rotateY(0);
                 }
             }
-        @include animate(pin, 2s)
+        @include animate(pin, 2s, linear,1);
             
         
 
@@ -829,7 +819,7 @@ html, body{
     margin-top: 8px;
     margin-left: 38%;
     border-radius: 12px;
-    @include animate(emerge,0.5s);
+    @include animate(emerge,0.5s,linear,1);
     @include keyframes(emerge){
         0%{
             transform: rotateX(-110deg);
