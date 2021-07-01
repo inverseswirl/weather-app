@@ -1,4 +1,4 @@
-@import './variables';
+@import './variables.scss';
 
 
 
@@ -246,7 +246,7 @@ html, body{
              
             }
         }
-        @include anime(fall,5.5s,linear,infinite );
+        @include animate(fall,5.5s,linear,infinite );
       
     }
 
