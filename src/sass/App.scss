@@ -391,7 +391,32 @@ html, body{
 
 
 
+.searchcopy{
+    position: absolute;
+    bottom: 1px;
+    left:40%;
+    @include serif-font();
+    @include font(200, 0.7rem);
+    color:rgb(73, 40, 73);
 
+     @include media(1450px){
+        left:50%;
+     }
+     @include media(1200px){
+        left:52%;
+     }
+    @include laptopLarge{
+        left:50%;
+    }
+    @include tablet{
+        left:47%;
+    }
+
+    @include mobileSmall{
+        left:42%; 
+    }
+
+}
 
 
 

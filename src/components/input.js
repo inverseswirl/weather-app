@@ -7,6 +7,7 @@ import Winter from '../style/winter';
 import Cloudy from '../style/cloudy';
 import Error from './error';
 import Loading from './loading';
+import {AiOutlineCopyright} from 'react-icons/ai';
 
 
 
@@ -98,6 +99,7 @@ if(errorMsg){
                 />
           <button  className="search-btn"
                    onClick={this.handleButton}></button>
+          
      </div>
                   
      
@@ -112,6 +114,7 @@ if(errorMsg){
                         />   : null}
 
         
+     <p className="searchcopy"><AiOutlineCopyright color="rgb(73, 40, 73)" size={10} style={{marginBottom:'-1px'}}/>shriya 2021</p>
 
      </div>           
 
