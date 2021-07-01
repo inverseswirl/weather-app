@@ -81,15 +81,15 @@ html, body{
 //  ///WINTER section.......
 
 .winter{
-    @mixin keyframes($name){
-        @keyframes #{$name}{
-            @content;
-        }
-    }
+    // @mixin keyframes($name){
+    //     @keyframes #{$name}{
+    //         @content;
+    //     }
+    // }
     
-    @mixin animate($name,$duration,$method,$times){
-        animation: $name $duration $method $times;
-    }
+    // @mixin animate($name,$duration,$method,$times){
+    //     animation: $name $duration $method $times;
+    // }
     
     background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
     background-repeat: no-repeat;
@@ -112,27 +112,27 @@ html, body{
         width:60px;
         position: absolute;
         left: 10%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
+        // @include keyframes(fall){
+        //     0%{
+        //         transform: translate(0,10vh) rotate(2deg);
+        //     }
+        //     25%{
+        //         transform: translate(0,22vh) rotate(90deg);
+        //     }
              
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
+        //     50%{
+        //         transform: translate(0,32vh) rotate(180deg);
+        //     }
+        //     75%{
+        //         transform: translate(0,45vh) rotate(270deg);
+        //     }
+        //     100%{
+        //         transform: translate(0px,56vh) rotate(360deg);
+        //         opacity:0;
              
-            }
-        }
-        @include animate(fall,6.5s ,linear,infinite);
+        //     }
+        // }
+        // @include animate(fall,6.5s ,linear,infinite);
     }
           
             
@@ -147,27 +147,27 @@ html, body{
         position: absolute;
         top: 12%;
         left: 16%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
+        // @include keyframes(fall){
+        //     0%{
+        //         transform: translate(0,10vh) rotate(2deg);
+        //     }
+        //     25%{
+        //         transform: translate(0,22vh) rotate(90deg);
+        //     }
              
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
+        //     50%{
+        //         transform: translate(0,32vh) rotate(180deg);
+        //     }
+        //     75%{
+        //         transform: translate(0,45vh) rotate(270deg);
+        //     }
+        //     100%{
+        //         transform: translate(0px,56vh) rotate(360deg);
+        //         opacity:0;
              
-            }
-        }
-        @include animate(fall,7s,linear,infinite );
+        //     }
+        // }
+        // @include animate(fall,7s,linear,infinite );
        
     }
     &-snowflake3{
@@ -178,27 +178,27 @@ html, body{
         position: absolute;
         top: 10%;
         left: 40%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
+        // @include keyframes(fall){
+        //     0%{
+        //         transform: translate(0,10vh) rotate(2deg);
+        //     }
+        //     25%{
+        //         transform: translate(0,22vh) rotate(90deg);
+        //     }
              
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
+        //     50%{
+        //         transform: translate(0,32vh) rotate(180deg);
+        //     }
+        //     75%{
+        //         transform: translate(0,45vh) rotate(270deg);
+        //     }
+        //     100%{
+        //         transform: translate(0px,56vh) rotate(360deg);
+        //         opacity:0;
              
-            }
-        }
-        @include animate(fall,4.9s ,linear,infinite);
+        //     }
+        // }
+        // @include animate(fall,4.9s ,linear,infinite);
     }
     &-snowflake4{
         background-image: url('../img/snowflake.svg');
@@ -208,60 +208,30 @@ html, body{
         position: absolute;
         top: 14%;
         left: 63%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
+        // @include keyframes(fall){
+        //     0%{
+        //         transform: translate(0,10vh) rotate(2deg);
+        //     }
+        //     25%{
+        //         transform: translate(0,22vh) rotate(90deg);
+        //     }
              
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
+        //     50%{
+        //         transform: translate(0,32vh) rotate(180deg);
+        //     }
+        //     75%{
+        //         transform: translate(0,45vh) rotate(270deg);
+        //     }
+        //     100%{
+        //         transform: translate(0px,56vh) rotate(360deg);
+        //         opacity:0;
              
-            }
-        }
-        @include animate(fall,4s,linear,infinite );
+        //     }
+        // }
+        // @include animate(fall,4s,linear,infinite );
        
     }
-    &-snowflake5{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        top: 0%;
-        left: 82%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
-             
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
-             
-            }
-        }
-        @include animate(fall,5.5s,linear,infinite );
-      
-    }
+    
 
 
 }

@@ -7,7 +7,6 @@ const Winter=()=>{
            <div className="winter-snowflake2"></div>
            <div className="winter-snowflake3"></div>
            <div className="winter-snowflake4"></div>
-           <div className="winter-snowflake5"></div>
        </div>
 
     )
