@@ -110,7 +110,7 @@ $mobileSmall-screen: 475px;
     }
 }
 
-@mixin animate($name,$duration,$method,$times){
-    animation: $name $duration $method $times;
+@mixin animate($animation,$duration,$method,$times){
+    animation: $animation $duration $method $times;
 }
 
