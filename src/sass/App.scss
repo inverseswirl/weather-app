@@ -246,15 +246,6 @@ html, body{
 
 
 .landscape{
-    @mixin keyframes($name){
-        @keyframes #{$name}{
-            @content;
-        }
-    }
-    
-    @mixin animate($name,$duration,$method,$times){
-        animation: $name $duration $method $times;
-    }
     
     background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
     background-repeat: no-repeat;
@@ -280,19 +271,19 @@ html, body{
         position: absolute;
         top: 20px;
         left: 40px;
-        @include keyframes(appear){
-            0%{
-                transform: translate(-80px,100px); 
-                opacity:0.5;
-             }
-             50%{
-                 transform: translate(-50px,50px); 
-             }
-            100%{
-             transform: translate(0px,0px); 
-             }
-        }
-        @include animate( appear,1.2s, linear, 1);
+        // @include keyframes(appear){
+        //     0%{
+        //         transform: translate(-80px,100px); 
+        //         opacity:0.5;
+        //      }
+        //      50%{
+        //          transform: translate(-50px,50px); 
+        //      }
+        //     100%{
+        //      transform: translate(0px,0px); 
+        //      }
+        // }
+        // @include animate( appear,1.2s, linear, 1);
     
 
         @include mobileSmall{
@@ -328,15 +319,7 @@ html, body{
 // ////// cloudy..................
 
 .cloudy{
-    @mixin keyframes($name){
-        @keyframes #{$name}{
-            @content;
-        }
-    }
     
-    @mixin animate($name,$duration,$method,$times){
-        animation: $name $duration $method $times;
-    }
     
     background-image:linear-gradient(180deg, rgba(128, 128, 128, 0.561) 1% ,transparent),url('../img/cloudypic.jpeg');
     background-repeat: no-repeat;
@@ -359,40 +342,40 @@ html, body{
         background:url('../img/gull-bird-flying-shape.svg');
         background-repeat: no-repeat;
         background-size: 50% 100%;
-        @include keyframes(bird){
-            0%{
-                top: 5%;
-                left:5%;
-                transform: rotateX(100deg) ;
-                opacity:0.5;
-            }
-            25%{
+    //     @include keyframes(bird){
+    //         0%{
+    //             top: 5%;
+    //             left:5%;
+    //             transform: rotateX(100deg) ;
+    //             opacity:0.5;
+    //         }
+    //         25%{
             
-                top: 15%;
-                left:40%;
-                transform: rotateX(0deg);
-                opacity:0.5;
-            }
-             50%{
-                top: 20%;
-                left:60%;
-                transform:rotateX(-80deg);
-                opacity:0.5;
-            }
-            75%{
-                top: 25%;
-                left: 80%;
-                transform: rotateX(0deg);
-                opacity:0.5;
-            }
-            100%{
-                opacity:0;
-                left:100%;
-                top:20%;
-                transform: rotateX(80deg);
-            }
-        }
-       @include animate(bird ,6.2s ,linear, infinite);  
+    //             top: 15%;
+    //             left:40%;
+    //             transform: rotateX(0deg);
+    //             opacity:0.5;
+    //         }
+    //          50%{
+    //             top: 20%;
+    //             left:60%;
+    //             transform:rotateX(-80deg);
+    //             opacity:0.5;
+    //         }
+    //         75%{
+    //             top: 25%;
+    //             left: 80%;
+    //             transform: rotateX(0deg);
+    //             opacity:0.5;
+    //         }
+    //         100%{
+    //             opacity:0;
+    //             left:100%;
+    //             top:20%;
+    //             transform: rotateX(80deg);
+    //         }
+    //     }
+    //    @include animate(bird ,6.2s ,linear, infinite);  
         perspective: 20rem;
         position: absolute;
         top: 10%;
@@ -448,15 +431,7 @@ html, body{
 
 
 .search{
-    @mixin keyframes($name){
-        @keyframes #{$name}{
-            @content;
-        }
-    }
-    
-    @mixin animate($name,$duration,$method,$times){
-        animation: $name $duration $method $times;
-    }
+   
     
   padding: 80px 0 0 0;
   @include flex(row);
@@ -474,24 +449,24 @@ html, body{
             width: 40%;     //420px
             color: $color;
             padding: 2px 0 5px 10px;
-            @include keyframes(wide){
-                0%{
-                    width: 8%;
-                }
-                25%{
-                    width: 16%;
-                }
-                50%{
-                    width: 24%;
-                }
-                75%{
-                    width: 36%;
-                }
-                100%{
-                    width: 40%;
-                }
-            }
-            @include animate(wide, 0.4s, linear, 1);
+            // @include keyframes(wide){
+            //     0%{
+            //         width: 8%;
+            //     }
+            //     25%{
+            //         width: 16%;
+            //     }
+            //     50%{
+            //         width: 24%;
+            //     }
+            //     75%{
+            //         width: 36%;
+            //     }
+            //     100%{
+            //         width: 40%;
+            //     }
+            // }
+            // @include animate(wide, 0.4s, linear, 1);
             
             @include laptop{
                width:50%;
@@ -612,16 +587,7 @@ html, body{
 .data{
 
     $font: 'Nunito', sans-serif;
-    @mixin keyframes($name){
-        @keyframes #{$name}{
-            @content;
-        }
-    }
-    
-    @mixin animate($name,$duration,$method,$times){
-        animation: $name $duration $method $times;
-    }
-    
+   
 
 
 
@@ -842,28 +808,28 @@ html, body{
         background-repeat: no-repeat;
         perspective: 40rem;
         z-index: 0;
-        @include keyframes(pin){
-            0%{
-                transform: translate(0,-6px)  rotateY(250deg);
+        // @include keyframes(pin){
+        //     0%{
+        //         transform: translate(0,-6px)  rotateY(250deg);
                         
-                }
-                25%{
-                    transform: translate(0,-12px)  rotateY(190deg);
-                }
-                50%{
-                    transform: translate(0,0px) rotateY(120deg);
-                }
-              75%{
-                    transform: translate(0,-7px) rotateY(85deg);
-                }
-                90%{
-                    transform: translate(0,-3.5px) rotateY(25deg);
-                }
-                100%{
-                    transform: rotate3d(0,0px) rotateY(0);
-                }
-            }
-        @include animate(pin, 2s, linear,1);
+        //         }
+        //         25%{
+        //             transform: translate(0,-12px)  rotateY(190deg);
+        //         }
+        //         50%{
+        //             transform: translate(0,0px) rotateY(120deg);
+        //         }
+        //       75%{
+        //             transform: translate(0,-7px) rotateY(85deg);
+        //         }
+        //         90%{
+        //             transform: translate(0,-3.5px) rotateY(25deg);
+        //         }
+        //         100%{
+        //             transform: rotate3d(0,0px) rotateY(0);
+        //         }
+        //     }
+        // @include animate(pin, 2s, linear,1);
             
         
 
@@ -892,15 +858,7 @@ html, body{
 // //error..............
 
 .error{
-    @mixin keyframes($name){
-        @keyframes #{$name}{
-            @content;
-        }
-    }
-    
-    @mixin animate($name,$duration,$method,$times){
-        animation: $name $duration $method $times;
-    }
+   
     
 
     @include font(200,10px);
@@ -915,27 +873,27 @@ html, body{
     margin-left: 38%;
     border-radius: 12px;
     
-    @include keyframes(emerge2){
-        0%{
-            transform: rotateX(-80deg);
-            opacity: 0.2;
-        }
-        25%{
-            transform: rotateX(-60deg);
-            opacity:0.4;
-        }
-        50%{
-            transform: rotateX(-40deg);
-            opacity: 0.6;
-        }
+    // @include keyframes(emerge2){
+    //     0%{
+    //         transform: rotateX(-80deg);
+    //         opacity: 0.2;
+    //     }
+    //     25%{
+    //         transform: rotateX(-60deg);
+    //         opacity:0.4;
+    //     }
+    //     50%{
+    //         transform: rotateX(-40deg);
+    //         opacity: 0.6;
+    //     }
         
-        100%{
-            transform: rotateX(0deg);
-            opacity:1;
-        }
+    //     100%{
+    //         transform: rotateX(0deg);
+    //         opacity:1;
+    //     }
 
-    }
-    @include animate(emerge2,0.5s,linear,1);
+    // }
+    // @include animate(emerge2,0.5s,linear,1);
     perspective: 15rem;
     letter-spacing: 0.4px;
     position: relative;
