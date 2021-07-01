@@ -2,15 +2,6 @@
 
 
 ///keyframes..
-@mixin keyframes($name){
-    @keyframes #{$name}{
-        @content;
-    }
-}
-
-@mixin animate($name,$duration,$method,$times){
-    animation: $name $duration $method $times;
-}
 
 
 
@@ -90,6 +81,16 @@ html, body{
 //  ///WINTER section.......
 
 .winter{
+    @mixin keyframes($name){
+        @keyframes #{$name}{
+            @content;
+        }
+    }
+    
+    @mixin animate($name,$duration,$method,$times){
+        animation: $name $duration $method $times;
+    }
+    
     background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -275,6 +276,16 @@ html, body{
 
 
 .landscape{
+    @mixin keyframes($name){
+        @keyframes #{$name}{
+            @content;
+        }
+    }
+    
+    @mixin animate($name,$duration,$method,$times){
+        animation: $name $duration $method $times;
+    }
+    
     background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -347,6 +358,16 @@ html, body{
 // ////// cloudy..................
 
 .cloudy{
+    @mixin keyframes($name){
+        @keyframes #{$name}{
+            @content;
+        }
+    }
+    
+    @mixin animate($name,$duration,$method,$times){
+        animation: $name $duration $method $times;
+    }
+    
     background-image:linear-gradient(180deg, rgba(128, 128, 128, 0.561) 1% ,transparent),url('../img/cloudypic.jpeg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -457,6 +478,16 @@ html, body{
 
 
 .search{
+    @mixin keyframes($name){
+        @keyframes #{$name}{
+            @content;
+        }
+    }
+    
+    @mixin animate($name,$duration,$method,$times){
+        animation: $name $duration $method $times;
+    }
+    
   padding: 80px 0 0 0;
   @include flex(row);
   position:relative;
@@ -611,7 +642,16 @@ html, body{
 .data{
 
     $font: 'Nunito', sans-serif;
-   
+    @mixin keyframes($name){
+        @keyframes #{$name}{
+            @content;
+        }
+    }
+    
+    @mixin animate($name,$duration,$method,$times){
+        animation: $name $duration $method $times;
+    }
+    
 
 
 
@@ -882,6 +922,16 @@ html, body{
 // //error..............
 
 .error{
+    @mixin keyframes($name){
+        @keyframes #{$name}{
+            @content;
+        }
+    }
+    
+    @mixin animate($name,$duration,$method,$times){
+        animation: $name $duration $method $times;
+    }
+    
 
     @include font(200,10px);
     @include sansserif-font();
