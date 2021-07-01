@@ -104,13 +104,3 @@ $mobileSmall-screen: 475px;
 }
 
 
-///keyframes..
-@mixin keyframes($name){
-    @keyframes #{$name}{
-        @content;
-    }
-}
-
-@mixin animate($name,$duration,$method,$times){
-    animation: $name $duration $method $times;
-}
