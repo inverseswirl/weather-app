@@ -431,20 +431,7 @@ html, body{
     @mixin animate($name,$duration){
         animation: $name $duration linear 1;
     }
-    @mixin keyframes($name){
-        @content;
-    }
-
-    @include flex(column);
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
-    background-size:  100% 100%,172% 169%,cover;
-    background-repeat: no-repeat;
-    width: 620px;
-    margin: 40px auto;
-    border-radius: 12px;
-    @include keyframes(emerge){
+    @include keyframes(emerge) {
         0%{
             transform: rotateX(-110deg);
             opacity: 0.3;
@@ -464,7 +451,18 @@ html, body{
                 opacity:1;
     
             }
-    }
+      }
+
+    @include flex(column);
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
+    background-size:  100% 100%,172% 169%,cover;
+    background-repeat: no-repeat;
+    width: 620px;
+    margin: 40px auto;
+    border-radius: 12px;
+  
     @include animate(emerge, 1s);
     position: relative;
     padding: 3% 2% 2% 2%;
