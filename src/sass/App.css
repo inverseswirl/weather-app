@@ -175,7 +175,6 @@ html, body {
   height: 100px;
   background-color: yellow;
   position: absolute;
-  border: 1px solid #ffa60042;
   top: 20px;
   left: 40px;
   -webkit-animation: appear 1.2s linear 1;
@@ -193,7 +192,7 @@ html, body {
 .landscape-sun::after {
   content: '';
   position: absolute;
-  background-image: radial-gradient(circle at 50% 50%, transparent 30%, yellow 40%, rgba(255, 166, 0, 0.8) 76%);
+  background-image: radial-gradient(circle at 50% 50%, transparent 30%, yellow 57%, rgba(255, 166, 0, 0.8) 76%);
   background-size: 100% 100%;
   border-radius: 50%;
   top: -10px;
@@ -540,8 +539,8 @@ html, body {
   width: 620px;
   margin: 40px auto;
   border-radius: 12px;
-  -webkit-animation: shine 0.5s linear 1;
-          animation: shine 0.5s linear 1;
+ 
+          animation: emerge 1s linear 1;
   position: relative;
   padding: 3% 2% 2% 2%;
 }
@@ -582,54 +581,6 @@ html, body {
   font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
   color: #e0cdaa;
-  -webkit-animation: emerge 0.7s linear 1;
-          animation: emerge 0.7s linear 1;
-}
-
-@-webkit-keyframes emerge {
-  0% {
-    -webkit-transform: rotateX(-110deg);
-            transform: rotateX(-110deg);
-    opacity: 0.3;
-  }
-  25% {
-    -webkit-transform: rotateX(-70deg);
-            transform: rotateX(-70deg);
-    opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: rotateX(-50deg);
-            transform: rotateX(-50deg);
-    opacity: 0.9;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes emerge {
-  0% {
-    -webkit-transform: rotateX(-110deg);
-            transform: rotateX(-110deg);
-    opacity: 0.3;
-  }
-  25% {
-    -webkit-transform: rotateX(-70deg);
-            transform: rotateX(-70deg);
-    opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: rotateX(-50deg);
-            transform: rotateX(-50deg);
-    opacity: 0.9;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    opacity: 1;
-  }
 }
 
 @media (max-width: 600px) {
@@ -652,32 +603,7 @@ html, body {
   font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
   color: #e0cdaa;
-  -webkit-animation: emerge 0.7s linear 1;
-          animation: emerge 0.7s linear 1;
   padding: 0 0 6px 0;
-}
-
-@keyframes emerge {
-  0% {
-    -webkit-transform: rotateX(-110deg);
-            transform: rotateX(-110deg);
-    opacity: 0.3;
-  }
-  25% {
-    -webkit-transform: rotateX(-70deg);
-            transform: rotateX(-70deg);
-    opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: rotateX(-50deg);
-            transform: rotateX(-50deg);
-    opacity: 0.9;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    opacity: 1;
-  }
 }
 
 @media (max-width: 600px) {
@@ -700,31 +626,6 @@ html, body {
   font-size: 1.2rem;
   font-family: "Nunito", sans-serif;
   color: #e0cdaa;
-  -webkit-animation: emerge 0.7s linear 1;
-          animation: emerge 0.7s linear 1;
-}
-
-@keyframes emerge {
-  0% {
-    -webkit-transform: rotateX(-110deg);
-            transform: rotateX(-110deg);
-    opacity: 0.3;
-  }
-  25% {
-    -webkit-transform: rotateX(-70deg);
-            transform: rotateX(-70deg);
-    opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: rotateX(-50deg);
-            transform: rotateX(-50deg);
-    opacity: 0.9;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    opacity: 1;
-  }
 }
 
 @media (max-width: 600px) {
@@ -748,31 +649,6 @@ html, body {
   font-weight: 600;
   font-size: 1.3rem;
   font-family: "Nunito", sans-serif;
-  -webkit-animation: emerge 0.7s linear 1;
-          animation: emerge 0.7s linear 1;
-}
-
-@keyframes emerge {
-  0% {
-    -webkit-transform: rotateX(-110deg);
-            transform: rotateX(-110deg);
-    opacity: 0.3;
-  }
-  25% {
-    -webkit-transform: rotateX(-70deg);
-            transform: rotateX(-70deg);
-    opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: rotateX(-50deg);
-            transform: rotateX(-50deg);
-    opacity: 0.9;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    opacity: 1;
-  }
 }
 
 @media (max-width: 475px) {
@@ -802,33 +678,8 @@ html, body {
           align-items: center;
   align-items: center;
   width: 45%;
-  -webkit-animation: emerge 0.7s linear 1;
-          animation: emerge 0.7s linear 1;
   border-radius: 12px;
   text-align: center;
-}
-
-@keyframes emerge {
-  0% {
-    -webkit-transform: rotateX(-110deg);
-            transform: rotateX(-110deg);
-    opacity: 0.3;
-  }
-  25% {
-    -webkit-transform: rotateX(-70deg);
-            transform: rotateX(-70deg);
-    opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: rotateX(-50deg);
-            transform: rotateX(-50deg);
-    opacity: 0.9;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    opacity: 1;
-  }
 }
 
 @media (max-width: 900px) {
@@ -924,36 +775,36 @@ html, body {
   -webkit-perspective: 40rem;
           perspective: 40rem;
   z-index: 0;
-  -webkit-animation: pin 2s linear 1;
+ 
           animation: pin 2s linear 1;
 }
 
-@-webkit-keyframes pin {
+
+
+@keyframes emerge {
   0% {
-    -webkit-transform: translate(0, -6px) rotateY(250deg);
-            transform: translate(0, -6px) rotateY(250deg);
+    -webkit-transform: rotateX(-110deg);
+            transform: rotateX(-110deg);
+    opacity: 0.3;
   }
   25% {
-    -webkit-transform: translate(0, -12px) rotateY(190deg);
-            transform: translate(0, -12px) rotateY(190deg);
+    -webkit-transform: rotateX(-70deg);
+            transform: rotateX(-70deg);
+    opacity: 0.6;
   }
   50% {
-    -webkit-transform: translate(0, 0px) rotateY(120deg);
-            transform: translate(0, 0px) rotateY(120deg);
-  }
-  75% {
-    -webkit-transform: translate(0, -7px) rotateY(85deg);
-            transform: translate(0, -7px) rotateY(85deg);
-  }
-  90% {
-    -webkit-transform: translate(0, -3.5px) rotateY(25deg);
-            transform: translate(0, -3.5px) rotateY(25deg);
+    -webkit-transform: rotateX(-50deg);
+            transform: rotateX(-50deg);
+    opacity: 0.9;
   }
   100% {
-    -webkit-transform: rotate3d(0, 0px) rotateY(0);
-            transform: rotate3d(0, 0px) rotateY(0);
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    opacity: 1;
   }
 }
+
+
 
 @keyframes pin {
   0% {
@@ -995,8 +846,6 @@ html, body {
   margin-top: 8px;
   margin-left: 38%;
   border-radius: 12px;
-  -webkit-animation: emerge 0.5s linear 1;
-          animation: emerge 0.5s linear 1;
   -webkit-perspective: 15rem;
           perspective: 15rem;
   letter-spacing: 0.4px;

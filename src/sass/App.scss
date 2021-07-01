@@ -177,10 +177,10 @@ html, body{
         height:100px;
         background-color: yellow;
         position: absolute;
-        border: 1px solid #ffa60042;
         top: 20px;
         left: 40px;
         animation: appear 1.2s linear 1;
+
         @include mobileSmall{
             left: 12px; 
             width:62px;
@@ -190,7 +190,7 @@ html, body{
         &::after{
             content:'';
             position: absolute;
-            background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 40%, rgba(255, 166, 0, 0.8) 76%);
+            background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 57%, rgba(255, 166, 0, 0.8) 76%);
             background-size: 100% 100%;
             border-radius: 50%;
             top: -10px;
@@ -428,6 +428,9 @@ html, body{
 .data{
 
     $font: 'Nunito', sans-serif;
+    @mixin animate($name,$duration){
+        animation: $name $duration linear 1;
+    }
     
 
     @include flex(column);
@@ -439,7 +442,7 @@ html, body{
     width: 620px;
     margin: 40px auto;
     border-radius: 12px;
-    animation: shine 0.5s linear 1;
+    @include animate(emerge, 1s);
     position: relative;
     padding: 3% 2% 2% 2%;
 
@@ -467,32 +470,8 @@ html, body{
         @include font(700, 1.2rem);
         font-family: $font;
         color:$color;
-        animation: emerge 0.7s linear 1;
-        @keyframes emerge{
-            0%{
-                transform: rotateX(-110deg);
-                opacity: 0.3;
-            }
-            25%{
-                transform: rotateX(-70deg);
-                opacity:0.6;
-                    
-                }
-                50%{
-                    transform: rotateX(-50deg);
-                    opacity: 0.9;
-                
-                }
-                100%{
-                    transform: rotateX(0deg);
-                    opacity:1;
-        
-                }
-            }
-                
-      
-                
-    
+     
+       
         @include mobileLarge{
             @include font(700, 0.9rem);   
         }
@@ -507,28 +486,7 @@ html, body{
         @include font(700, 1.2rem);
         font-family: $font;
         color:$color;
-        animation: emerge 0.7s linear 1;
-        @keyframes emerge{
-            0%{
-                transform: rotateX(-110deg);
-                opacity: 0.3;
-            }
-            25%{
-                transform: rotateX(-70deg);
-                opacity:0.6;
-                    
-                }
-                50%{
-                    transform: rotateX(-50deg);
-                    opacity: 0.9;
-                
-                }
-                100%{
-                    transform: rotateX(0deg);
-                    opacity:1;
-        
-                }
-            }
+       
         padding: 0 0 6px 0;
         @include mobileLarge{
             @include font(700, 0.9rem);   
@@ -544,28 +502,7 @@ html, body{
         @include font(700, 1.2rem);
         font-family: $font;
         color:$color;
-        animation:emerge 0.7s linear 1;
-        @keyframes emerge{
-            0%{
-                transform: rotateX(-110deg);
-                opacity: 0.3;
-            }
-            25%{
-                transform: rotateX(-70deg);
-                opacity:0.6;
-                    
-                }
-                50%{
-                    transform: rotateX(-50deg);
-                    opacity: 0.9;
-                
-                }
-                100%{
-                    transform: rotateX(0deg);
-                    opacity:1;
-        
-                }
-            }
+       
 
         @include mobileLarge{
             @include font(700, 0.9rem);   
@@ -585,28 +522,7 @@ html, body{
         color: purple !important;
         @include font(600, 1.3rem);
         font-family: $font;
-        animation:emerge 0.7s linear 1;
-        @keyframes emerge{
-            0%{
-                transform: rotateX(-110deg);
-                opacity: 0.3;
-            }
-            25%{
-                transform: rotateX(-70deg);
-                opacity:0.6;
-                    
-                }
-                50%{
-                    transform: rotateX(-50deg);
-                    opacity: 0.9;
-                
-                }
-                100%{
-                    transform: rotateX(0deg);
-                    opacity:1;
-        
-                }
-            }
+       
 
         @include mobileSmall{
             @include font(500, 1rem);
@@ -629,28 +545,6 @@ html, body{
         @include flex(column);
         align-items: center;
         width: 45%;
-        animation:emerge 0.7s linear 1;
-        @keyframes emerge{
-            0%{
-                transform: rotateX(-110deg);
-                opacity: 0.3;
-            }
-            25%{
-                transform: rotateX(-70deg);
-                opacity:0.6;
-                    
-                }
-                50%{
-                    transform: rotateX(-50deg);
-                    opacity: 0.9;
-                
-                }
-                100%{
-                    transform: rotateX(0deg);
-                    opacity:1;
-        
-                }
-            }
         border-radius: 12px;
         text-align: center;
         
@@ -736,37 +630,14 @@ html, body{
         background-repeat: no-repeat;
         perspective: 40rem;
         z-index: 0;
-        animation: pin 2s linear 1 ;
+        @include animate(pin, 2s)
+        
 
-        @keyframes pin{
-            0%{
-                transform: translate(0,-6px)  rotateY(250deg);
-                
-            }
-            25%{
-                transform: translate(0,-12px)  rotateY(190deg);
-                
-            }
-        
-            50%{
-                transform: translate(0,0px) rotateY(120deg);
-        
-            }
-            75%{
-                transform: translate(0,-7px) rotateY(85deg);
-            }
-            90%{
-                transform: translate(0,-3.5px) rotateY(25deg);
-        
-            }
-            100%{
-                transform: rotate3d(0,0px) rotateY(0);
-            }
-        }
+       }
+      
     
 
 
-     }
 
 
     
@@ -789,11 +660,55 @@ html, body{
 
        
 
+@keyframes emerge{
+    0%{
+        transform: rotateX(-110deg);
+        opacity: 0.3;
+    }
+    25%{
+        transform: rotateX(-70deg);
+        opacity:0.6;
+            
+        }
+        50%{
+            transform: rotateX(-50deg);
+            opacity: 0.9;
+        
+        }
+        100%{
+            transform: rotateX(0deg);
+            opacity:1;
 
+        }
+    }
 
 
         
-      
+    @keyframes pin{
+        0%{
+            transform: translate(0,-6px)  rotateY(250deg);
+            
+        }
+        25%{
+            transform: translate(0,-12px)  rotateY(190deg);
+            
+        }
+    
+        50%{
+            transform: translate(0,0px) rotateY(120deg);
+    
+        }
+        75%{
+            transform: translate(0,-7px) rotateY(85deg);
+        }
+        90%{
+            transform: translate(0,-3.5px) rotateY(25deg);
+    
+        }
+        100%{
+            transform: rotate3d(0,0px) rotateY(0);
+        }
+    } 
 
     
 
@@ -812,7 +727,7 @@ html, body{
     margin-top: 8px;
     margin-left: 38%;
     border-radius: 12px;
-    animation: emerge 0.5s linear 1;
+    // animation: emerge 0.5s linear 1;
     perspective: 15rem;
     letter-spacing: 0.4px;
     position: relative;
