@@ -945,18 +945,18 @@ html, body{
     margin-left: 38%;
     border-radius: 12px;
     
-    @include keyframes(emerge){
+    @include keyframes(emerge2){
         0%{
-            transform: rotateX(-110deg);
-            opacity: 0.3;
+            transform: rotateX(-80deg);
+            opacity: 0.2;
         }
         25%{
-            transform: rotateX(-70deg);
-            opacity:0.6;
+            transform: rotateX(-60deg);
+            opacity:0.4;
         }
         50%{
-            transform: rotateX(-50deg);
-            opacity: 0.9;
+            transform: rotateX(-40deg);
+            opacity: 0.6;
         }
         
         100%{
@@ -965,7 +965,7 @@ html, body{
         }
 
     }
-    @include animate(emerge,0.5s,linear,1);
+    @include animate(emerge2,0.5s,linear,1);
     perspective: 15rem;
     letter-spacing: 0.4px;
     position: relative;
