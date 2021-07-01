@@ -539,7 +539,7 @@ html, body {
   width: 620px;
   margin: 40px auto;
   border-radius: 12px;
- 
+  -webkit-animation: emerge 1s linear 1;
           animation: emerge 1s linear 1;
   position: relative;
   padding: 3% 2% 2% 2%;
@@ -775,62 +775,8 @@ html, body {
   -webkit-perspective: 40rem;
           perspective: 40rem;
   z-index: 0;
- 
+  -webkit-animation: pin 2s linear 1;
           animation: pin 2s linear 1;
-}
-
-
-
-@keyframes emerge {
-  0% {
-    -webkit-transform: rotateX(-110deg);
-            transform: rotateX(-110deg);
-    opacity: 0.3;
-  }
-  25% {
-    -webkit-transform: rotateX(-70deg);
-            transform: rotateX(-70deg);
-    opacity: 0.6;
-  }
-  50% {
-    -webkit-transform: rotateX(-50deg);
-            transform: rotateX(-50deg);
-    opacity: 0.9;
-  }
-  100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
-    opacity: 1;
-  }
-}
-
-
-
-@keyframes pin {
-  0% {
-    -webkit-transform: translate(0, -6px) rotateY(250deg);
-            transform: translate(0, -6px) rotateY(250deg);
-  }
-  25% {
-    -webkit-transform: translate(0, -12px) rotateY(190deg);
-            transform: translate(0, -12px) rotateY(190deg);
-  }
-  50% {
-    -webkit-transform: translate(0, 0px) rotateY(120deg);
-            transform: translate(0, 0px) rotateY(120deg);
-  }
-  75% {
-    -webkit-transform: translate(0, -7px) rotateY(85deg);
-            transform: translate(0, -7px) rotateY(85deg);
-  }
-  90% {
-    -webkit-transform: translate(0, -3.5px) rotateY(25deg);
-            transform: translate(0, -3.5px) rotateY(25deg);
-  }
-  100% {
-    -webkit-transform: rotate3d(0, 0px) rotateY(0);
-            transform: rotate3d(0, 0px) rotateY(0);
-  }
 }
 
 .error {
