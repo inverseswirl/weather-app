@@ -449,24 +449,24 @@ html, body{
             width: 40%;     //420px
             color: $color;
             padding: 2px 0 5px 10px;
-            // @include keyframes(wide){
-            //     0%{
-            //         width: 8%;
-            //     }
-            //     25%{
-            //         width: 16%;
-            //     }
-            //     50%{
-            //         width: 24%;
-            //     }
-            //     75%{
-            //         width: 36%;
-            //     }
-            //     100%{
-            //         width: 40%;
-            //     }
-            // }
-            // @include animate(wide, 0.4s, linear, 1);
+            @include keyframes(wide){
+                0%{
+                    width: 8%;
+                }
+                25%{
+                    width: 16%;
+                }
+                50%{
+                    width: 24%;
+                }
+                75%{
+                    width: 36%;
+                }
+                100%{
+                    width: 40%;
+                }
+            }
+            @include animate(wide, 0.4s, linear, 1);
             
             @include laptop{
                width:50%;
@@ -808,28 +808,28 @@ html, body{
         background-repeat: no-repeat;
         perspective: 40rem;
         z-index: 0;
-        @include keyframes(pin){
-            0%{
-                transform: translate(0,-6px)  rotateY(250deg);
+        // @include keyframes(pin){
+        //     0%{
+        //         transform: translate(0,-6px)  rotateY(250deg);
                         
-                }
-                25%{
-                    transform: translate(0,-12px)  rotateY(190deg);
-                }
-                50%{
-                    transform: translate(0,0px) rotateY(120deg);
-                }
-              75%{
-                    transform: translate(0,-7px) rotateY(85deg);
-                }
-                90%{
-                    transform: translate(0,-3.5px) rotateY(25deg);
-                }
-                100%{
-                    transform: rotate3d(0,0px) rotateY(0);
-                }
-            }
-        @include animate(pin, 2s, linear,1);
+        //         }
+        //         25%{
+        //             transform: translate(0,-12px)  rotateY(190deg);
+        //         }
+        //         50%{
+        //             transform: translate(0,0px) rotateY(120deg);
+        //         }
+        //       75%{
+        //             transform: translate(0,-7px) rotateY(85deg);
+        //         }
+        //         90%{
+        //             transform: translate(0,-3.5px) rotateY(25deg);
+        //         }
+        //         100%{
+        //             transform: rotate3d(0,0px) rotateY(0);
+        //         }
+        //     }
+        // @include animate(pin, 2s, linear,1);
             
         
 
