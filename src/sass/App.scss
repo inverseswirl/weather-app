@@ -431,27 +431,13 @@ html, body{
     @mixin animate($name,$duration){
         animation: $name $duration linear 1;
     }
-    @include keyframes(emerge) {
-        0%{
-            transform: rotateX(-110deg);
-            opacity: 0.3;
+
+    @mixin keyframes($name){
+        @keyframes #{$name}{
+            @content;
         }
-        25%{
-            transform: rotateX(-70deg);
-            opacity:0.6;
-                
-            }
-            50%{
-                transform: rotateX(-50deg);
-                opacity: 0.9;
-            
-            }
-            100%{
-                transform: rotateX(0deg);
-                opacity:1;
-    
-            }
-      }
+    }
+  
 
     @include flex(column);
     align-items: flex-start;
@@ -462,7 +448,26 @@ html, body{
     width: 620px;
     margin: 40px auto;
     border-radius: 12px;
-  
+    @include keyframes(emerge) {
+        0%{
+            transform: rotateX(-110deg);
+            opacity: 0.3;
+        }
+        25%{
+            transform: rotateX(-70deg);
+            opacity:0.6;
+        }
+        50%{
+            transform: rotateX(-50deg);
+            opacity: 0.9;
+        }
+        
+        100%{
+            transform: rotateX(0deg);
+            opacity:1;
+        }
+    }
+                
     @include animate(emerge, 1s);
     position: relative;
     padding: 3% 2% 2% 2%;
