@@ -110,3 +110,7 @@ $mobileSmall-screen: 475px;
         @content;
     }
 }
+
+@mixin animate($name,$duration){
+    animation: $name $duration linear 1;
+}
