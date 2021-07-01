@@ -431,7 +431,9 @@ html, body{
     @mixin animate($name,$duration){
         animation: $name $duration linear 1;
     }
-    
+    @mixin keyframes($name){
+        @content;
+    }
 
     @include flex(column);
     align-items: flex-start;
@@ -442,6 +444,27 @@ html, body{
     width: 620px;
     margin: 40px auto;
     border-radius: 12px;
+    @include keyframes(emerge){
+        0%{
+            transform: rotateX(-110deg);
+            opacity: 0.3;
+        }
+        25%{
+            transform: rotateX(-70deg);
+            opacity:0.6;
+                
+            }
+            50%{
+                transform: rotateX(-50deg);
+                opacity: 0.9;
+            
+            }
+            100%{
+                transform: rotateX(0deg);
+                opacity:1;
+    
+            }
+    }
     @include animate(emerge, 1s);
     position: relative;
     padding: 3% 2% 2% 2%;
@@ -630,7 +653,7 @@ html, body{
         background-repeat: no-repeat;
         perspective: 40rem;
         z-index: 0;
-        @include animate(pin, 2s)
+        // @include animate(pin, 2s)
         
 
        }
@@ -660,55 +683,55 @@ html, body{
 
        
 
-@keyframes emerge{
-    0%{
-        transform: rotateX(-110deg);
-        opacity: 0.3;
-    }
-    25%{
-        transform: rotateX(-70deg);
-        opacity:0.6;
+// @keyframes emerge{
+//     0%{
+//         transform: rotateX(-110deg);
+//         opacity: 0.3;
+//     }
+//     25%{
+//         transform: rotateX(-70deg);
+//         opacity:0.6;
             
-        }
-        50%{
-            transform: rotateX(-50deg);
-            opacity: 0.9;
+//         }
+//         50%{
+//             transform: rotateX(-50deg);
+//             opacity: 0.9;
         
-        }
-        100%{
-            transform: rotateX(0deg);
-            opacity:1;
+//         }
+//         100%{
+//             transform: rotateX(0deg);
+//             opacity:1;
 
-        }
-    }
+//         }
+//     }
 
 
         
-    @keyframes pin{
-        0%{
-            transform: translate(0,-6px)  rotateY(250deg);
+    // @keyframes pin{
+    //     0%{
+    //         transform: translate(0,-6px)  rotateY(250deg);
             
-        }
-        25%{
-            transform: translate(0,-12px)  rotateY(190deg);
+    //     }
+    //     25%{
+    //         transform: translate(0,-12px)  rotateY(190deg);
             
-        }
+    //     }
     
-        50%{
-            transform: translate(0,0px) rotateY(120deg);
+    //     50%{
+    //         transform: translate(0,0px) rotateY(120deg);
     
-        }
-        75%{
-            transform: translate(0,-7px) rotateY(85deg);
-        }
-        90%{
-            transform: translate(0,-3.5px) rotateY(25deg);
+    //     }
+    //     75%{
+    //         transform: translate(0,-7px) rotateY(85deg);
+    //     }
+    //     90%{
+    //         transform: translate(0,-3.5px) rotateY(25deg);
     
-        }
-        100%{
-            transform: rotate3d(0,0px) rotateY(0);
-        }
-    } 
+    //     }
+    //     100%{
+    //         transform: rotate3d(0,0px) rotateY(0);
+    //     }
+    // } 
 
     
 
