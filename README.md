@@ -1,7 +1,8 @@
 Hi there 👋🏻
-This is weather-app. 
 
-### It will help to generate weather details for the day. 
+###This is weather-app. 
+
+#### It will help to generate weather details for the day. 
 
 **How to use**
 
