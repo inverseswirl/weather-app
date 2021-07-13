@@ -6,3 +6,4 @@ This is weather-app. It will help to generate weather details for the day.
 
 Just enter the name of the place and press search button. the weather details will appear.
 
+
