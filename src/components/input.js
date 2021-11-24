@@ -48,7 +48,7 @@ handleButton(){
 fetchCurrentWeather(searchQuery){
 
 
-   fetch(`https://api.weatherstack.com/current?access_key=9391c9586a2d3b132d11d401bd02e569&query=${searchQuery}`)
+   fetch(`https://api.weatherstack.com/current?access_key=edfa7b64c0ce6bf1e66267151206f83a&query=${searchQuery}`)
     .then((res)=>res.json())
     .then((res)=> 
     
