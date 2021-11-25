@@ -48,7 +48,7 @@ handleButton(){
 fetchCurrentWeather(searchQuery){
 
 
-   fetch(`https://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHERSTACK_API_KEY}&query=${searchQuery}`)
+   fetch(`https://api.weatherstack.com/current?access_key=f81004f5ea06591c377edde1d364e945&query=${searchQuery}`)
     .then((res)=>res.json())
     .then((res)=> 
     
