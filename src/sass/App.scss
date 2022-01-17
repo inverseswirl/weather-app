@@ -1,910 +1,761 @@
-@import './variables.scss';
-
+@import "./variables.scss";
 
 ///keyframes..
 
-
-
-html, body{
- overflow: hidden;
-
+html,
+body {
+  overflow: hidden;
 }
-  
-.Apps{
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
 
-  
+.Apps {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
-   
-  
-   
-  
+
 ///title................
 
-.title{
-    color:transparent;
-    padding: 30px 0 0 0;
-    background-clip: text;
-    background-image: radial-gradient(circle at 20%,$color 50%,purple 51.5%);
-    background-position: 100% 100%;
-    @include block-font();
-    @include font(200, 80px);
-    @include center();
-    font-size:calc(70px + 1vw);
-    text-transform:capitalize;
-    
-    @include laptopLarge{
-        font-size:calc(3.5rem + 1vw);
-    }
-    @include laptop{
-        font-size:calc(2.7rem + 1vw);
-    }
-    @include tablet{
-        font-size:calc(2.2rem + 1vw);
-    }
-  
-    @include mobileLarge{
-        font-size:calc(1.85rem + 1vw);
-    }
-  
-    @include mobileSmall{
-        font-size:calc(1.6rem + 1vw);
-    }
-  
-    
+.title {
+  color: transparent;
+  padding: 30px 0 0 0;
+  background-clip: text;
+  background-image: radial-gradient(circle at 20%, $color 50%, purple 51.5%);
+  background-position: 100% 100%;
+  @include block-font();
+  @include font(200, 80px);
+  @include center();
+  font-size: calc(70px + 1vw);
+  text-transform: capitalize;
 
+  @include laptopLarge {
+    font-size: calc(3.5rem + 1vw);
+  }
+  @include laptop {
+    font-size: calc(2.7rem + 1vw);
+  }
+  @include tablet {
+    font-size: calc(2.2rem + 1vw);
+  }
 
+  @include mobileLarge {
+    font-size: calc(1.85rem + 1vw);
+  }
+
+  @include mobileSmall {
+    font-size: calc(1.6rem + 1vw);
+  }
 }
 
 // ///NEUTRAL main SECTION............
-.neutral{
-
+.neutral {
   height: 100vh;
   width: 100vw;
-  background-image:linear-gradient(120deg,rgba(128, 0, 128,1),transparent),url('../img/planet.svg');
+  background-image: linear-gradient(120deg, rgba(128, 0, 128, 1), transparent),
+    url("../img/planet.svg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   overflow: hidden;
   position: absolute;
-  top:0;
-  z-index:-1;
- 
-
+  top: 0;
+  z-index: -1;
 }
-
-
-
-
 
 //  ///WINTER section.......
 
-.winter{
-   
-    
-    background-image:linear-gradient(110deg,rgb(194, 142, 194) 1%, transparent),url('../img/hills.jpg');
-    background-repeat: no-repeat;
+.winter {
+  background-image: linear-gradient(110deg, rgb(194, 142, 194) 1%, transparent),
+    url("../img/hills.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  @include mobileSmall {
+    background-size: cover;
+  }
+
+  &-snowflake1 {
+    background-image: url("../img/snowflake.svg");
     background-size: 100% 100%;
-    height: 100vh;
-    width: 100vw;
+    height: 40px;
+    width: 60px;
     position: absolute;
-    top:0;
-    z-index: -1;
-  
+    left: 10%;
+    @include keyframes(fall) {
+      0% {
+        transform: translate(0, 10vh) rotate(2deg);
+      }
+      25% {
+        transform: translate(0, 22vh) rotate(90deg);
+      }
 
-    @include mobileSmall{
-        background-size: cover;
+      50% {
+        transform: translate(0, 32vh) rotate(180deg);
+      }
+      75% {
+        transform: translate(0, 45vh) rotate(270deg);
+      }
+      100% {
+        transform: translate(0px, 56vh) rotate(360deg);
+        opacity: 0;
+      }
     }
+    @include animate(fall, 6.5s, linear, infinite);
+  }
 
-    &-snowflake1{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        left: 10%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
-             
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
-             
-            }
-        }
-        @include animate(fall,6.5s ,linear,infinite);
-    }
-          
-            
-          
-          
+  &-snowflake2 {
+    background-image: url("../img/snowflake.svg");
+    background-size: 100% 100%;
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top: 12%;
+    left: 16%;
+    @include keyframes(fall) {
+      0% {
+        transform: translate(0, 10vh) rotate(2deg);
+      }
+      25% {
+        transform: translate(0, 22vh) rotate(90deg);
+      }
 
-    &-snowflake2{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        top: 12%;
-        left: 16%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
-             
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
-             
-            }
-        }
-        @include animate(fall,7s,linear,infinite );
-       
+      50% {
+        transform: translate(0, 32vh) rotate(180deg);
+      }
+      75% {
+        transform: translate(0, 45vh) rotate(270deg);
+      }
+      100% {
+        transform: translate(0px, 56vh) rotate(360deg);
+        opacity: 0;
+      }
     }
-    &-snowflake3{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height: 40px;
-        width:60px;
-        position: absolute;
-        top: 10%;
-        left: 40%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
-             
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
-             
-            }
-        }
-        @include animate(fall,4.9s ,linear,infinite);
-    }
-    &-snowflake4{
-        background-image: url('../img/snowflake.svg');
-        background-size: 100% 100%;
-        height:40px;
-        width:60px;
-        position: absolute;
-        top: 14%;
-        left: 63%;
-        @include keyframes(fall){
-            0%{
-                transform: translate(0,10vh) rotate(2deg);
-            }
-            25%{
-                transform: translate(0,22vh) rotate(90deg);
-            }
-             
-            50%{
-                transform: translate(0,32vh) rotate(180deg);
-            }
-            75%{
-                transform: translate(0,45vh) rotate(270deg);
-            }
-            100%{
-                transform: translate(0px,56vh) rotate(360deg);
-                opacity:0;
-             
-            }
-        }
-        @include animate(fall,4s,linear,infinite );
-       
-    }
-    
+    @include animate(fall, 7s, linear, infinite);
+  }
+  &-snowflake3 {
+    background-image: url("../img/snowflake.svg");
+    background-size: 100% 100%;
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    @include keyframes(fall) {
+      0% {
+        transform: translate(0, 10vh) rotate(2deg);
+      }
+      25% {
+        transform: translate(0, 22vh) rotate(90deg);
+      }
 
+      50% {
+        transform: translate(0, 32vh) rotate(180deg);
+      }
+      75% {
+        transform: translate(0, 45vh) rotate(270deg);
+      }
+      100% {
+        transform: translate(0px, 56vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    @include animate(fall, 4.9s, linear, infinite);
+  }
+  &-snowflake4 {
+    background-image: url("../img/snowflake.svg");
+    background-size: 100% 100%;
+    height: 40px;
+    width: 60px;
+    position: absolute;
+    top: 14%;
+    left: 63%;
+    @include keyframes(fall) {
+      0% {
+        transform: translate(0, 10vh) rotate(2deg);
+      }
+      25% {
+        transform: translate(0, 22vh) rotate(90deg);
+      }
 
+      50% {
+        transform: translate(0, 32vh) rotate(180deg);
+      }
+      75% {
+        transform: translate(0, 45vh) rotate(270deg);
+      }
+      100% {
+        transform: translate(0px, 56vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    @include animate(fall, 4s, linear, infinite);
+  }
 }
-
-
-
-
-
 
 // ///SUMMER SECTION............
 
+.landscape {
+  background-image: linear-gradient(
+      120deg,
+      rgba(128, 128, 128, 0.561) 15%,
+      transparent
+    ),
+    url("../img/summer.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 
+  @include mobileSmall {
+    background-size: cover;
+    background-position: 40% 0%;
+  }
 
-.landscape{
-    
-    background-image:linear-gradient(120deg, rgba(128, 128, 128, 0.561) 15% ,transparent),url('../img/summer.jpeg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: 50% 50%;
-    height: 100vh;
-    width: 100vw;
+  &-sun {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
     position: absolute;
-    top:0;
-    z-index: -1;
+    top: 20px;
+    left: 40px;
+    @include keyframes(appear) {
+      0% {
+        transform: translate(-80px, 100px);
+        opacity: 0.5;
+      }
+      50% {
+        transform: translate(-50px, 50px);
+      }
+      100% {
+        transform: translate(0px, 0px);
+      }
+    }
+    @include animate(appear, 1.2s, linear, 1);
 
-
-    @include mobileSmall{
-        background-size: cover;
-        background-position: 40% 0%;
+    @include mobileSmall {
+      left: 12px;
+      width: 62px;
+      height: 62px;
     }
 
-    &-sun{
-        border-radius: 50%;
-        width:100px;
-        height:100px;
-        background-color: yellow;
-        position: absolute;
-        top: 20px;
-        left: 40px;
-        @include keyframes(appear){
-            0%{
-                transform: translate(-80px,100px); 
-                opacity:0.5;
-             }
-             50%{
-                 transform: translate(-50px,50px); 
-             }
-            100%{
-             transform: translate(0px,0px); 
-             }
-        }
-        @include animate( appear,1.2s, linear, 1);
-    
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: radial-gradient(
+        circle at 50% 50%,
+        transparent 30%,
+        yellow 57%,
+        rgba(255, 166, 0, 0.8) 76%
+      );
+      background-size: 100% 100%;
+      border-radius: 50%;
+      top: -10px;
+      left: -10px;
+      width: 120px;
+      height: 120px;
 
-        @include mobileSmall{
-            left: 12px; 
-            width:62px;
-            height:62px;
-        }
-    
-        &::after{
-            content:'';
-            position: absolute;
-            background-image: radial-gradient(circle at 50% 50%,transparent 30%, yellow 57%, rgba(255, 166, 0, 0.8) 76%);
-            background-size: 100% 100%;
-            border-radius: 50%;
-            top: -10px;
-            left: -10px;
-            width:120px;
-            height:120px;
-            
-            @include mobileSmall{
-                top: -5px;
-                left: -6px;
-                width:72px;
-                height:72px;
-            }
-        }
+      @include mobileSmall {
+        top: -5px;
+        left: -6px;
+        width: 72px;
+        height: 72px;
+      }
     }
-    
-
+  }
 }
-  
-   
+
 // ////// cloudy..................
 
-.cloudy{
-    
-    
-    background-image:linear-gradient(180deg, rgba(128, 128, 128, 0.561) 1% ,transparent),url('../img/cloudypic.jpeg');
+.cloudy {
+  background-image: linear-gradient(
+      180deg,
+      rgba(128, 128, 128, 0.561) 1%,
+      transparent
+    ),
+    url("../img/cloudypic.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  overflow: hidden;
+
+  @include mobileSmall {
+    background-size: cover;
+    background-position: 10% 0%;
+  }
+
+  &-birds {
+    background: url("../img/gull-bird-flying-shape.svg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100vh;
-    width: 100vw;
+    background-size: 50% 100%;
+    @include keyframes(bird) {
+      0% {
+        top: 5%;
+        left: 5%;
+        transform: rotateX(100deg);
+        opacity: 0.5;
+      }
+      25% {
+        top: 15%;
+        left: 40%;
+        transform: rotateX(0deg);
+        opacity: 0.5;
+      }
+      50% {
+        top: 20%;
+        left: 60%;
+        transform: rotateX(-80deg);
+        opacity: 0.5;
+      }
+      75% {
+        top: 25%;
+        left: 80%;
+        transform: rotateX(0deg);
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 0;
+        left: 100%;
+        top: 20%;
+        transform: rotateX(80deg);
+      }
+    }
+    @include animate(bird, 6.2s, linear, infinite);
+    perspective: 20rem;
     position: absolute;
-    top:0;
-    z-index: -1;
-    overflow: hidden;
-
-    @include mobileSmall{
-        background-size: cover;
-        background-position: 10% 0%;
-    }
-  
- 
-    
-    &-birds{
-        background:url('../img/gull-bird-flying-shape.svg');
-        background-repeat: no-repeat;
-        background-size: 50% 100%;
-        @include keyframes(bird){
-            0%{
-                top: 5%;
-                left:5%;
-                transform: rotateX(100deg) ;
-                opacity:0.5;
-            }
-            25%{
-            
-                top: 15%;
-                left:40%;
-                transform: rotateX(0deg);
-                opacity:0.5;
-            }
-             50%{
-                top: 20%;
-                left:60%;
-                transform:rotateX(-80deg);
-                opacity:0.5;
-            }
-            75%{
-                top: 25%;
-                left: 80%;
-                transform: rotateX(0deg);
-                opacity:0.5;
-            }
-            100%{
-                opacity:0;
-                left:100%;
-                top:20%;
-                transform: rotateX(80deg);
-            }
-        }
-       @include animate(bird ,6.2s ,linear, infinite);  
-        perspective: 20rem;
-        position: absolute;
-        top: 10%;
-        left:20%;
-        height:100px;
-        width:100px;
-        opacity:0; 
-    
-    }
-   
-    
-
+    top: 10%;
+    left: 20%;
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+  }
 }
-
-
-
-
-
-
 
 // //////loading.............
-.loading{
-   
-    @include flex(row);
+.loading {
+  @include flex(row);
 
-    &-img{
-        height:100px;
-        width:100px;
+  &-img {
+    height: 100px;
+    width: 100px;
 
-        @include laptop{
-            height: 80px;
-            width:80px;
-            margin-right: 6%;
-        
-        }
-        @include mobileSmall{
-            height: 70px;
-            width:70px;
-            margin-right: 10%;
-        }
+    @include laptop {
+      height: 80px;
+      width: 80px;
+      margin-right: 6%;
     }
-
-
-   
+    @include mobileSmall {
+      height: 70px;
+      width: 70px;
+      margin-right: 10%;
+    }
+  }
 }
-
-
-
-
 
 // ///search input.....................
 
-
-
-.search{
-   
-    
+.search {
   padding: 80px 0 0 0;
   @include flex(row);
-  position:relative;
-    
-      &-input{
-            outline:none;
-            background-image: radial-gradient(circle,rgb(167, 71, 167) 130%,transparent);
-            border: 2px solid $color;
-            border-radius: 100px;
-            @include font(700, 2rem);
-            color: rgba(18,18,18,0.8);
-            @include sansserif-font();
-            @include center();
-            width: 40%;     //420px
-            color: $color;
-            padding: 2px 0 5px 10px;
-            @include keyframes(wide){
-                0%{
-                    width: 8%;
-                }
-                25%{
-                    width: 16%;
-                }
-                50%{
-                    width: 24%;
-                }
-                75%{
-                    width: 36%;
-                }
-                100%{
-                    width: 40%;
-                }
-            }
-            @include animate(wide, 0.4s, linear, 1);
-            
-            @include laptop{
-               width:50%;
-               padding: 1px 0 4px 18px;
-            }
-            @include tablet{
-               width:53%;
-               padding: 1px 0 4px 18px;
-               @include font(700, 1.7rem);
-            }
-            @include mobileLarge{
-               width:55%;
-               padding: 0px 0 4px 12px;
-               @include font(700, 1.6rem);
-            }
-            @include mobileSmall{
-               width:55%;
-               padding: 4px 0 4px 10px;
-               @include font(700, 1.2rem);
-            }
+  position: relative;
 
-
-
-            &::-webkit-search-cancel-button{
-                appearance: none;
-                background-image: linear-gradient(45deg, transparent 50%,$color 50% 53.5%,transparent 53.5%),linear-gradient(135deg,transparent 50%,$color 50% 53.5%,transparent 53.5%);
-                height: 14px;
-                width: 14px;
-                padding-right:30px;
-              
-
-            }
-           &::placeholder{
-               color: #b68c21;
-               @include font(200, 1.2rem);
-               @include cursive();
-               @include tablet{
-                @include font(200, 1.1rem);  
-               }
-               @include mobileLarge{
-                @include font(200, 0.9rem);
-              }
-               @include mobileSmall{
-                @include font(200, 0.5rem);
-           
-            }
-           }
-        
-          
-
-        }
-       
-
-        &-btn{
-            color: $color;
-            outline:none;
-            border:none; 
-            background: transparent;
-            cursor: pointer;
-            height: 52px;
-            width:70px;
-            background-image: url('../img/magnifying-glass.svg');
-            background-size: 70px 40px;
-            background-position: 0% 58%;
-            background-repeat: no-repeat;
-           
-            @include mobileLarge{
-                background-size: 56px 30px;
-            }
-            &:active, &:focus{
-                outline:none;
-                border:none; 
-
-
-            }
-            
-        }
-           
-
-}
-
-
-
-.searchcopy{
-    position: absolute;
-    bottom: 1px;
-    left:40%;
-    @include serif-font();
-    @include font(200, 0.7rem);
-    color:rgb(73, 40, 73);
-
-     @include media(1450px){
-        left:50%;
-     }
-     @include media(1200px){
-        left:52%;
-     }
-    @include laptopLarge{
-        left:50%;
-    }
-    @include tablet{
-        left:47%;
-    }
-
-    @include mobileSmall{
-        left:42%; 
-    }
-
-}
-
-
-
-    
-
-// ////result data set................................. 
-
-
-.data{
-
-    $font: 'Nunito', sans-serif;
-   
-
-
-
-    @include flex(column);
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-image:  linear-gradient(0deg,rgb(221, 157, 37),transparent),url('../img/customwave.svg'),linear-gradient( 110deg,rgb(167, 71, 167),rgb(255, 198, 53));
-    background-size:  100% 100%,172% 169%,cover;
-    background-repeat: no-repeat;
-    width: 620px;
-    margin: 40px auto;
-    border-radius: 12px;
-    @include keyframes(emerge) {
-        0%{
-            transform: rotateX(-110deg);
-            opacity: 0.3;
-        }
-        25%{
-            transform: rotateX(-70deg);
-            opacity:0.6;
-        }
-        50%{
-            transform: rotateX(-50deg);
-            opacity: 0.9;
-        }
-        
-        100%{
-            transform: rotateX(0deg);
-            opacity:1;
-        }
-    }
-                
-    @include animate(emerge,1s,linear,1);
-    position: relative;
-    padding: 3% 2% 2% 2%;
-
-    @include laptop{
-        width: 540px;
-    }
-    @include tablet{
-        width: 520px;
-    }
-    @include mobileLarge{
-        width: 420px;
-    }
-
-    @include mobileSmall{
-        width: 280px;
-    }
-    @include media2(1400px){
-        width: 700px;
-        margin: 20px auto;
-        
-    }
-
-
-    &-temperature{
-        @include font(700, 1.2rem);
-        font-family: $font;
-        color:$color;
-     
-       
-        @include mobileLarge{
-            @include font(700, 0.9rem);   
-        }
-        @include mobileSmall{
-            @include font(700, 0.85rem); 
-            padding-left: 3px;  
-        }
-    
-    }
-
-    &-feelslike{
-        @include font(700, 1.2rem);
-        font-family: $font;
-        color:$color;
-       
-        padding: 0 0 6px 0;
-        @include mobileLarge{
-            @include font(700, 0.9rem);   
-        }
-       
-        @include mobileSmall{
-            @include font(700, 0.85rem); 
-            padding-left: 3px;    
-        }
-    }
-            
-    &-other{
-        @include font(700, 1.2rem);
-        font-family: $font;
-        color:$color;
-       
-
-        @include mobileLarge{
-            @include font(700, 0.9rem);   
-        }
-        @include mobileSmall{
-            @include font(700, 0.85rem);  
-            padding-left: 2px;   
-        }
-    
-    }
-
-
-
-    &-weathertype{
-
-        padding-top:55px;
-        color: purple !important;
-        @include font(600, 1.3rem);
-        font-family: $font;
-       
-
-        @include mobileSmall{
-            @include font(500, 1rem);
-            padding-left: 2px;  
-        
-        }
-        
-    }
-    
-
-       
-
-
-   
-      
-    &-location{
-        position:absolute;
-        right:4%;
-        top:8%;
-        @include flex(column);
-        align-items: center;
-        width: 45%;
-        border-radius: 12px;
-        text-align: center;
-        
-    
-        @include laptop{
-            width: 52%; 
-        }
-    
-        @include mobileLarge{
-            width: 53%; 
-            right:1%; 
-    
-        }
-        @include mobileSmall{
-            width: 45%; 
-            right:1%; 
-            top:8%;
-         
-           
-        }
-    
-        @include media2(1400px){
-            width: 52%; 
-           padding-top: 20px;
-           
-        }
-
-
-
-
-
-
-        h1{
-            margin:0;
-            font-family: 'Dela Gothic One', cursive;
-            @include font(500,1.4rem);
-            display:inline-flex;
-            background-clip: text;
-            color: transparent;
-            background-image: url('../img/milky-way.jpeg');
-            background-position: 100% 50%;
-            background-size: contain;
-            @include mobileLarge{
-                @include font(700, 0.9rem);   
-            }
-            @include mobileSmall{
-                @include font(400, 0.8rem);  
-                
-            }
-        
-        }
-        
-
-
-
-        h2{
-            color: purple;
-            margin:0;
-            @include cursive();
-            background-clip: text;
-            color: transparent;
-            background-image: url('../img/texture.jpeg');
-            background-position: center;
-            background-size: cover;  
-            @include font(600,1.3rem);
-            font-family: $font;
-            @include mobileLarge{
-                @include font(700, 0.9rem);   
-            }
-            @include mobileSmall{
-                @include font(700, 0.8rem);   
-            }
-        
-            
-        }
-
-
-
-       &-pinshadow{
-        background-image: radial-gradient(ellipse at 30% 70%,  rgb(156, 102, 2) 4%,transparent 32%);
-        background-size: 100% 20%;
-        background-position: 6px 94%;
-        background-repeat: no-repeat;
-        perspective: 40rem;
-        z-index: 0;
-            
-        
+  &-input {
+    outline: none;
+    background-image: radial-gradient(
+      circle,
+      rgb(167, 71, 167) 130%,
+      transparent
+    );
+    border: 2px solid $color;
+    border-radius: 100px;
+    @include font(700, 2rem);
+    color: rgba(18, 18, 18, 0.8);
+    @include sansserif-font();
+    @include center();
+    width: 40%; //420px
+    color: $color;
+    padding: 2px 0 5px 10px;
+    @include keyframes(wide) {
+      0% {
+        width: 8%;
       }
-
-      
-    
-
-
-
-
+      25% {
+        width: 16%;
+      }
+      50% {
+        width: 24%;
+      }
+      75% {
+        width: 36%;
+      }
+      100% {
+        width: 40%;
+      }
     }
-    
-    
+    @include animate(wide, 0.4s, linear, 1);
 
+    @include laptop {
+      width: 50%;
+      padding: 1px 0 4px 18px;
+    }
+    @include tablet {
+      width: 53%;
+      padding: 1px 0 4px 18px;
+      @include font(700, 1.7rem);
+    }
+    @include mobileLarge {
+      width: 55%;
+      padding: 0px 0 4px 12px;
+      @include font(700, 1.6rem);
+    }
+    @include mobileSmall {
+      width: 55%;
+      padding: 4px 0 4px 10px;
+      @include font(700, 1.2rem);
+    }
+
+    &::-webkit-search-cancel-button {
+      appearance: none;
+      background-image: linear-gradient(
+          45deg,
+          transparent 50%,
+          $color 50% 53.5%,
+          transparent 53.5%
+        ),
+        linear-gradient(
+          135deg,
+          transparent 50%,
+          $color 50% 53.5%,
+          transparent 53.5%
+        );
+      height: 14px;
+      width: 14px;
+      padding-right: 30px;
+    }
+    &::placeholder {
+      color: #b68c21;
+      @include font(200, 1.2rem);
+      @include cursive();
+      @include tablet {
+        @include font(200, 1.1rem);
+      }
+      @include mobileLarge {
+        @include font(200, 0.9rem);
+      }
+      @include mobileSmall {
+        @include font(200, 0.5rem);
+      }
+    }
+  }
+
+  &-btn {
+    color: $color;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    height: 52px;
+    width: 70px;
+    background-image: url("../img/magnifying-glass.svg");
+    background-size: 70px 40px;
+    background-position: 0% 58%;
+    background-repeat: no-repeat;
+
+    @include mobileLarge {
+      background-size: 56px 30px;
+    }
+    &:active,
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
 }
-     
-    
 
-    
+.searchcopy {
+  position: absolute;
+  bottom: 1px;
+  left: 40%;
+  @include serif-font();
+  @include font(200, 0.7rem);
+  color: rgb(73, 40, 73);
 
+  @include media(1450px) {
+    left: 50%;
+  }
+  @include media(1200px) {
+    left: 52%;
+  }
+  @include laptopLarge {
+    left: 50%;
+  }
+  @include tablet {
+    left: 47%;
+  }
 
+  @include mobileSmall {
+    left: 42%;
+  }
+}
 
-  
-       
-  
+// ////result data set.................................
+
+.data {
+  $font: "Nunito", sans-serif;
+
+  @include flex(column);
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-image: linear-gradient(0deg, rgb(221, 157, 37), transparent),
+    url("../img/customwave.svg"),
+    linear-gradient(110deg, rgb(167, 71, 167), rgb(255, 198, 53));
+  background-size: 100% 100%, 172% 169%, cover;
+  background-repeat: no-repeat;
+  width: 620px;
+  margin: 40px auto;
+  border-radius: 12px;
+  @include keyframes(emerge) {
+    0% {
+      transform: rotateX(-110deg);
+      opacity: 0.3;
+    }
+    25% {
+      transform: rotateX(-70deg);
+      opacity: 0.6;
+    }
+    50% {
+      transform: rotateX(-50deg);
+      opacity: 0.9;
+    }
+
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+
+  @include animate(emerge, 1s, linear, 1);
+  position: relative;
+  padding: 3% 2% 2% 2%;
+
+  @include laptop {
+    width: 540px;
+  }
+  @include tablet {
+    width: 520px;
+  }
+  @include mobileLarge {
+    width: 420px;
+  }
+
+  @include mobileSmall {
+    width: 280px;
+  }
+  @include media2(1400px) {
+    width: 700px;
+    margin: 20px auto;
+  }
+
+  &-temperature {
+    @include font(700, 1.2rem);
+    font-family: $font;
+    color: $color;
+
+    @include mobileLarge {
+      @include font(700, 0.9rem);
+    }
+    @include mobileSmall {
+      @include font(700, 0.85rem);
+      padding-left: 3px;
+    }
+  }
+
+  &-feelslike {
+    @include font(700, 1.2rem);
+    font-family: $font;
+    color: $color;
+
+    padding: 0 0 6px 0;
+    @include mobileLarge {
+      @include font(700, 0.9rem);
+    }
+
+    @include mobileSmall {
+      @include font(700, 0.85rem);
+      padding-left: 3px;
+    }
+  }
+
+  &-other {
+    @include font(700, 1.2rem);
+    font-family: $font;
+    color: $color;
+
+    @include mobileLarge {
+      @include font(700, 0.9rem);
+    }
+    @include mobileSmall {
+      @include font(700, 0.85rem);
+      padding-left: 2px;
+    }
+  }
+
+  &-weathertype {
+    padding-top: 55px;
+    color: purple !important;
+    @include font(600, 1.3rem);
+    font-family: $font;
+
+    @include mobileSmall {
+      @include font(500, 1rem);
+      padding-left: 2px;
+    }
+  }
+
+  &-location {
+    position: absolute;
+    right: 4%;
+    top: 8%;
+    @include flex(column);
+    align-items: center;
+    width: 45%;
+    border-radius: 12px;
+    text-align: center;
+
+    @include laptop {
+      width: 52%;
+    }
+
+    @include mobileLarge {
+      width: 53%;
+      right: 1%;
+    }
+    @include mobileSmall {
+      width: 45%;
+      right: 1%;
+      top: 8%;
+    }
+
+    @include media2(1400px) {
+      width: 52%;
+      padding-top: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: "Dela Gothic One", cursive;
+      @include font(500, 1.4rem);
+      display: inline-flex;
+      background-clip: text;
+      color: transparent;
+      background-image: url("../img/milky-way.jpeg");
+      background-position: 100% 50%;
+      background-size: contain;
+      @include mobileLarge {
+        @include font(700, 0.9rem);
+      }
+      @include mobileSmall {
+        @include font(400, 0.8rem);
+      }
+    }
+
+    h2 {
+      color: purple;
+      margin: 0;
+      @include cursive();
+      background-clip: text;
+      color: transparent;
+      background-image: url("../img/texture.jpeg");
+      background-position: center;
+      background-size: cover;
+      @include font(600, 1.3rem);
+      font-family: $font;
+      @include mobileLarge {
+        @include font(700, 0.9rem);
+      }
+      @include mobileSmall {
+        @include font(700, 0.8rem);
+      }
+    }
+
+    &-pinshadow {
+      background-image: radial-gradient(
+        ellipse at 30% 70%,
+        rgb(156, 102, 2) 4%,
+        transparent 32%
+      );
+      background-size: 100% 20%;
+      background-position: 6px 94%;
+      background-repeat: no-repeat;
+      perspective: 40rem;
+      z-index: 0;
+    }
+  }
+}
+
 // //error..............
 
-.error{
-   
-    
+.error {
+  @include font(200, 10px);
+  @include sansserif-font();
+  color: $color;
+  text-align: center;
+  padding: 6px 0 6px 0;
+  background-color: rgb(214, 104, 104);
+  width: 17%;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-left: 38%;
+  border-radius: 12px;
 
-    @include font(200,10px);
-    @include sansserif-font();
-    color:$color;
-    text-align: center;
-    padding:6px 0 6px 0;
-    background-color: rgb(214, 104, 104);
-    width:17%;
-    margin: 0 auto;
-    margin-top: 8px;
-    margin-left: 38%;
-    border-radius: 12px;
-    
-    @include keyframes(error){
-        0%{
-            transform: rotateX(-80deg);
-            opacity: 0.4;
-        }
-        25%{
-            transform: rotateX(-60deg);
-            opacity:0.4;
-        }
-        50%{
-            transform: rotateX(-40deg);
-            opacity: 0.8;
-        }
-        
-        100%{
-            transform: rotateX(0deg);
-            opacity:1;
-        }
-
+  @include keyframes(error) {
+    0% {
+      transform: rotateX(-80deg);
+      opacity: 0.4;
     }
-    @include animate(error,0.5s,linear,1);
-    perspective: 15rem;
-    letter-spacing: 0.4px;
-    position: relative;
-
-
-    &::after{
-        background-image: linear-gradient(135deg,transparent 50%,rgb(214, 104, 104) 50.14%);
-        content: '';
-        position: absolute;
-        left:4%;
-        top:-14px;
-        height: 17px;
-        width:16px;
+    25% {
+      transform: rotateX(-60deg);
+      opacity: 0.4;
     }
+    50% {
+      transform: rotateX(-40deg);
+      opacity: 0.8;
+    }
+
+    100% {
+      transform: rotateX(0deg);
+      opacity: 1;
+    }
+  }
+  @include animate(error, 0.5s, linear, 1);
+  perspective: 15rem;
+  letter-spacing: 0.4px;
+  position: relative;
+
+  &::after {
+    background-image: linear-gradient(
+      135deg,
+      transparent 50%,
+      rgb(214, 104, 104) 50.14%
+    );
+    content: "";
+    position: absolute;
+    left: 4%;
+    top: -14px;
+    height: 17px;
+    width: 16px;
+  }
 }
 
-
-
-
-    
-
-
-
 // /////////KEYFRAMES..........................
-
-
-
-
-
-
-
-
-
-
-
- 
-       
-       
-         
-
-
-
-
-

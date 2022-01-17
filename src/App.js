@@ -1,17 +1,13 @@
-import React from 'react';
-import './sass/App.scss';
-import Input from './components/input.js';
+import React from "react";
+import "./sass/App.scss";
+import Input from "./components/input.js";
 
-
-const App = ()=> {
+const App = () => {
   return (
-   
-     <>
-      <Input/>
-   
+    <>
+      <Input />
     </>
-
   );
-}
+};
 
 export default App;
